@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmblemCon Panel Overlay</title>
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="js/main.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.prod.js"
+            }
+        }
+    </script>
+    <script defer type="module" src="js/apps.js"></script>
+</head>
+<body>
+    <header class="grid-con">
+        <div id="logo-area" class="col-span-full"></div>
+    </header>
+
+    <section id="top-area" class="grid-con">
+        <div id="questions" class="col-span-full">
+            <p @click="previousQuestion" class="arrow"><</p>
+            <p>{{questionArray[count].question}}</p>
+            <p @click="nextQuestion" class="arrow">></p>
+        </div>
+    </section>
+
+    <section id="main-area" class="grid-con">
+        <div id="hostess-area" class="col-span-full m-col-span-5"></div>
+
+        <div id="player-area" class= "col-span-full m-col-start-6 m-col-span-7">
+            <div id="player1" class="player">
+                <img src="images/Ducessa.png" alt="">
+                <p class="name">Ducessa</p>
+                <div class="point-area">
+                    <button @click="subtractCount1">-</button>
+                    <p class="points">Points: {{count1}}</p>
+                    <button @click="addToCount1">+</button>
+                </div>
+            </div>
+
+            <div id="player2" class="player">
+                <img src="images/Ducessa.png" alt="">
+                <p class="name">Ducessa</p>
+                <div class="point-area">
+                    <button @click="subtractCount2">-</button>
+                    <p class="points">Points: {{count2}}</p>
+                    <button @click="addToCount2">+</button>
+                </div>
+            </div>
+
+            <div id="player3" class="player">
+                <img src="images/Ducessa.png" alt="">
+                <p class="name">Ducessa</p>
+                <div class="point-area">
+                    <button @click="subtractCount3">-</button>
+                    <p class="points">Points: {{count3}}</p>
+                    <button @click="addToCount3">+</button>
+                </div>
+            </div>
+
+            <div id="player4" class="player">
+                <img src="images/Ducessa.png" alt="">
+                <p class="name">Ducessa</p>
+                <div class="point-area">
+                    <button @click="subtractCount4">-</button>
+                    <p class="points">Points: {{count4}}</p>
+                    <button @click="addToCount4">+</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

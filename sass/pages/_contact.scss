@@ -1,0 +1,126 @@
+#contact-con {
+    padding-top: 10px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#contact-form-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    p:not(#error-message) {
+        margin: 10px;
+        margin-bottom: 20px;
+    }
+}
+
+#contact-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-form input:not(#submit-contact) {
+    margin-top: 5px;
+    border-radius: 10px;
+    padding: 5px;
+    width: 80%;
+}
+
+#contact-form textarea {
+    margin-top: 5px;
+    border-radius: 10px;
+    padding: 5px;
+    width: 80%!important;
+    height: 100px;
+}
+
+#submit-contact {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: white;
+    width: 25%;
+    &:hover {
+        border: 2px solid #ffdf7f;
+        color: white;
+        background-image: linear-gradient(#3616d7, #2d0065);
+    }
+}
+
+#error-message {
+    margin-top: 10px;
+}
+
+#error-text {
+    text-align: center;
+}
+
+#other-errors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#contact-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    p {
+        border-radius: 50px;
+        border: 3px solid #ffdf7f;
+        background-image: linear-gradient(#3616d7, #2d0065);
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        cursor: pointer;
+        transition: all ease-in-out 0.5s;
+        &:hover {
+            background-color: white;
+            background-image: none;
+            color: #000246;
+            text-shadow: none!important;
+        }
+    }
+}
+
+#help-desk-info {
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+
+#help-desk-image {
+    margin-top: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    #contact-form input:not(#submit-contact) {
+        width: 50%;
+    }
+
+    #contact-form textarea {
+        width: 50%!important;
+    }
+
+    #submit-contact {
+        width: 10%;
+    }
+}
