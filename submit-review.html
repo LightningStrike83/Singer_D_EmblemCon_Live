@@ -6,7 +6,7 @@
     <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
 	<meta http-equiv="Pragma" content="no-cache">
 	<meta http-equiv="Expires" content="0">
-    <title>EmblemCon- Schedule</title>
+    <title>EmblemCon- Mod Team</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/main.css?version=0.4">
@@ -22,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 </head>
-<body data-page="schedule">
+<body data-page="team">
     <header class="full-width-grid-con">
         <a class="col-start-2 col-span-1 m-col-span-1 header-logo-con" href="index.html"><img class="header-logo" src="images/emblemcon.png" alt="EmblemCon Logo"></a>
         <svg class="col-span-1" id="ham-menu" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.83 22">
@@ -107,27 +107,41 @@
         </div>
     </header>
 
-    <section id="schedule-info-con" class="grid-con content-section">
-        <h3 class="col-span-full">SCHEDULE</h3>
-        <div class="line-divider col-span-full"></div>
-        <p class="col-span-full">The schedule for EmblemCon 2025 has not yet been revealed. Please check back or follow our social media to hear when the schedule will be released!</p>
-        <!-- <p class="col-span-full">Please find our schedule down below. Click a day tab to show both the image and the text version of the information for that day!</p>
-
-        <div id="schedule-selector" class="col-span-full">
-            <ul id="schedule-days">
-                <li data-day="1" class="day">DAY 1 ▼</li>
-                <li data-day="2" class="day">DAY 2 ▼</li>
-                <li data-day="3" class="day">DAY 3 ▼</li>
-                <li data-day="4" class="day">DAY 4 ▼</li>
-            </ul>
+    <section id="feedback-con" class="grid-con content-section">
+        <div class="col-span-full">
+            <h3>SUBMIT A REVIEW OR DOODLE</h3>
+            <div class="line-divider"></div>
+            <p>Want to submit a review to EmblemCon? Or toss the mods a little doodle for us to display? Feel free! We'd love to hear from you! Select what you would like to submit, and it will be submitted to the mods for approval. If approved, you may find it in one of our galleries!</p>
         </div>
 
-        <div id="schedule-details-con" class="col-span-full">
-            <div id="schedule-details">
-                <div id="schedule-image"></div>
-                <div id="schedule-text" class="detail-section"></div>
+        <div id="feedback-buttons" class="col-span-full">
+            <p data-method="text" class="feedback-switch">Feedback ▼</p>
+            <p data-method="doodle" class="feedback-switch">Doodle ▼</p>
+        </div>
+
+        <div id="feedback-form-con" class="col-span-full">
+            <form id="feedback-form">
+                <label for="name">Preferred Name or Discord Handle:</label>
+                <input id="name" name="name" type="text"><br>
+                <label for="message">Your Feedback:</label>
+                <textarea name="message" id="message"></textarea>
+                <div id="privacy-con">
+                  <input type="checkbox" id="privacy"><label id="privacy-label" for="privacy">I have read and agree to the <a href="privacy.html">privacy policy</a></label>
+                </div>
+
+                <div id="consent-con">
+                    <input type="checkbox" id="consent"><label for="consent" id="consent-label">I consent that my review may be displayed on the website if chosen</label>
+                </div>
+                <input type="submit" value="Send" id="submit-feedback">
+            </form>
+
+            <div id="error-message">
+                <p id="error-text"></p>
+                <div id="other-errors"></div>
             </div>
-        </div> -->
+        </div>
+
+        <div id="doodle-form"></div>
     </section>
 
     <section class="grid-con to-top-con">
