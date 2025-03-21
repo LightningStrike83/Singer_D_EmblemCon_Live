@@ -3,9 +3,11 @@ export function hamburgerMenu() {
     const aboutMobile = document.querySelector("#about-mobile-menu")
     const eventMobile = document.querySelector("#event-mobile-menu")
     const guestMobile = document.querySelector("#guest-mobile-menu")
+    const contactMobile = document.querySelector("#contact-mobile-menu")
     const aboutMobileButton = document.querySelector(".about-mobile-button")
     const eventMobileButton = document.querySelector(".events-mobile-button")
     const guestMobileButton = document.querySelector(".guest-mobile-button")
+    const contactMobileButton = document.querySelector(".contact-mobile-button")
     const hamMenu = document.querySelector("#ham-menu")
     const mainMenu = document.querySelector("#main-mobile-menu")
 
@@ -48,9 +50,18 @@ export function hamburgerMenu() {
         })
     }
 
+    function openContactMenu() {
+        contactMobile.style.visibility = "visible"
+        contactMobile.style.opacity = "1"
+        hamClose.forEach(ham => {
+            ham.textContent = "←"
+        })
+    }
+
     hamMenu.addEventListener("click", hamburgerOpen)
     hamClose.forEach(close => close.addEventListener("click", hamBurgerClose))
     aboutMobileButton.addEventListener("click", openAboutMenu)
     eventMobileButton.addEventListener("click", openEventMenu)
     guestMobileButton.addEventListener("click", openGuestMenu)
+    contactMobileButton.addEventListener("click", openContactMenu)
 }

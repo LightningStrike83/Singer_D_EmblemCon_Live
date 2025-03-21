@@ -2,14 +2,17 @@ export function headerSubLinks() {
     const eventLinks = document.querySelector(".sub-links-events")
     const aboutLinks = document.querySelector(".sub-links-about")
     const guestLinks = document.querySelector(".sub-links-guests")
+    const contactLinks = document.querySelector(".sub-links-contact")
     const eventButton = document.querySelector(".events-button")
     const aboutButton = document.querySelector(".about-button")
     const guestButton = document.querySelector(".guest-button")
+    const contactButton = document.querySelector(".contact-button")
 
     function initialState() {
         eventLinks.style.display = "none"
         aboutLinks.style.display = "none"
         guestLinks.style.display = "none"
+        contactLinks.style.display = "none"
     }
 
     initialState()
@@ -57,12 +60,37 @@ export function headerSubLinks() {
             if (aboutLinks.style.display === "flex") {
                 aboutLinks.style.display = "none"
             }
+
+            if (contactLinks.style.display === "flex") {
+                contactLinks.style.display = "none"
+            }
         } else {
             guestLinks.style.display = "none"
+        }
+    }
+
+    function openContactLinks() {
+        if (contactLinks.style.display === "none") {
+            contactLinks.style.display = "flex"
+
+            if (eventLinks.style.display === "flex") {
+                eventLinks.style.display = "none"
+            }
+
+            if (aboutLinks.style.display === "flex") {
+                aboutLinks.style.display = "none"
+            }
+
+            if (guestLinks.style.display === "flex") {
+                guestLinks.style.display = "none"
+            }
+        } else {
+            contactLinks.style.display = "none"
         }
     }
 
     eventButton.addEventListener("click", openEventLinks)
     aboutButton.addEventListener("click", openAboutLinks)
     guestButton.addEventListener("click", openGuestLinks)
+    contactButton.addEventListener("click", openContactLinks)
 }

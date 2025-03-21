@@ -86,7 +86,7 @@ if(!$_SESSION['username']) {
             <a class="header-link events-button">EVENT INFO ▼</a>
             <a class="header-link guest-button">GUESTS ▼</a>
             <a class="header-link" href="apply.html">APPLICATIONS</a>
-            <a class="header-link" href="contact.html">CONTACT</a>
+            <a class="header-link contact-button">CONTACT ▼</a>
 
             <div class="sub-links-events">
                 <a class="header-link" href="schedule.html">SCHEDULE</a>
@@ -107,6 +107,11 @@ if(!$_SESSION['username']) {
                 <a class="header-link" href="team.html">MOD TEAM</a>
                 <a class="header-link" href="archive.html">MOD CREATIONS</a>
                 <a class="header-link" target="_blank" href="https://docs.google.com/document/d/1_cDZk7ylTlnkT4UQgRJ-2_Y89slCWmm9SofVBeFB0Uw/edit?usp=sharing">FAQ</a>
+            </div>
+
+            <div class="sub-links-contact">
+                <a class="header-link" href="contact.html">CONTACT THE CON</a>
+                <a class="header-link" href="submit-review.html">SUBMIT A REVIEW / MESSAGE</a>
             </div>
         </div>
     </header>
@@ -177,7 +182,7 @@ if(!$_SESSION['username']) {
             <p class="header-link events-mobile-button">EVENT INFO ▼</p>
             <p class="header-link guest-mobile-button">GUESTS ▼</p>
             <a class="header-link" href="apply.html">APPLICATIONS</a>
-            <a class="header-link" href="contact.html">CONTACT</a>
+            <a class="header-link contact-mobile-button">CONTACT ▼</a>
         </div>
 
         <div class="col-span-1 mobile-close">
@@ -249,6 +254,19 @@ if(!$_SESSION['username']) {
             <a class="header-link" href="team.html">MOD TEAM</a>
             <a class="header-link" href="archive.html">MOD CREATIONS</a>
             <a class="header-link" target="_blank" href="https://docs.google.com/document/d/1_cDZk7ylTlnkT4UQgRJ-2_Y89slCWmm9SofVBeFB0Uw/edit?usp=sharing">FAQ</a>
+        </div>
+
+        <div class="col-span-1 mobile-close">
+            <p class="close-button">X</p>
+        </div>
+    </section>
+
+    <section id="contact-mobile-menu" class="full-width-grid-con mobile-menu">
+        <h1 class="hidden">Mobile Contact Menu</h1>
+
+        <div class="col-start-2 col-span-1 mobile-links">
+            <a class="header-link" href="contact.html">CONTACT THE CON</a>
+            <a class="header-link" href="submit-review.html">SUBMIT A REVIEW / MESSAGE</a>
         </div>
 
         <div class="col-span-1 mobile-close">
