@@ -115,15 +115,16 @@
         </div>
 
         <div id="feedback-buttons" class="col-span-full">
-            <p data-method="text" class="feedback-switch">Feedback ▼</p>
+            <p data-method="text" class="feedback-switch">Review ▼</p>
             <p data-method="doodle" class="feedback-switch">Doodle ▼</p>
         </div>
 
-        <div id="feedback-form-con" class="col-span-full">
+        <div id="feedback-form-con" class="col-span-full detail-section">
+            <h3 class="feedback-title">Review:</h3>
             <form id="feedback-form">
                 <label for="name">Preferred Name or Discord Handle:</label>
                 <input id="name" name="name" type="text"><br>
-                <label for="message">Your Feedback:</label>
+                <label for="message">Your Review:</label>
                 <textarea name="message" id="message"></textarea>
                 <div id="privacy-con">
                   <input type="checkbox" id="privacy"><label id="privacy-label" for="privacy">I have read and agree to the <a href="privacy.html">privacy policy</a></label>
@@ -141,7 +142,9 @@
             </div>
         </div>
 
-        <div id="doodle-form"></div>
+        <div id="doodle-form" class="col-span-full detail-section">
+            <h3 class="feedback-title">Doodle:</h3>
+        </div>
     </section>
 
     <section class="grid-con to-top-con">

@@ -115,6 +115,14 @@
     margin-top: 10px;
 }
 
+.feedback-title {
+    margin-top: 20px;
+}
+
+#doodle-form {
+    border-radius: 20px;
+}
+
 @media screen and (min-width: 768px) {
     #contact-form input:not(#submit-contact, #privacy), #feedback-form input:not(#submit-feedback, #privacy, #consent) {
         width: 50%;
