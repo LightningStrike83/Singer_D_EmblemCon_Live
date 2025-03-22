@@ -41,8 +41,8 @@ try {
     $stmt = $connection->prepare($query);
     $stmt->bindParam(':name', $name);
     $stmt->bindParam(':imagename', $file_name);
-    $stmt->bindParam(':doodleconsent', $doodleconsent);
-    $stmt->bindParam(':nameconsent', $nameconsent);
+    $stmt->bindParam(':doodleConsent', $doodleconsent);
+    $stmt->bindParam(':nameConsent', $nameconsent);
 
     if ($stmt->execute()) {
         $to = 'contactemblemcon@gmail.com';
