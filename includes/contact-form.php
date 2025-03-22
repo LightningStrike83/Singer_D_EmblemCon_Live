@@ -45,7 +45,7 @@ try {
         $to = 'contactemblemcon@gmail.com';
         $sub = 'New Message Received';
 
-        $emailBody = "You have received a new message on Littleroot Dreams! \n\n";
+        $emailBody = "EmblemCon, you've received a new message! \n\n";
         $emailBody .= "Name: $name\n";
         $emailBody .= "Email: $email\n\n";
         $emailBody .= "Subject: $subject\n";

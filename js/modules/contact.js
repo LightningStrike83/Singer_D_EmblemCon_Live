@@ -23,7 +23,7 @@ export function contactForm() {
         event.preventDefault();
     
         errorCon.innerHTML = spinner;
-        const url = "../Singer_D_EmblemConWebsite_Alpha/includes/contact-form.php";
+        const url = "../includes/contact-form.php";
         const formData = new URLSearchParams(new FormData(event.target)).toString();
     
         if (privacyCheckbox.checked === true) {

@@ -17,6 +17,9 @@ import { assetsSlideshow } from "./modules/daniel-assets.js?version=0.4";
 import { sylvainGallery } from "./modules/dennys-sylvain.js?version=0.4";
 import { yearSwitch } from "./modules/cotc.js?version=0.4";
 import { contactForm } from "./modules/contact.js?version=0.5";
+import { drawing } from "./modules/drawing.js?version=0.4";
+import { submitReview } from "./modules/submit-review.js?version=0.4";
+import { switchSubmissions } from "./modules/switch-submissions.js?version=0.4";
 
 headerSubLinks()
 footerScroll()
@@ -84,4 +87,10 @@ if (document.body.dataset.page === 'cutest') {
 
 if (document.body.dataset.page === 'contact') {
     contactForm()
+}
+
+if (document.body.dataset.page === 'submit-review') {
+    drawing()
+    submitReview()
+    switchSubmissions()
 }
