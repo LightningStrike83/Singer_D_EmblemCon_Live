@@ -35,12 +35,14 @@ export function submitReview() {
         if (reviewPrivacy.checked === true) {
             spinnerBoxR.innerHTML = spinner
 
+            const urlEncodedData = new URLSearchParams(formData).toString();
+
             fetch(url, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/x-www-form-urlencoded"
                 },
-                body: formData
+                body: urlEncodedData
             })
                 .then(response =>
                     response.json().catch(() => {
@@ -59,13 +61,13 @@ export function submitReview() {
                             spinnerBoxR.appendChild(p);
                         });
                     } else {
-                        form.reset();
-                        errorMessage.textContent = "Thank you for your message! We'll be in contact as soon as possible!";
+                        reviewForm.reset();
+                        errorMessage.textContent = "Thank you for your review!";
                     }
                 })
                 .catch(error => {
                     errorMessage.textContent = `Sorry, something went wrong! ${error}`;
-                    errorCon.innerHTML = "";
+                    reviewErrorCon.innerHTML = "";
                 });
         } else {
             spinnerBoxR.innerHTML = `<p>Please accept the privacy policy before submitting</p>`;
@@ -82,6 +84,8 @@ export function submitReview() {
         const doodleForm = document.querySelector("#doodle-form")
         const consentDoodleCheck = doodleForm.querySelector("#consent-doodle")
         const consentNameCheck = doodleForm.querySelector("#consent-name")
+        const nameCon = document.querySelector("#name-con")
+        const url = "../includes/doodle.php";
         
         let consentDoodleValue = ""
         let consentNameValue = ""
@@ -109,18 +113,20 @@ export function submitReview() {
                 const dataUrl = canvas.toDataURL("image/png");
 
                 const formData = {
-                    name: doodleForm.querySelector("#name").value,
+                    name: nameCon.querySelector("#name").value,
                     image: dataUrl,
                     consentDoodle: consentDoodleValue,
                     consentName: consentNameValue
                 }
+
+                const urlEncodedData = new URLSearchParams(formData).toString();
 
                 fetch(url, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/x-www-form-urlencoded"
                     },
-                    body: formData
+                    body: urlEncodedData
                 })
                     .then(response =>
                         response.json().catch(() => {
@@ -139,13 +145,12 @@ export function submitReview() {
                                 spinnerBoxD.appendChild(p);
                             });
                         } else {
-                            form.reset();
-                            errorMessage.textContent = "Thank you for your message! We'll be in contact as soon as possible!";
+                            errorMessage.textContent = "Thank you for your doodle!";
                         }
                     })
                     .catch(error => {
                         errorMessage.textContent = `Sorry, something went wrong! ${error}`;
-                        errorCon.innerHTML = "";
+                        doodleErrorCon.innerHTML = "";
                     });
               });
         } else {
