@@ -5,7 +5,7 @@
     margin-top: 20px;
 }
 
-#contact-form-con, #feedback-form-con {
+#contact-form-con, #review-form-con {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,7 +18,7 @@
     }
 }
 
-#contact-form, #feedback-form {
+#contact-form, #review-form {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -26,14 +26,14 @@
     align-items: center;
 }
 
-#contact-form input:not(#submit-contact, #privacy), #feedback-form input:not(#submit-feedback, #privacy, #consent) {
+#contact-form input:not(#submit-contact, #privacy), #review-form input:not(#submit-review, #privacy, #consent) {
     margin-top: 5px;
     border-radius: 10px;
     padding: 5px;
     width: 80%;
 }
 
-#contact-form textarea, #feedback-form textarea {
+#contact-form textarea, #review-form textarea {
     margin-top: 5px;
     border-radius: 10px;
     padding: 5px;
@@ -41,7 +41,7 @@
     height: 100px;
 }
 
-#submit-contact, #submit-feedback {
+#submit-contact, #submit-review, #clear-button, #eraser, #submit-doodle {
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 10px;
@@ -50,12 +50,20 @@
     margin-top: 20px;
     cursor: pointer;
     background-color: white;
-    width: 25%;
+    &:not(#clear-button, #submit-review, #eraser) {
+        width: 25%;
+    }
     &:hover {
         border: 2px solid #ffdf7f;
         color: white;
         background-image: linear-gradient(#3616d7, #2d0065);
     }
+}
+
+#eraser.clicked {
+    background-image: linear-gradient(#3616d7, #2d0065);
+    border: 2px solid #ffdf7f;
+    color: white;
 }
 
 #privacy-con {
@@ -124,15 +132,15 @@
 }
 
 @media screen and (min-width: 768px) {
-    #contact-form input:not(#submit-contact, #privacy), #feedback-form input:not(#submit-feedback, #privacy, #consent) {
+    #contact-form input:not(#submit-contact, #privacy), #review-form input:not(#submit-review, #privacy, #consent, #eraser) {
         width: 50%;
     }
 
-    #contact-form textarea, #feedback-form textarea {
+    #contact-form textarea, #review-form textarea {
         width: 50%!important;
     }
 
-    #submit-contact, #submit-feedback {
+    #submit-contact, #submit-review {
         width: 10%;
     }
 }
