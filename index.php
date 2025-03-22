@@ -102,7 +102,7 @@ if(!$_SESSION['username']) {
 
             <div class="sub-links-about">
                 <a class="header-link" href="register.html">REGISTRATION</a>
-                <a class="header-link" href="about.html">ABOUT</a>
+                <a class="header-link" href="history.html">HISTORY</a>
             <a class="header-link" href="experience.html">OVERVIEW</a>
                 <a class="header-link" href="team.html">MOD TEAM</a>
                 <a class="header-link" href="archive.html">MOD CREATIONS</a>
@@ -249,7 +249,7 @@ if(!$_SESSION['username']) {
         <h1 class="hidden">Mobile About Menu</h1>
         <div class="col-start-2 col-span-1 mobile-links">
             <a class="header-link" href="register.html">REGISTRATION</a>
-            <a class="header-link" href="about.html">ABOUT</a>
+            <a class="header-link" href="history.html">HISTORY</a>
             <a class="header-link" href="experience.html">OVERVIEW</a>
             <a class="header-link" href="team.html">MOD TEAM</a>
             <a class="header-link" href="archive.html">MOD CREATIONS</a>
