@@ -18,8 +18,8 @@ if(!$_SESSION['username']) {
     <title>EmblemCon- Homepage</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/grid.css">
-    <link rel="stylesheet" href="css/main.css?version=0.4">
-    <script type="module" src="js/main.js?version=0.4"></script>
+    <link rel="stylesheet" href="css/main.css?version=0.6">
+    <script type="module" src="js/main.js?version=0.6"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
@@ -103,7 +103,8 @@ if(!$_SESSION['username']) {
             <div class="sub-links-about">
                 <a class="header-link" href="register.html">REGISTRATION</a>
                 <a class="header-link" href="history.html">HISTORY</a>
-            <a class="header-link" href="experience.html">OVERVIEW</a>
+                <a class="header-link" href="experience.html">OVERVIEW</a>
+                <a class="header-link" href="reviews.html">REVIEWS</a>
                 <a class="header-link" href="team.html">MOD TEAM</a>
                 <a class="header-link" href="archive.html">MOD CREATIONS</a>
                 <a class="header-link" target="_blank" href="https://docs.google.com/document/d/1_cDZk7ylTlnkT4UQgRJ-2_Y89slCWmm9SofVBeFB0Uw/edit?usp=sharing">FAQ</a>
@@ -147,6 +148,12 @@ if(!$_SESSION['username']) {
                     <img id="started-index-image" class="index-images" src="images/website_assets/chibi.png" alt="EmblemCon Mascot and Logo">
                     <p class="about-index-text">Check out our <a href="register.html">registration</a> page to see how you can join the convention and keep an eye out on our <a href="apply.html">applications</a> page to see how you can contribute to the EmblemCon experience! <br><br>Keep an eye out for our <a href="announcements.html">announcements</a> to see when applications open, or to see what EmblemCon has in store for you!</p>
                 </div>
+            </div>
+
+            <div class="content-section" id="about-trailer">
+                <h3>CONVENTION OVERVIEW</h3>
+                <div class="line-divider"></div>
+                <div id="about-video-text"><div><p>EmblemCon's very own <a target="_blank" class="about-guest-link" href="https://twitter.com/EvernightStudio?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Daniel Alba</a> has been kind enough to create an overview of the EmblemCon experience. See what it is that brings people from all other the world together and all the different ways they can celebrate their love of the Fire Emblem franchise!<br>You can find additional details about what EmblemCon has to offer <a href="experience.html">here</a>.</p></div> <video id="about-video" controls src="video/twittervid.com_TheEmblemCon_6e7ef9.mp4"></video> </div>
             </div>
         </div>
 
@@ -251,6 +258,7 @@ if(!$_SESSION['username']) {
             <a class="header-link" href="register.html">REGISTRATION</a>
             <a class="header-link" href="history.html">HISTORY</a>
             <a class="header-link" href="experience.html">OVERVIEW</a>
+            <a class="header-link" href="reviews.html">REVIEWS</a>
             <a class="header-link" href="team.html">MOD TEAM</a>
             <a class="header-link" href="archive.html">MOD CREATIONS</a>
             <a class="header-link" target="_blank" href="https://docs.google.com/document/d/1_cDZk7ylTlnkT4UQgRJ-2_Y89slCWmm9SofVBeFB0Uw/edit?usp=sharing">FAQ</a>
