@@ -109,6 +109,8 @@ export function submitReview() {
         if (doodlePrivacyCheck.checked === true) {
             spinnerBoxD.innerHTML = spinner
 
+            imageExport.style.border = "none"
+
             html2canvas(imageExport).then((canvas) => {
                 const dataUrl = canvas.toDataURL("image/png");
 
@@ -153,6 +155,8 @@ export function submitReview() {
                         doodleErrorCon.innerHTML = "";
                     });
               });
+
+              imageExport.style.border = "3px solid #ffdf7f;"
         } else {
             spinnerBoxD.innerHTML = `<p>Please accept the privacy policy before submitting</p>`
         }
