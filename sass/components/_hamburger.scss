@@ -7,6 +7,7 @@
 #main-mobile-menu {
     visibility: hidden;
     opacity: 0;
+    z-index: 10;
 }
 
 .mobile-menu {
@@ -19,6 +20,7 @@
     // background-color: #1b5eeeab;
     background-image: linear-gradient(90deg, #3616d7, #2d0065 70%);
     transition: all ease-in-out 0.5s;
+    z-index: 10;
 }
 
 .mobile-links {

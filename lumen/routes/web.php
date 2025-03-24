@@ -33,3 +33,5 @@ $router->get("/update", "UpdateController@getAll");
 $router->get("/update-three", "UpdateController@getThree");
 $router->get("/comics", "ComicController@getAll");
 $router->get("/users", "UserController@getAll");
+$router->get("/doodles", "FeaturedDoodleController@getAll");
+$router->get("/reviews", "FeaturedReviewController@getAll");

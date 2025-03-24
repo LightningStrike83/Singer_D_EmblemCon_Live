@@ -6,7 +6,7 @@
     <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
 	<meta http-equiv="Pragma" content="no-cache">
 	<meta http-equiv="Expires" content="0">
-    <title>EmblemCon- Announcements</title>
+    <title>EmblemCon- Reviews</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/main.css?version=0.4">
@@ -22,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 </head>
-<body data-page="announcements">
+<body data-page="review">
     <header class="full-width-grid-con">
         <a class="col-start-2 col-span-1 m-col-span-1 header-logo-con" href="index.html"><img class="header-logo" src="images/emblemcon.png" alt="EmblemCon Logo"></a>
         <svg class="col-span-1" id="ham-menu" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.83 22">
@@ -108,21 +108,47 @@
         </div>
     </header>
 
-    <div id="announcement-con" class="grid-con content-section">
-        <section id="announcement-info-con" class="col-span-full">
-            <h3>ANNOUNCEMENTS</h3>
+    <section id="review-con" class="grid-con content-section">
+        <div id="reg-info" class="col-span-full">
+            <h3>REVIEWS</h3>
             <div class="line-divider"></div>
-        </section>
-    
-        <section id="announcement-content-con" class="col-span-full">
-            <h1 class="hidden">List of Announcements</h1>
-        </section>
-    </div>
+            <p>Curious to see what others have to say about EmblemCon? Check out the reviews below!</p>
+        </div>
+
+        <div id="review-gallery" class="col-span-full review-gallery">
+            <div class="arrow-con">
+                <p id="rl-arrow" class="left-arrow">◄</p>
+                <p id="rr-arrow" class="right-arrow">►</p>
+            </div>
+            <p id="review-text"></p>
+            <p id="review-credit"></p>
+        </div>
+    </section>
+
+    <section id="doodle-con" class="grid-con content-section">
+        <div id="reg-info" class="col-span-full">
+            <h3>DOODLES</h3>
+            <div class="line-divider"></div>
+            <p>These doodles were left by some of EmblemCon's guests and attendees to show their appreciation for everyone's hard work!</p>
+        </div>
+
+        <div class="col-span-full review-gallery">
+            <div class="arrow-con">
+                <p id="dl-arrow" class="left-arrow">◄</p>
+                <p id="dr-arrow" class="right-arrow">►</p>
+            </div>
+
+            <div id="doodle-image-con">
+                <div id="image-div"></div>
+                <p id="artist-credit"></p>
+            </div>
+        </div>
+    </section>
 
     <section class="grid-con to-top-con">
         <h1 class="hidden">To Top Button</h1>
         <div class="col-span-full line-divider"></div>
-        <a class="top-button">↑ To Top</a>
+        <a class="top-button white-text">↑ To Top</a>
     </section>
 
     <div class="bg-gradient"></div>
