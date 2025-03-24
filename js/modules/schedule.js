@@ -14,6 +14,8 @@ export function schedulePopulation() {
             scheduleImage.innerHTML = ""
             scheduleText.innerHTML = ""
 
+            console.log(response)
+
             let img = document.createElement("img")
             img.src = `../images/schedule_images/day-${d}.jpg`
             img.setAttribute("id", "schedule-image")
@@ -26,14 +28,27 @@ export function schedulePopulation() {
                 const panelTime = document.createElement("p")
                 const panelDescription = document.createElement("p")
                 const scheduleDiv = document.createElement("div")
+                const panelHost = document.createElement("p")
+
+                const utcTime = panel.time;
+
+                const utcTimeWithZ = `${utcTime.replace(' ', 'T')}Z`;
+
+                const userTime = new Date(utcTimeWithZ).toLocaleString('en-US', {
+                    timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+                    timeZoneName: 'short'
+                });
+
 
                 scheduleDiv.setAttribute("class", "panel-div")
                 panelTitle.textContent = panel.title
                 panelTitle.setAttribute("class", "panel-title")
-                panelTime.textContent = `Time: ${panel.time}`
+                panelTime.textContent = `Time: ${userTime}`
                 panelDescription.textContent = `Description: ${panel.description}`
+                panelHost.textContent = `Hosted by: ${panel.host}`
 
                 scheduleDiv.appendChild(panelTitle)
+                scheduleDiv.appendChild(panelHost)
                 scheduleDiv.appendChild(panelTime)
                 scheduleDiv.appendChild(panelDescription)
                 scheduleText.appendChild(scheduleDiv)

@@ -3,6 +3,7 @@ export function aaFilter() {
     const spinner = `<img id="spinner" src="../images/website_assets/shield.gif" alt="Loading image"><br> <p id="spinner-text">Loading...</p>`;
     const continentSelect = document.querySelector("#continent-con")
     const artistDisplay = document.querySelector("#artist-display")
+    const continentSelectList = document.querySelector("#continent-select-list")
 
     function continentPopulation() {
         continentSelect.innerHTML = spinner
@@ -11,20 +12,42 @@ export function aaFilter() {
         .then(response => response.json())
         .then(function(response){
             continentSelect.innerHTML = ""
+
+            const initialOption = document.createElement("option")
+
+            initialOption.textContent = "--Please Select A Continent--"
+            initialOption.disabled = true
+            initialOption.selected = true
+
+            continentSelectList.appendChild(initialOption)
+
             response.forEach(continent => {
                 const li = document.createElement("li")
+                const option = document.createElement("option")
+
 
                 li.textContent = continent.continent
                 li.setAttribute("data-continent", `${continent.id}`)
+                li.setAttribute("data-continentName", `${continent.continent}`)
                 li.setAttribute("class", "continent")
                 li.addEventListener("click", displayArtists)
                 continentSelect.appendChild(li)
+
+                option.textContent = continent.continent
+                option.setAttribute("class", "continent-option")
+                option.setAttribute("data-continent", `${continent.id}`)
+
+                continentSelectList.appendChild(option)
             })
+
+            continentSelectList.addEventListener("change", displayArtists)
         })
     }
 
     function displayArtists(e) {
-        const continentNumber = this.dataset.continent
+        const continentNumber = continentSelectList.options[continentSelectList.selectedIndex].dataset.continent || this.dataset.continent
+
+        const continentName = e?.currentTarget?.dataset.continentname || continentSelectList.options[continentSelectList.selectedIndex].innerText
 
         artistDisplay.innerHTML = spinner
 
@@ -33,15 +56,21 @@ export function aaFilter() {
         .then(function(response){
             const ul = document.createElement("ul")
             const artistTitle = document.querySelector("#artist-title")
-            const continentName = e.target.textContent
 
             artistDisplay.innerHTML = ""
             artistTitle.textContent = `${continentName} has ${response.length} artists in the Artist Alley`
 
             response.forEach(artist => {
                 const li = document.createElement("li")
+                const a = document.createElement("a")
 
-                li.textContent = artist.name
+
+                a.textContent = artist.name
+                a.href = artist.aa_table
+                a.setAttribute("class", "ae-guest-name")
+                a.setAttribute("target", "_blank")
+
+                li.appendChild(a)
                 ul.appendChild(li)
             })
 
