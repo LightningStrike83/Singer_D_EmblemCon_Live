@@ -15,7 +15,7 @@ class ExhibitorController extends Controller {
      */
 
      public function getAll() {
-        $exhibitor = Exhibitor::select('name', 'id')->orderBy('name', 'asc')->get();
+        $exhibitor = Exhibitor::select('name', 'link', 'id')->orderBy('name', 'asc')->get();
         return response()->json($exhibitor);
     }
 }

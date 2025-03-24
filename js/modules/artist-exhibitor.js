@@ -50,7 +50,7 @@ export function artistExhibitor() {
                 const a = document.createElement("a")
                 const div = document.createElement("div")
 
-                a.textContent = `${guest.name}`
+                a.innerHTML = `<a target="_blank" class="ae-guest-name" href="${guest.link}">${guest.name} <img class="external-icon" src="../images/external.svg" alt="External Icon"></a>`
                 a.href = guest.link
                 a.setAttribute("class", "ae-guest-name")
                 a.setAttribute("target", "_blank")
