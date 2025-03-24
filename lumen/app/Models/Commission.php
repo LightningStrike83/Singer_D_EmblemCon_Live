@@ -11,7 +11,7 @@ class Commission extends Model
      *
      * @var array
      */
-    protected $fillable = ["id", "name"];
+    protected $fillable = ["id", "name", 'link'];
 
     /**
      * The attributes excluded from the model's JSON form.

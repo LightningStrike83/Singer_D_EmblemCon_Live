@@ -65,10 +65,7 @@ export function aaFilter() {
                 const a = document.createElement("a")
 
 
-                a.textContent = artist.name
-                a.href = artist.aa_table
-                a.setAttribute("class", "ae-guest-name")
-                a.setAttribute("target", "_blank")
+                a.innerHTML = `<a target="_blank" class="ae-guest-name" href="${artist.aa_table}">${artist.name} <img class="external-icon" src="../images/external.svg" alt="External Icon"></a>`
 
                 li.appendChild(a)
                 ul.appendChild(li)

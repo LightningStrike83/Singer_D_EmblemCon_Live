@@ -15,7 +15,7 @@ class CommissionController extends Controller {
      */
 
      public function getAll() {
-        $commisssion = Commission::select('name', 'id')->orderBy('name', 'asc')->get();
+        $commisssion = Commission::select('name', 'id', 'link')->orderBy('name', 'asc')->get();
         return response()->json($commisssion);
     }
 }
