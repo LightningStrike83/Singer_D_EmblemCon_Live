@@ -47,13 +47,15 @@ export function artistExhibitor() {
 
             textCon.innerHTML = ""
             response.forEach(guest => {
-                const p = document.createElement("p")
+                const a = document.createElement("a")
                 const div = document.createElement("div")
 
-                p.textContent = guest.name
-                p.setAttribute("class", "ae-guest-name")
+                a.textContent = `${guest.name}`
+                a.href = guest.link
+                a.setAttribute("class", "ae-guest-name")
+                a.setAttribute("target", "_blank")
 
-                div.appendChild(p)
+                div.appendChild(a)
                 textCon.appendChild(div)
             })
         })

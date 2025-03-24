@@ -15,12 +15,12 @@ class ArtistContinentController extends Controller {
      */
 
      public function getAll() {
-        $artistcontinent = ArtistContinent::join('artists', 'artist_continents.artist', '=', 'artists.id')->join('continents', 'artist_continents.continent', '=', 'continents.id')->select('artist', 'artist_continents.continent', "name", "continents.continent", 'artist_continents.id')->orderBy('name', 'asc')->get();
+        $artistcontinent = ArtistContinent::join('artists', 'artist_continents.artist', '=', 'artists.id')->join('continents', 'artist_continents.continent', '=', 'continents.id')->select('artist', 'artist_continents.continent', "name", "aa_table", "continents.continent", 'artist_continents.id')->orderBy('name', 'asc')->get();
         return response()->json($artistcontinent);
     }
 
     public function getArtist($id) {
-        $artistcontinent = ArtistContinent::join('artists', 'artist_continents.artist', '=', 'artists.id')->join('continents', 'artist_continents.continent', '=', 'continents.id')->select('artist', 'artist_continents.continent', "name", "continents.continent")->orderBy('name', 'asc')->where('artist_continents.continent', '=', $id)->get();
+        $artistcontinent = ArtistContinent::join('artists', 'artist_continents.artist', '=', 'artists.id')->join('continents', 'artist_continents.continent', '=', 'continents.id')->select('artist', 'artist_continents.continent', "name", "aa_table", "continents.continent")->orderBy('name', 'asc')->where('artist_continents.continent', '=', $id)->get();
         return response()->json($artistcontinent);
     }
 }

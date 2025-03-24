@@ -77,7 +77,7 @@
             <a class="header-link events-button">EVENT INFO ▼</a>
             <a class="header-link guest-button">GUESTS ▼</a>
             <a class="header-link" href="apply.html">APPLICATIONS</a>
-            <a class="header-link" href="contact.html">CONTACT</a>
+            <a class="header-link contact-button">CONTACT ▼</a>
 
             <div class="sub-links-events">
                 <a class="header-link" href="schedule.html">SCHEDULE</a>
@@ -100,6 +100,11 @@
                 <a class="header-link" href="archive.html">MOD CREATIONS</a>
                 <a class="header-link" target="_blank" href="https://docs.google.com/document/d/1_cDZk7ylTlnkT4UQgRJ-2_Y89slCWmm9SofVBeFB0Uw/edit?usp=sharing">FAQ</a>
             </div>
+
+            <div class="sub-links-contact">
+                <a class="header-link" href="contact.html">CONTACT THE CON</a>
+                <a class="header-link" href="submit-review.html">SUBMIT A REVIEW / MESSAGE</a>
+            </div>
         </div>
     </header>
 
@@ -111,11 +116,13 @@
     
         <div id="filter-info-con" class="col-span-full">
             <section id="artist-alley-info" class="grid-con">
-                <div id="continent-select" class="col-span-2 m-col-span-3">
+                <select id="continent-select-list" class="col-span-full" name="" id=""></select>
+
+                <div id="continent-select" class="m-col-span-3">
                     <ul id="continent-con"></ul>
                 </div>
         
-                <div id="artist-display-con" class="col-span-2 m-col-span-9">
+                <div id="artist-display-con" class="col-span-full m-col-span-9">
                     <h3 id="artist-title">A list of artists will display here</h3>
                     <div id="artist-display"></div>
                 </div>

@@ -34,15 +34,21 @@
 
 #artist-display li {
     text-align: left;
-    margin-left: 10%;
+    margin-left: 20px;
     list-style-type: disc;
     margin-bottom: 10px;
 }
 
 #continent-select {
     border-right: 3px solid #ffdf7f;
-    display: flex;
+    display: none;
     flex-direction: column;
+}
+
+#continent-select-list {
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding-left: 2.5px;
 }
 
 #filter-title {
@@ -52,5 +58,13 @@
 @media screen and (min-width: 768px) {
     #artist-alley-info {
         margin-top: 10px;
+    }
+    
+    #continent-select {
+        display: flex;
+    }
+
+    #continent-select-list {
+        display: none;
     }
 }
