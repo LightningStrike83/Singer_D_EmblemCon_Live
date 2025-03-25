@@ -83,7 +83,9 @@ export function modPopulation() {
             setTimeout(() => {
                 this.style.transform = ''; // Reset transform
                 this.classList.remove("clicked")
+                this.classList.add("col-span-2")
                 this.classList.add("m-col-span-3")
+                this.classList.remove("col-span-full")
                 this.classList.remove("m-col-span-6")
             }, 500);
         } else {
@@ -92,7 +94,9 @@ export function modPopulation() {
             setTimeout(() => {
                 this.style.transform = ''; // Reset transform
                 this.classList.add("clicked")
+                this.classList.remove("col-span-2")
                 this.classList.remove("m-col-span-3")
+                this.classList.add("col-span-full")
                 this.classList.add("m-col-span-6")
             }, 500);
         }
