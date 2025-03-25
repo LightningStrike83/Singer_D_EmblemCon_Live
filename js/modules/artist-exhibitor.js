@@ -50,8 +50,13 @@ export function artistExhibitor() {
                 const a = document.createElement("a")
                 const div = document.createElement("div")
 
-                a.innerHTML = `<a target="_blank" class="ae-guest-name" href="${guest.link}">${guest.name} <img class="external-icon" src="../images/external.svg" alt="External Icon"></a>`
-                a.href = guest.link
+                console.log(guest.link)
+
+                if (guest.link !== "") {
+                    a.innerHTML = `<a target="_blank" class="ae-guest-name" href="${guest.link}">${guest.name} <img class="external-icon" src="../images/external.svg" alt="External Icon"></a>`
+                } else {
+                    a.innerHTML = `<a class="ae-guest-name">${guest.name}</a>`
+                }
                 a.setAttribute("class", "ae-guest-name")
                 a.setAttribute("target", "_blank")
 
