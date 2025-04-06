@@ -14,8 +14,6 @@ export function schedulePopulation() {
             scheduleImage.innerHTML = ""
             scheduleText.innerHTML = ""
 
-            console.log(response)
-
             let img = document.createElement("img")
             img.src = `../images/schedule_images/day-${d}.jpg`
             img.setAttribute("id", "schedule-image")
@@ -31,19 +29,15 @@ export function schedulePopulation() {
                 const panelHost = document.createElement("p")
 
                 const utcTime = panel.time;
+                const utcDateTime = luxon.DateTime.fromFormat(utcTime, "yyyy-MM-dd HH:mm:ss", { zone: "utc" });
 
-                const utcTimeWithZ = `${utcTime.replace(' ', 'T')}Z`;
-
-                const userTime = new Date(utcTimeWithZ).toLocaleString('en-US', {
-                    timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-                    timeZoneName: 'short'
-                });
-
+                const userZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+                const localTime = utcDateTime.setZone(userZone).toLocaleString(luxon.DateTime.DATETIME_FULL);
 
                 scheduleDiv.setAttribute("class", "panel-div")
                 panelTitle.textContent = panel.title
                 panelTitle.setAttribute("class", "panel-title")
-                panelTime.textContent = `Time: ${userTime}`
+                panelTime.textContent = `Time: ${localTime}`
                 panelDescription.textContent = `Description: ${panel.description}`
                 panelHost.textContent = `Hosted by: ${panel.host}`
 
