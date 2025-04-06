@@ -17,7 +17,7 @@ export function reviewPopulation() {
 
             rLength = response.length
 
-            reviewText.textContent = response[r].review
+            reviewText.innerHTML = response[r].review
             reviewCredit.textContent = `-${response[r].name}`
         })
         .catch(error => {

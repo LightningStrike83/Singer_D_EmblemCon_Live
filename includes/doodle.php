@@ -5,8 +5,8 @@ require_once('../includes/connect.php');
 
 $name = trim($_POST['name'] ?? '');
 $imagename = trim($_POST['image'] ?? '');  // The base64-encoded image data from JavaScript
-$doodleconsent = trim($_POST['doodle_consent'] ?? '');
-$nameconsent = trim($_POST['name_consent'] ?? '');
+$doodleconsent = trim($_POST['consentDoodle'] ?? '');
+$nameconsent = trim($_POST['consentName'] ?? '');
 
 $errors = [];
 
@@ -51,6 +51,8 @@ try {
         $emailBody = "EmblemCon, you've received a new doodle! \n\n";
         $emailBody .= "The image is from: $name\n";
         $emailBody .= "Please check out the file: $file_name\n";
+        $emailBody .= "Image Consent: $doodleconsent\n";
+        $emailBody .= "Name Consent: $nameconsent\n";
 
         if (mail($to, $sub, $emailBody)) {
             echo json_encode(["message" => "Thank you for your doodle!"]);
