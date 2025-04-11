@@ -50,15 +50,13 @@ export function artistExhibitor() {
                 const a = document.createElement("a")
                 const div = document.createElement("div")
 
-                console.log(guest.link)
-
-                if (guest.link !== "") {
+                if (guest.name === "hanjyuus x rainymint") {
+                    a.innerHTML = `<a target="_blank" class="ae-guest-name" href="https://twitter.com/hanjyuus">hanjyuus</a> <p class="cross">x</p> <a target="_blank" class="ae-guest-name" href="https://twitter.com/rainy_mint">rainymint</a> <img class="external-icon" src="../images/external.svg" alt="External Icon">`
+                } else if (guest.link !== "") {
                     a.innerHTML = `<a target="_blank" class="ae-guest-name" href="${guest.link}">${guest.name} <img class="external-icon" src="../images/external.svg" alt="External Icon"></a>`
                 } else {
                     a.innerHTML = `<a class="ae-guest-name">${guest.name}</a>`
                 }
-                a.setAttribute("class", "ae-guest-name")
-                a.setAttribute("target", "_blank")
 
                 div.appendChild(a)
                 textCon.appendChild(div)

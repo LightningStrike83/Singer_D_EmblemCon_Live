@@ -81,6 +81,7 @@ export function submitReview() {
         const spinnerBoxD = doodleErrorCon.querySelector("#other-errors")
         const errorMessage = doodleErrorCon.querySelector("#error-text")
         const imageExport = document.querySelector(".drawing-board")
+        const board = document.querySelector("#drawing-board")
         const doodleForm = document.querySelector("#doodle-form")
         const consentDoodleCheck = doodleForm.querySelector("#consent-doodle")
         const consentNameCheck = doodleForm.querySelector("#consent-name")
@@ -109,7 +110,7 @@ export function submitReview() {
         if (doodlePrivacyCheck.checked === true) {
             spinnerBoxD.innerHTML = spinner
 
-            imageExport.style.border = "none"
+            board.style.border = "none"
 
             html2canvas(imageExport).then((canvas) => {
                 const dataUrl = canvas.toDataURL("image/png");
@@ -156,7 +157,7 @@ export function submitReview() {
                     });
               });
 
-              imageExport.style.border = "3px solid #ffdf7f;"
+              board.style.border = "3px solid #ffdf7f;"
         } else {
             spinnerBoxD.innerHTML = `<p>Please accept the privacy policy before submitting</p>`
         }
