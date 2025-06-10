@@ -1,0 +1,75 @@
+#experience-con {
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+}
+
+.experience-info {
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+#e-title {
+    width: 100%;
+}
+
+#e-intro {
+    margin-bottom: 10px;
+}
+
+.e-image {
+    margin-right: 20px;
+    border: 1.5px solid #ffdf7f;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 90%;
+    margin-bottom: 10px;
+    background-position: 0 25%
+}
+
+.e-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#e-cosplay-image {
+    background-image: url(/images/website_assets/Title_applications_square.png);
+}
+
+#e-panel-image {
+    background-image: url(/images/website_assets/Title_guests_square.png);
+}
+
+#e-discussion-image {
+    background-image: url(/images/website_assets/Title_about_square.png);
+}
+
+#e-meme-image {
+    background-image: url(/images/website_assets/meme_square.png);
+}
+
+#e-creative-image {
+    background-image: url(/images/website_assets/creative.png);
+}
+
+@media screen and (min-width: 768px) {
+    .e-info {
+        flex-direction: row;
+    }
+
+    .e-image {
+        width: 25%;
+        background-position: 0 -40px;
+    }
+
+    .e-text {
+        width: 75%;
+    }
+}

@@ -1,0 +1,138 @@
+#about-history {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #dcdcdc;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+}
+
+.about-guest-link {
+    color: black;
+}
+
+#about-charity {
+    margin-bottom: 20px;
+    background-color: #dcdcdc;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+}
+
+#about-mascot {
+    background-color: #dcdcdc;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+#about-trailer div {
+    display: grid;
+}
+
+#about-video {
+    max-width: 260px;
+    margin-top: 10px;
+}
+
+#about-video-text, #history-con {
+    display: flex!important;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#history-image {
+    margin-bottom: 10px;
+}
+
+#about-trailer {
+    background-color: #dcdcdc;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+#mascot-con, #charity-con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-mascot-image {
+    margin-top: 10px;
+    border: 5px solid #ffdf7f;
+}
+
+#mascot-vertical {
+    display: none;
+}
+
+#charity-image {
+    margin-top: 10px;
+    width: 80%;
+}
+
+@media screen and (min-width: 768px) {
+    #about-history {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #about-mascot {
+        margin-bottom: 30px;
+    }
+
+    #about-charity {
+        margin-bottom: 30px;
+    }
+
+    #about-video {
+        order: -1;
+        max-width: 450px;
+        margin-right: 10px;
+        margin-top: 0;
+    }
+
+    #about-video-text, #history-con {
+        flex-direction: row;
+    }
+
+    #history-image {
+        width: 40%;
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+
+    #about-trailer {
+        margin-bottom: 30px;
+    }
+
+    #charity-con, #mascot-con {
+        flex-direction: row-reverse;
+        img {
+            margin-right: 20px;
+        }
+    }
+
+    #mascot-vertical {
+        display: block;
+    }
+
+    #mascot-horizontal {
+        display: none;
+    }
+
+    .about-mascot-image {
+        width: 40%;
+        margin-top: 0px;
+    }
+    
+    #charity-image {
+        width: 40%;
+        margin-top: 0px;
+    }
+}
