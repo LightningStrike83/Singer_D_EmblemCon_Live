@@ -20,6 +20,7 @@ import { drawing } from "./modules/drawing.js?version=1.0";
 import { submitReview } from "./modules/submit-review.js?version=1.0";
 import { switchSubmissions } from "./modules/switch-submissions.js?version=1.0";
 import { reviewPopulation } from "./modules/review.js?version=1.1";
+import { colourBlindSchedule } from "./modules/colour-blind.js?version=1.0";
 
 headerSubLinks()
 footerScroll()
@@ -35,6 +36,7 @@ if (document.body.dataset.page === "team") {
 
 if (document.body.dataset.page === "schedule") {
     schedulePopulation()
+    colourBlindSchedule()
 }
 
 if (document.body.dataset.page === 'artist-exhibitor') {

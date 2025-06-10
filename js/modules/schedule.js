@@ -40,6 +40,17 @@ export function schedulePopulation() {
                 panelTime.textContent = `Time: ${localTime}`
                 panelDescription.textContent = `Description: ${panel.description}`
                 panelHost.textContent = `Hosted by: ${panel.host}`
+                scheduleDiv.setAttribute("data-type", `${panel.type}`)
+
+                if (panel.type === "m") {
+                    scheduleDiv.style.background = "linear-gradient( #0f1ca1, #01034c)"
+                } else if (panel.type === "g") {
+                    scheduleDiv.style.background = "linear-gradient( #298933, #032404)"
+                } else if (panel.type === "p") {
+                    scheduleDiv.style.background = "linear-gradient( #a78d2e, #523607)"
+                } else if (panel.type === "v") {
+                    scheduleDiv.style.background = "linear-gradient( #95032d, #3d0003)"
+                } 
 
                 scheduleDiv.appendChild(panelTitle)
                 scheduleDiv.appendChild(panelHost)

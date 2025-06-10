@@ -11,7 +11,7 @@ class Panel extends Model
      *
      * @var array
      */
-    protected $fillable = ["id", "title", "day", "time", "description", "year"];
+    protected $fillable = ["id", "title", "day", "time", "description", "year", "type"];
 
     /**
      * The attributes excluded from the model's JSON form.
