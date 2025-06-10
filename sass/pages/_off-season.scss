@@ -1,0 +1,83 @@
+#off-season-con {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+#off-events-con {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.off-event {
+    background-color: #dcdcdc;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+}
+
+.off-event-title {
+    font-weight: bold;
+    text-align: center;
+}
+
+.off-event-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.off-event-image {
+    width: 90%;
+    height: 200px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+    border: 1.5px solid #ffdf7f;
+}
+
+.off-event-desc {
+    width: 90%
+}
+
+.off-event-link {
+    margin: 10px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+#secret-sothis-image {
+    background-image: url(/images/website_assets/secret-sothis.png);
+}
+
+#dub-image {
+    background-image: url(/images/website_assets/dor.png);
+}
+
+@media screen and (min-width: 768px) {
+    .off-event-image {
+        width: 33.3%;
+        margin-left: 10px;
+    }
+
+    .off-event-desc {
+        width: 65%;
+        margin-left: 10px;
+    }
+
+    .off-event-info {
+        flex-direction: row;
+    }
+
+    .off-event-link {
+        text-align: left;
+    }
+}

@@ -1,0 +1,47 @@
+#registration-con {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #dcdcdc;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+}
+
+#instructions-con {
+    margin-top: 20px;
+}
+
+.instruction {
+    p {
+        margin-bottom: 20px;
+    }
+    padding: 15px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: start;
+
+    img {
+        border: 1px solid #ffdf7f;
+    }
+}
+
+#reg-info {
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .instruction {
+        img {
+            margin-bottom: 10px;
+        }
+    }
+
+    #instructions-con {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+}

@@ -1,0 +1,90 @@
+#schedule-info-con {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #dcdcdc;
+    padding-top: 10px;
+    border-radius: 20px;
+    padding-bottom: 10px;
+}
+
+.day {
+    border: 1px solid #ffdf7f;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+    &:hover {
+        text-decoration: underline;
+        background-image: none;
+        background-color: white;
+        color: #000246;
+        text-shadow: none;
+    }
+    font-size: 10px;
+    background-image: linear-gradient(#3616d7, #2d0065);
+}
+
+#schedule-days {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 2px solid #ffdf7f;
+}
+
+.panel-div {
+    &:not(:last-of-type) {
+        border-bottom: 2px solid #ffdf7f;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+    }
+    p {
+        margin-bottom: 5px;
+    }
+}
+
+.panel-title {
+    font-weight: bold;
+}
+
+#schedule-text {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+
+#schedule-image {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    img {
+        max-width: 90%;
+    }
+}
+
+@media screen and (min-width: 428px) {
+    .day {
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #schedule-image {
+        img {
+            max-width: 75%;
+        }
+    }
+
+    .day {
+        padding-left: 35px;
+        padding-right: 35px;
+        font-size: 16px;
+    }
+}

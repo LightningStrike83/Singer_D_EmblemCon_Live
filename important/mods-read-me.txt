@@ -1,0 +1,28 @@
+Hello mods! Lightning here~
+
+So if you're reading this, it's probably because I can't update the website for some reason. Let's hope it's not for a negative reason. Lol jk jk
+
+Anyways, I'm leaving here the code that I've implemented that needs to be changed between con seasons. Feel free to edit it as you'd like, but make sure you know what you're doing~ Coding is as finnicky as time travel; make one wrong typo and suddenly everything breaks. Been there, done that~
+
+-Do a Ctrl + F for "header-date" to change the date of the con
+-On schedule.html, line 106-122 (or whatever is green text close to there) should be commented (Ctrl + /) during off season, active during con season
+-Likewise, on schedule.html line 105 should be active during off season, commented out during con season (this is the line that says to check back for the schedule)
+-On apply.html, do a Ctrl + F for "app-info" and change the href= for artist alley, creatives corridor, exhibitors hall, and panelists. Just replace the link in the href with a # (which will just refresh the page)
+-On off-season.html, change the href of the Secret Sothis link when applicable. At the time of writing this, it's line 118
+-On artist-exhbitor.html, you'll want to enable the off season container during off season, but then enable the rest during con season. At the time of writing this, off season container is lines 103-107 and the con season stuff is lines 108-122.
+-On guests.html, change line 106 to match the current or upcoming year~
+-Also, please comment out line 107 when there's guest announcements. It should only be enabled when there isn't any announcements
+-If Rye is still around and doing Fire Emblem Feud, look around line 113 and follow the structure. It's pretty simple, just make sure the link for her answers goes in the href
+-As well, change line 123 when Rye's surveys are open
+
+As well, most of the dynamic content can be found and managed on the admin-list page. Depending who you are, you're already set up in the system or you might need to ask one of the other mods to add you or manage the content for you. Just remember to be respectful; as this is a culmination of the efforts of many different people and their shared love for the franchise.
+
+One last thing, if you're writing new code and implement images, whether through html or javascript, please ensure you add alt tags to the images. This is very important as Domino's Pizza and Beyonce were sued for not including them. EmblemCon should be fine as long as the team is smaller than 50 people but I never really got a straight answer if it's under 50 people.
+
+That should be everything. I'll be sure to update this doc if any thing else pops up.
+
+Thank you for the hard work you're doing. Even if you think the contribution is all, know it can make a world of difference to someone.
+
+Sincerely,
+
+Lightning
