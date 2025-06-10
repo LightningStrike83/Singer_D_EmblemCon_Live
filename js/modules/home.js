@@ -11,7 +11,7 @@ export function homeContent() {
         {
             text: "Welcome to EmblemCon! Made by Fire Emblem fans for Fire Emblem fans!",
             image: "emblemcon_banner.png",
-            link: "about.html"
+            link: "experience.html"
         },
 
         {
@@ -37,11 +37,18 @@ export function homeContent() {
         const homeText = document.querySelector("#home-text")
         const homeImage = document.querySelector("#home-picture")
         const homeLink = document.querySelector("#hero-link")
+        const image = document.createElement("img")
 
+        homeImage.innerHTML = ""
+
+        image.src = `../images/website_assets/${homeContent[count].image}`
+        image.setAttribute("alt", `Image for ${homeContent[count].link}`)
         homeLink.setAttribute("href", `${homeContent[count].link}`)
 
         homeText.textContent = homeContent[count].text
-        homeImage.style.backgroundImage = `url("../images/website_assets/${homeContent[count].image}")`
+        // homeImage.style.backgroundImage = `url("../images/website_assets/${homeContent[count].image}")`
+
+        homeImage.appendChild(image)
     }
 
     homeSliderContent()
@@ -81,7 +88,7 @@ export function homeContent() {
                 const date = document.createElement("p")
 
                 text.textContent = update.title
-                info.textContent = update.body
+                info.innerHTML = update.body
                 date.textContent = `Updated on: ${update.date}`
 
                 divText.setAttribute("class", "update-text detail-section")

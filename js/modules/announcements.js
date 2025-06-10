@@ -19,7 +19,7 @@ export function announcementContent() {
                 const line = document.createElement("div")
 
                 title.textContent = update.title
-                text.textContent = update.body
+                text.innerHTML = update.body
                 imagediv.style.backgroundImage = `url("../images/updates/${update.image_path}")`
 
                 line.setAttribute("class", "col-span-full line-divider")

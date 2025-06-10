@@ -32,8 +32,8 @@ export function artistExhibitor() {
         }
 
         if (g === "commission") {
-            aeTitle.textContent = "Commissions Corridor"
-            aeDesc.textContent = "Our commissions corridor is where our guests can find artists to bring their ideas to life"
+            aeTitle.textContent = "Creatives Corridor"
+            aeDesc.textContent = "Our creatives corridor is where our guests can find artists to bring their ideas to life"
         }
 
         if (g === "exhibitor") {
@@ -50,15 +50,23 @@ export function artistExhibitor() {
                 const a = document.createElement("a")
                 const div = document.createElement("div")
 
-                console.log(guest.link)
+                a.setAttribute("class", "artist-link")
 
-                if (guest.link !== "") {
+                if (guest.name === "hanjyuus x rainymint") {
+                    a.innerHTML = `<a target="_blank" class="ae-guest-name" href="https://twitter.com/hanjyuus">hanjyuus</a> <p class="cross">x</p> <a target="_blank" class="ae-guest-name" href="https://twitter.com/rainy_mint">rainymint</a> <img class="external-icon" src="../images/external.svg" alt="External Icon">`
+                } else if (guest.name === "Hzokki x Embu") {
+                    a.innerHTML = `<a target="_blank" class="ae-guest-name" href="https://hzokki.com">Hzokki</a> <p class="cross">x</p> <a target="_blank" class="ae-guest-name" href="https://x.com/embubuu">Embu</a> <img class="external-icon" src="../images/external.svg" alt="External Icon">`
+                } else if (guest.name === "DT75Art & Trikey") {
+                    a.innerHTML = `<a target="_blank" class="ae-guest-name" href="https://x.com/Dt75Art">DT75Art</a> <p class="cross">x</p> <a target="_blank" class="ae-guest-name" href="https://linktr.ee/trikey">Trikey</a> <img class="external-icon" src="../images/external.svg" alt="External Icon">`
+                }else if (guest.name === "Kagayaki Cafe") {
+                    a.innerHTML = `<a target="_blank" class="ae-guest-name" href="${guest.link}">${guest.name} <img class="external-icon" src="../images/external.svg" alt="External Icon"><div><ul><li><a target="_blank" class="ae-guest-name special-name" href="https://bsky.app/profile/rockythebunny13.bsky.social">• Rocky <img class="external-icon" src="../images/external.svg" alt="External Icon"</a><a target="_blank" class="ae-guest-name special-name" href="https://bsky.app/profile/springexalt.bsky.social">• Robin <img class="external-icon" src="../images/external.svg" alt="External Icon"</a></li></ul></div></a>`
+
+                    a.setAttribute("class", "special-request")
+                } else if (guest.link !== "") {
                     a.innerHTML = `<a target="_blank" class="ae-guest-name" href="${guest.link}">${guest.name} <img class="external-icon" src="../images/external.svg" alt="External Icon"></a>`
                 } else {
                     a.innerHTML = `<a class="ae-guest-name">${guest.name}</a>`
                 }
-                a.setAttribute("class", "ae-guest-name")
-                a.setAttribute("target", "_blank")
 
                 div.appendChild(a)
                 textCon.appendChild(div)

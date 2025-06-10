@@ -2,6 +2,7 @@ export function reviewPopulation() {
     const baseURL = "https://emblemcon.com/lumen/public/"
     const rightArrows = document.querySelectorAll(".right-arrow")
     const leftArrows = document.querySelectorAll(".left-arrow")
+    const spinner = `<img id="spinner" src="../images/website_assets/shield.gif" alt="Loading image"><br> <p id="spinner-text">Loading...</p>`;
 
     let rLength
     let dLength
@@ -9,30 +10,40 @@ export function reviewPopulation() {
     let d = 0
 
     function reviewPopulate() {
-        fetch(`${baseURL}reviews`)
+        const reviewText = document.querySelector("#review-text")
+        reviewText.innerHTML = spinner
+        
+        fetch(`${baseURL}featured-reviews`)
         .then(response => response.json())
         .then(function(response){
-            const reviewText = document.querySelector("#review-text")
             const reviewCredit = document.querySelector("#review-credit")
 
             rLength = response.length
 
-            reviewText.textContent = response[r].review
+            reviewText.innerHTML = response[r].review
             reviewCredit.textContent = `-${response[r].name}`
+            
         })
         .catch(error => {
-
+            const errorText = document.createElement("p")
+            
+            errorText.textContent = error
+            
+            reviewText.appendChild(errorText)
         })
     }
 
     function doodlePopulate() {
-        fetch(`${baseURL}doodles`)
+        const div = document.querySelector("#image-div")
+        
+        div.innerHTML = spinner
+        
+        fetch(`${baseURL}featured-doodles`)
         .then(response => response.json())
         .then(function(response){
-            const div = document.querySelector("#image-div")
             const img = document.createElement("img")
             const credit = document.querySelector("#artist-credit")
-
+            
             div.innerHTML = ""
 
             dLength = response.length
@@ -46,7 +57,11 @@ export function reviewPopulation() {
             div.appendChild(img)
         })
         .catch(error => {
-
+            const errorText = document.createElement("p")
+            
+            errorText.textContent = error
+            
+            div.appendChild(errorText)
         })
     }
 

@@ -15,7 +15,7 @@ class FeaturedReviewController extends Controller {
      */
 
      public function getAll() {
-        $review = FeaturedReview::select('name', 'review')->orderBy('id', 'asc')->get();
+        $review = FeaturedReview::select('name', 'review', 'id')->orderBy('id', 'asc')->get();
         return response()->json($review);
     }
 }

@@ -5,7 +5,7 @@ $query = "INSERT INTO guests (name, social_media, image_path) VALUES (?, ?, ?)";
 
 $file_name = $_FILES['image_path']['name'];
 
-$target_path = '../images/guests-va/'.($file_name);
+$target_path = '../images/guests_va/'.($file_name);
 $imageFileType = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
 move_uploaded_file($_FILES['image_path']['tmp_name'], $target_path);
 

@@ -15,7 +15,7 @@ class FeaturedDoodleController extends Controller {
      */
 
      public function getAll() {
-        $doodle = FeaturedDoodle::select('name', 'image_path')->orderBy('id', 'asc')->get();
+        $doodle = FeaturedDoodle::select('name', 'image_path', 'id')->orderBy('id', 'asc')->get();
         return response()->json($doodle);
     }
 }

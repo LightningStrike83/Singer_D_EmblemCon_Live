@@ -1,13 +1,12 @@
 import { footerScroll } from "./modules/footer.js?version=1.0";
 import { headerSubLinks } from "./modules/header.js?version=1.0";
 import { modPopulation } from "./modules/team.js?version=1.0";
-import { vaPopulation } from "./modules/va.js?version=1.0";
-import { schedulePopulation } from "./modules/schedule.js?version=1.0";
-import { artistExhibitor } from "./modules/artist-exhibitor.js?version=1.0";
-import { homeContent } from "./modules/home.js?version=1.0";
-import { announcementContent } from "./modules/announcements.js?version=1.0";
-import { ldContent } from "./modules/ld-showcase.js?version=1.0";
-import { aaFilter } from "./modules/aa-filter.js?version=1.0";
+import { vaPopulation } from "./modules/va.js?version=1.1";
+import { schedulePopulation } from "./modules/schedule.js?version=1.1";
+import { artistExhibitor } from "./modules/artist-exhibitor.js?version=1.8";
+import { homeContent } from "./modules/home.js?version=1.2";
+import { announcementContent } from "./modules/announcements.js?version=1.1";
+import { aaFilter } from "./modules/aa-filter.js?version=1.2";
 import { comicPopulation } from "./modules/comic-gallery.js?version=1.0";
 import { hamburgerMenu } from "./modules/hamburger.js?version=1.0";
 import { adminFunctionality } from "./modules/admin.js?version=1.0";
@@ -20,7 +19,7 @@ import { contactForm } from "./modules/contact.js?version=1.0";
 import { drawing } from "./modules/drawing.js?version=1.0";
 import { submitReview } from "./modules/submit-review.js?version=1.0";
 import { switchSubmissions } from "./modules/switch-submissions.js?version=1.0";
-import { reviewPopulation } from "./modules/review.js?version=1.0";
+import { reviewPopulation } from "./modules/review.js?version=1.1";
 
 headerSubLinks()
 footerScroll()
@@ -48,10 +47,6 @@ if (document.body.dataset.page === 'home') {
 
 if (document.body.dataset.page === 'announcements') {
     announcementContent()
-}
-
-if (document.body.dataset.page === 'ld-showcase') {
-    ldContent()
 }
 
 if (document.body.dataset.page === 'aa-filter') {

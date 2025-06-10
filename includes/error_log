@@ -7,3 +7,8 @@
 [22-Mar-2025 03:08:52 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /home/bwzxof27/public_html/includes/doodle.php on line 47
 [22-Mar-2025 03:10:40 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /home/bwzxof27/public_html/includes/doodle.php on line 53
 [22-Mar-2025 03:11:34 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /home/bwzxof27/public_html/includes/doodle.php on line 53
+[26-Mar-2025 18:59:19 UTC] PHP Notice:  Undefined variable: doodleConsent in /home/bwzxof27/public_html/includes/doodle.php on line 54
+[26-Mar-2025 18:59:19 UTC] PHP Notice:  Undefined variable: emaiBody in /home/bwzxof27/public_html/includes/doodle.php on line 55
+[26-Mar-2025 19:01:11 UTC] PHP Notice:  Undefined variable: doodleConsent in /home/bwzxof27/public_html/includes/doodle.php on line 54
+[26-Mar-2025 19:01:11 UTC] PHP Notice:  Undefined variable: emaiBody in /home/bwzxof27/public_html/includes/doodle.php on line 55
+[26-Mar-2025 19:02:17 UTC] PHP Notice:  Undefined variable: emaiBody in /home/bwzxof27/public_html/includes/doodle.php on line 55

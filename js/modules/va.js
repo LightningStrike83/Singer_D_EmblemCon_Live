@@ -31,7 +31,7 @@ export function vaPopulation() {
                 p.setAttribute("class", "col-span-full bolder")
                 p.setAttribute("id", "stay-tuned")
 
-                upcomingGuestCon.appendChild(p)
+                // upcomingGuestCon.appendChild(p)
             }
 
             spinnerCon.innerHTML = ""
@@ -60,7 +60,7 @@ export function vaPopulation() {
             response.forEach(guest => {
                 const img = document.createElement("img")
 
-                img.src = `../images/guests_va/${guest.image_path}`
+                img.src = `../images/previous_guests_va/${guest.image_path}`
                 img.setAttribute("class", "col-span-1 m-col-span-2 previous-guest")
                 img.setAttribute("alt", `Image of ${guest.name}`)
                 previousGuestCon.appendChild(img)
