@@ -21,6 +21,7 @@ import { submitReview } from "./modules/submit-review.js?version=1.0";
 import { switchSubmissions } from "./modules/switch-submissions.js?version=1.0";
 import { reviewPopulation } from "./modules/review.js?version=1.1";
 import { colourBlindSchedule } from "./modules/colour-blind.js?version=1.0";
+import { podcastPopulation } from "./modules/paralogues.js?version=1.0";
 
 headerSubLinks()
 footerScroll()
@@ -95,4 +96,8 @@ if (document.body.dataset.page === 'submit-review') {
 
 if (document.body.dataset.page === 'review') {
     reviewPopulation()
+}
+
+if (document.body.dataset.page === 'podcast') {
+    podcastPopulation()
 }
