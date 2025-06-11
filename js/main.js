@@ -22,6 +22,7 @@ import { switchSubmissions } from "./modules/switch-submissions.js?version=1.0";
 import { reviewPopulation } from "./modules/review.js?version=1.1";
 import { colourBlindSchedule } from "./modules/colour-blind.js?version=1.0";
 import { podcastPopulation } from "./modules/paralogues.js?version=1.0";
+import { countdown } from "./modules/countdown.js?version=1.0";
 
 headerSubLinks()
 footerScroll()
@@ -46,6 +47,7 @@ if (document.body.dataset.page === 'artist-exhibitor') {
 
 if (document.body.dataset.page === 'home') {
     homeContent()
+    countdown()
 }
 
 if (document.body.dataset.page === 'announcements') {

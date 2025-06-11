@@ -58,10 +58,6 @@ export function artistExhibitor() {
                     a.innerHTML = `<a target="_blank" class="ae-guest-name" href="https://hzokki.com">Hzokki</a> <p class="cross">x</p> <a target="_blank" class="ae-guest-name" href="https://x.com/embubuu">Embu</a> <img class="external-icon" src="../images/external.svg" alt="External Icon">`
                 } else if (guest.name === "DT75Art & Trikey") {
                     a.innerHTML = `<a target="_blank" class="ae-guest-name" href="https://x.com/Dt75Art">DT75Art</a> <p class="cross">x</p> <a target="_blank" class="ae-guest-name" href="https://linktr.ee/trikey">Trikey</a> <img class="external-icon" src="../images/external.svg" alt="External Icon">`
-                }else if (guest.name === "Kagayaki Cafe") {
-                    a.innerHTML = `<a target="_blank" class="ae-guest-name" href="${guest.link}">${guest.name} <img class="external-icon" src="../images/external.svg" alt="External Icon"><div><ul><li><a target="_blank" class="ae-guest-name special-name" href="https://bsky.app/profile/rockythebunny13.bsky.social">• Rocky <img class="external-icon" src="../images/external.svg" alt="External Icon"</a><a target="_blank" class="ae-guest-name special-name" href="https://bsky.app/profile/springexalt.bsky.social">• Robin <img class="external-icon" src="../images/external.svg" alt="External Icon"</a></li></ul></div></a>`
-
-                    a.setAttribute("class", "special-request")
                 } else if (guest.link !== "") {
                     a.innerHTML = `<a target="_blank" class="ae-guest-name" href="${guest.link}">${guest.name} <img class="external-icon" src="../images/external.svg" alt="External Icon"></a>`
                 } else {
