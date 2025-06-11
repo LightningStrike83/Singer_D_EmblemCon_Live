@@ -148,11 +148,30 @@ header {
         margin-top: 20px;
         display: flex;
     }
+
+    .header-logo {
+        max-width: 60%;
+        margin-left: 0px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .header-logo {
+        max-width: 50%;
+        margin-left: 130px;
+    }
+}
+
+@media screen and (min-width: 1050px) {
+    .header-logo {
+        max-width: 40%;
+        margin-left: 130px;
+    }
 }
 
 @media screen and (min-width: 1200px) {
     .header-logo {
-        max-width: 20%;
+        max-width: 30%;
     }
 
     .header-link {
