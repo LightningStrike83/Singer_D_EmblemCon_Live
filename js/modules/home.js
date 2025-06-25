@@ -4,6 +4,7 @@ export function homeContent() {
     const rightArrow = document.querySelector("#home-right")
     const baseURL = "https://emblemcon.com/lumen/public/"
     const spinner = `<img id="spinner" src="../images/website_assets/shield.gif" alt="Loading image"><br> <p id="spinner-text">Loading...</p>`;
+    const trailerText = document.querySelector("#see-trailer")
 
     let count = 0
 
@@ -110,6 +111,24 @@ export function homeContent() {
 
     dynamicUpdates()
 
+    function videoVisibility() {
+        const indexVideo = document.querySelector("#index-video")
+
+        if (indexVideo.style.display === "block") {
+            indexVideo.style.display = "none"
+            trailerText.textContent = "▼ See A Trailer For The Convention ▼"
+
+            if (!indexVideo.paused && !indexVideo.ended) {
+                indexVideo.pause();
+                indexVideo.currentTime = 0;
+            }
+        } else {
+            indexVideo.style.display = "block"
+            trailerText.textContent = "▲ Hide The Trailer For The Convention ▲"
+        }
+    }
+
     rightArrow.addEventListener("click", nextContent)
     leftArrow.addEventListener("click", previousContent)
+    trailerText.addEventListener("click", videoVisibility)
 }

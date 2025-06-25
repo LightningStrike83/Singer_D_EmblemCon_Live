@@ -140,6 +140,29 @@
     align-self: center;
     margin-left: 5%;
     margin-right: 5%;
+    width: 75%;
+}
+
+#trailer-con {
+    text-align: center;
+    p {
+        cursor: pointer;
+        text-decoration: underline;
+        text-underline-offset: 5px;
+        margin-bottom: 10px;
+        &:hover {
+            opacity: 70%;
+        }
+    }
+}
+
+#video-con {
+    display: flex;
+    justify-content: center;
+}
+
+#index-video {
+    display: none;
 }
 
 .index-link {
@@ -187,6 +210,21 @@
 #jump-con {
     margin-bottom: 10px;
     text-align: center;
+}
+
+.starting-point {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5%;
+    font-size: calc(100% - 2px);
+}
+
+.starting-link {
+    font-size: calc(100%);
+}
+
+#icon-con {
+    width: 20%!important;
 }
 
 @media screen and (min-width: 768px) {
