@@ -31,11 +31,6 @@
     display: grid;
 }
 
-#about-video {
-    max-width: 260px;
-    margin-top: 10px;
-}
-
 #about-video-text, #history-con {
     display: flex!important;
     flex-direction: column;
@@ -88,13 +83,6 @@
 
     #about-charity {
         margin-bottom: 30px;
-    }
-
-    #about-video {
-        order: -1;
-        max-width: 450px;
-        margin-right: 10px;
-        margin-top: 0;
     }
 
     #about-video-text, #history-con {
