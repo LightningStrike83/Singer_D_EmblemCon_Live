@@ -59,6 +59,10 @@
     background-image: url(/images/website_assets/creative.png);
 }
 
+#e-inclusive-image {
+    background-image: url(/images/website_assets/inclusive.jpg);
+}
+
 @media screen and (min-width: 768px) {
     .e-info {
         flex-direction: row;
@@ -71,5 +75,10 @@
 
     .e-text {
         width: 75%;
+    }
+
+    #e-inclusive-image {
+        background-image: url(/images/website_assets/inclusive.jpg);
+        background-position: center;
     }
 }
