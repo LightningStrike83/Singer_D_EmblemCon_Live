@@ -23,6 +23,8 @@ import { reviewPopulation } from "./modules/review.js?version=1.1";
 import { colourBlindSchedule } from "./modules/colour-blind.js?version=1.0";
 import { podcastPopulation } from "./modules/paralogues.js?version=1.0";
 import { countdown } from "./modules/countdown.js?version=1.0";
+import { stampSwitch } from "./modules/stamp.js?version=1.0";
+import { stampPopulation } from "./modules/stamp-rally.js?version=1.0";
 
 headerSubLinks()
 footerScroll()
@@ -102,4 +104,12 @@ if (document.body.dataset.page === 'review') {
 
 if (document.body.dataset.page === 'podcast') {
     podcastPopulation()
+}
+
+if (document.body.dataset.page === 'stamps') {
+    stampSwitch()
+}
+
+if (document.body.dataset.page === 'stamp-rally') {
+    stampPopulation()
 }

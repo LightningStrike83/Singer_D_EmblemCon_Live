@@ -11,7 +11,7 @@ class Artist extends Model
      *
      * @var array
      */
-    protected $fillable = ["id", "name", 'link'];
+    protected $fillable = ["id", "name", 'link', 'stamp_rally'];
 
     /**
      * The attributes excluded from the model's JSON form.
