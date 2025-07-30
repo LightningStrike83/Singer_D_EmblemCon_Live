@@ -6,11 +6,12 @@
     <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
 	<meta http-equiv="Pragma" content="no-cache">
 	<meta http-equiv="Expires" content="0">
-    <title>EmblemCon- Sacred Stones EmblemCon Edition</title>
+    <title>EmblemCon- Stamp Rally</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/main.css?version=1.0">
-    <script type="module" src="js/main.js?version=1.0"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/3.4.3/luxon.min.js"></script>
+    <script type="module" src="js/main.js?version=1.2"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
@@ -22,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 </head>
-<body data-page="sacred-stones">
+<body data-page="stamp-rally">
     <header class="full-width-grid-con">
         <a class="col-start-2 col-span-1 m-col-span-1 header-logo-con" href="index.html"><img class="header-logo" src="images/emblemcon.png" alt="EmblemCon Logo"></a>
         <svg class="col-span-1" id="ham-menu" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.83 22">
@@ -98,7 +99,7 @@
             <div class="sub-links-about">
                 <a class="header-link" href="register.html">REGISTRATION</a>
                 <a class="header-link" href="history.html">HISTORY</a>
-                <a class="header-link" href="experience.html">OVERVIEW</a>
+                <a class="header-link" href="overview.html">OVERVIEW</a>
                 <a class="header-link" href="reviews.html">REVIEWS</a>
                 <a class="header-link" href="team.html">MOD TEAM</a>
                 <a class="header-link" href="archive.html">MOD CREATIONS</a>
@@ -112,17 +113,28 @@
         </div>
     </header>
 
-    <section class="grid-con content-section">
-        <div class="col-span-full">
-            <h3>THE EMBLEMCON EXPERIENCE</h3>
-            <div class="line-divider"></div>
+    <section id="stamp-info-con" class="grid-con content-section">
+        <h3 class="col-span-full">STAMP RALLY</h3>
+        <div class="line-divider col-span-full"></div>
+        <p class="col-span-full">Stamp Rallies are where attendees can fulfill certain requirements from designated artists in the Artist Alley to acquire a stamp. Once all of the stamps have been collected from all of the artists, the attendee can receive special rewards from those artists!<br><br>To view an archive of past stamp rallies, please visit <a href="previous-stamp-rallies.html">this page.</a></p>
+        <!-- <p class="col-span-full"><br>This year's stamp rally theme is <span id="stamp-theme">Fire Emblem Engage!</span> Please view the details below and visit each artist's booth to see details on how you can earn your stamp!</p> -->
+
+        <div id="current-stamp-con" class="detail-section col-span-full">
+            <p id="inactive-stamp">--A stamp rally has not been announced. Please stay tuned!--</p>
+            <!-- <div id="artist-con">
+                <h3>List of Participating Artists:</h3>
+                <div id="current-stamp-info">
+                    <ul id="artist-list"></ul>
+                    <img id="current-stamp-image" src="images/stamp_rally/2025-nohr.png" alt="Image of Current Stamp Rally">
+                </div>
+            </div> -->
         </div>
     </section>
 
     <section class="grid-con to-top-con">
         <h1 class="hidden">To Top Button</h1>
         <div class="col-span-full line-divider"></div>
-        <a class="top-button white-text">↑ To Top</a>
+        <a class="top-button">↑ To Top</a>
     </section>
 
     <div class="bg-gradient"></div>
@@ -207,7 +219,7 @@
         <div class="col-start-2 col-span-1 mobile-links">
             <a class="header-link" href="register.html">REGISTRATION</a>
             <a class="header-link" href="history.html">HISTORY</a>
-            <a class="header-link" href="experience.html">OVERVIEW</a>
+            <a class="header-link" href="overview.html">OVERVIEW</a>
             <a class="header-link" href="reviews.html">REVIEWS</a>
             <a class="header-link" href="team.html">MOD TEAM</a>
             <a class="header-link" href="archive.html">MOD CREATIONS</a>

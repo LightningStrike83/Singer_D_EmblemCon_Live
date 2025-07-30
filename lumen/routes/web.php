@@ -38,3 +38,4 @@ $router->get("/featured-reviews", "FeaturedReviewController@getAll");
 $router->get("/doodles", "DoodleController@getAll");
 $router->get("/reviews", "ReviewController@getAll");
 $router->get("/podcasts", "PodcastController@getAll");
+$router->get("/stamps", "ArtistController@getStamps");

@@ -59,17 +59,32 @@
     background-image: url(/images/website_assets/creative.png);
 }
 
+#e-inclusive-image {
+    background-image: url(/images/website_assets/inclusive.jpg);
+}
+
+#e-stamp-image {
+    background-image: url(/images/stamp_rally/2025-fe8_rally.png);
+}
+
 @media screen and (min-width: 768px) {
-    .e-info {
-        flex-direction: row;
-    }
-
     .e-image {
-        width: 25%;
-        background-position: 0 -40px;
+       height: 200px;
     }
 
-    .e-text {
-        width: 75%;
+    #e-inclusive-image {
+        background-image: url(/images/website_assets/inclusive.jpg);
+        background-position: center;
+    }
+
+    .experience-info {
+        width: 49%;
+    }
+
+    #experience-home {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: flex-start;
     }
 }

@@ -18,5 +18,10 @@ class ArtistController extends Controller {
         $artist = Artist::select('id', 'name', 'link')->orderBy('name', 'asc')->get();
         return response()->json($artist);
     }
+
+    public function getStamps() {
+        $artist = Artist::select('id', 'name', 'link')->where('stamp_rally', '=', 'y')->orderBy('name', 'asc')->get();
+        return response()->json($artist);
+    }
 }
 
