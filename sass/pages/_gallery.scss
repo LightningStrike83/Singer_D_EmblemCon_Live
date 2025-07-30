@@ -137,6 +137,11 @@
     height: 200px;
 }
 
+#gallery-image {
+    margin-top: 10px;
+    max-height: 100%;
+}
+
 @media screen and (min-width: 428px) {
     #comic-con {
         height: 500px;
