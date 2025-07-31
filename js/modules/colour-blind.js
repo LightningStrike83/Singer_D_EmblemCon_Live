@@ -6,7 +6,7 @@ export function colourBlindSchedule() {
     let theme = currentTheme || "default";
 
     function checkTheme() {
-        if (theme === "colour-blind") {
+        if (theme === "default") {
             setTimeout(() => {
             toggleScheduleColours()
             }, "500");
@@ -21,15 +21,6 @@ export function colourBlindSchedule() {
             scheduleIndicator.textContent = "On"
 
             panelDiv.forEach(panel => {
-                panel.style.background = "transparent"
-           }) 
-
-           theme = "colour-blind"
-        } else if (scheduleIndicator.textContent === "On") {
-            toggle.src = "../images/website_assets/toggle-off.svg"
-            scheduleIndicator.textContent = "Off"
-
-           panelDiv.forEach(panel => {
              if (panel.dataset.type === "m") {
                 panel.style.background = "linear-gradient( #0f1ca1, #01034c)"
             } else if (panel.dataset.type === "g") {
@@ -40,8 +31,18 @@ export function colourBlindSchedule() {
                 panel.style.background = "linear-gradient( #95032d, #3d0003)"
             }
 
-            theme = "default"
+           })
+
+           theme = "default"
+        } else if (scheduleIndicator.textContent === "On") {
+            toggle.src = "../images/website_assets/toggle-off.svg"
+            scheduleIndicator.textContent = "Off"
+
+           panelDiv.forEach(panel => {
+                panel.style.background = "transparent"
            }) 
+           
+           theme = "colour-blind"
         }
 
         localStorage.setItem("theme", theme);
