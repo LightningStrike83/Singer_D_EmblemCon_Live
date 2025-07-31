@@ -28,6 +28,10 @@ export function headerSubLinks() {
             if (guestLinks.style.display === "flex") {
                 guestLinks.style.display = "none"
             }
+
+            if (contactLinks.style.display === "flex") {
+                contactLinks.style.display = "none"
+            }
         } else {
             eventLinks.style.display = "none"
         }
@@ -43,6 +47,10 @@ export function headerSubLinks() {
 
             if (guestLinks.style.display === "flex") {
                 guestLinks.style.display = "none"
+            }
+
+            if (contactLinks.style.display === "flex") {
+                contactLinks.style.display = "none"
             }
         } else {
             aboutLinks.style.display = "none"
