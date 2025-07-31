@@ -67,6 +67,11 @@
     background-image: url(/images/stamp_rally/2025-fe8_rally.png);
 }
 
+#e-contest-image {
+    background-image: url(/images/website_assets/contest.png);
+    background-position: 0 -20px;
+}
+
 @media screen and (min-width: 768px) {
     .e-image {
        height: 200px;
