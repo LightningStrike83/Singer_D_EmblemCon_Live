@@ -49,7 +49,11 @@
     height: 30px;
 }
 
-#submit-doodle-con, #privacy-con-doodle, #consent-con-doodle, #consent-con-name {
+#consent-con-name, #privacy-con-doodle, #consent-con-doodle {
+    margin-left: 10px;
+}
+
+#submit-doodle-con {
     justify-self: center;
 }
 
@@ -76,6 +80,7 @@
 }
 
 #doodle-form {
+    margin-bottom: 10px;
     display: none;
 }
 

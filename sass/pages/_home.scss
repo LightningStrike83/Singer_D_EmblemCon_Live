@@ -44,7 +44,9 @@
 
 #home-left, #home-right {
     position: absolute;
-    top: 37.5%;
+    top: calc(50% - 25px);
+    transform: translate(0%, -50%);
+    height: fit-content;
     cursor: pointer;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -100,9 +102,9 @@
     padding-right: 15px;
     border: none;
     border: 1px solid rgb(255, 239, 219);
-    p {
+    p, a {
         font-size: 12px;
-        line-height: normal;
+        line-height: 1.75;
         margin-bottom: 5px;
     }
 }
@@ -140,6 +142,7 @@
     align-self: center;
     margin-left: 5%;
     margin-right: 5%;
+    margin-bottom: 10px;
     width: 75%;
 }
 
@@ -224,7 +227,10 @@
 }
 
 #icon-con {
-    width: 20%!important;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 10px;
 }
 
 #mascot-credit {
@@ -277,5 +283,9 @@
 
     #jump-con {
         display: none;
+    }
+
+    #icon-con {
+        width: 20%!important;
     }
 }

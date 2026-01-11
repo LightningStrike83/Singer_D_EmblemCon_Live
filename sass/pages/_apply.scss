@@ -66,6 +66,14 @@
     background-image: url(/images/website_assets/title_applications.png);
 }
 
+#close-reminder {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: calc(100% + 2px);
+    line-height: 30px;
+}
+
 @media screen and (min-width: 428px) {
     .apply-image {
         height: 150px;

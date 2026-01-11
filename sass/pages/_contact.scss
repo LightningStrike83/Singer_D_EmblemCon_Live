@@ -67,7 +67,7 @@
 }
 
 #privacy-con {
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -140,14 +140,14 @@
 
 @media screen and (min-width: 768px) {
     #contact-form input:not(#submit-contact, #privacy), #review-form input:not(#submit-review, #privacy, #consent, #eraser) {
-        width: 50%;
+        width: 40%;
     }
 
     #contact-form textarea, #review-form textarea {
-        width: 50%!important;
+        width: 40%!important;
     }
 
     #submit-contact, #submit-review {
-        width: 10%;
+        width: 10%!important;
     }
 }
