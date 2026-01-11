@@ -1,6 +1,6 @@
 export function countdown() {
     const countdownCon = document.querySelector("#countdown-display")
-    var countDownDate = new Date("June 10, 2025 21:40:00").getTime();
+    var countDownDate = new Date("May 7, 2026 12:00:00").getTime();
 
     var x = setInterval(function() {
 
