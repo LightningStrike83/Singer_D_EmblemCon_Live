@@ -1,1 +1,0 @@
-# Singer_D_EC_WoF
