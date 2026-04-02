@@ -138,14 +138,106 @@ if(!$_SESSION['username']) {
     <section id="form-con" class="grid-con">
         <div id="artist-continents-form" class="new-form col-span-full">
             <h3>Artist - Continent Form</h3>
-            <form action="add-artist-continent.php" class="admin-form" method="POST" enctype="multipart/form-data">
-                <label class="admin-label" for="artist">Artist ID:</label>
-                <input class="admin-input" name="artist" type="number" min="1" required><br><br>
-                <label class="admin-label" for="continent">Continent:</label>
-                <input class="admin-input" name="continent" type="number" min="1" required><br>
-                
-                <input class="admin-input" name="submit" type="submit" value="Add">
-            </form>
+                <form action="add-artist-continent.php" class="admin-form" method="POST">
+                    <label class="admin-label" for="artist">Artist ID:</label>
+                    <input class="admin-input" name="artist" type="number" min="1" required><br><br>
+
+                    <div id="continent-checkbox-con">
+
+                    <label class="continent-option">
+                        <input type="checkbox" name="continent[]" value="1">
+                        <span class="continent-name">Archanea</span>
+                    </label>
+
+                    <label class="continent-option">
+                        <input type="checkbox" name="continent[]" value="2">
+                        <span class="continent-name">Valentia</span>
+                    </label>
+
+                    <label class="continent-option">
+                        <input type="checkbox" name="continent[]" value="3">
+                        <span class="continent-name">Jugdral</span>
+                    </label>
+
+                    <label class="continent-option">
+                        <input type="checkbox" name="continent[]" value="4">
+                        <span class="continent-name">Thracia</span>
+                    </label>
+
+                    <label class="continent-option">
+                        <input type="checkbox" name="continent[]" value="5">
+                        <span class="continent-name">Elibe (Binding Blade)</span>
+                    </label>
+
+                    <label class="continent-option">
+                        <input type="checkbox" name="continent[]" value="6">
+                        <span class="continent-name">Elibe (Blazing Blade)</span>
+                    </label>
+
+                    <label class="continent-option">
+                        <input type="checkbox" name="continent[]" value="7">
+                        <span class="continent-name">Magvel</span>
+                    </label>
+
+                    <label class="continent-option">
+                        <input type="checkbox" name="continent[]" value="8">
+                        <span class="continent-name">Tellius</span>
+                    </label>
+
+                    <label class="continent-option">
+                        <input type="checkbox" name="continent[]" value="9">
+                        <span class="continent-name">Ylisse</span>
+                    </label>
+
+                    <label class="continent-option">
+                        <input type="checkbox" name="continent[]" value="10">
+                        <span class="continent-name">Fateslandia</span>
+                    </label>
+
+                    <label class="continent-option">
+                        <input type="checkbox" name="continent[]" value="11">
+                        <span class="continent-name">Fodlan</span>
+                    </label>
+
+                    <label class="continent-option">
+                        <input type="checkbox" name="continent[]" value="12">
+                        <span class="continent-name">Japan</span>
+                    </label>
+
+                    <label class="continent-option">
+                        <input type="checkbox" name="continent[]" value="13">
+                        <span class="continent-name">Elyos</span>
+                    </label>
+
+                    <label class="continent-option">
+                        <input type="checkbox" name="continent[]" value="14">
+                        <span class="continent-name">Zenith</span>
+                    </label>
+
+                    <label class="continent-option">
+                        <input type="checkbox" name="continent[]" value="15">
+                        <span class="continent-name">OC</span>
+                    </label>
+
+                    <label class="continent-option">
+                        <input type="checkbox" name="continent[]" value="16">
+                        <span class="continent-name">Other</span>
+                    </label>
+
+                    <label class="continent-option">
+                        <input type="checkbox" name="continent[]" value="17">
+                        <span class="continent-name">Shadowsland</span>
+                    </label>
+
+                    <label class="continent-option">
+                        <input type="checkbox" name="continent[]" value="18">
+                        <span class="continent-name">Pre-Fodlan</span>
+                    </label>
+
+                    </div>
+
+                    <input class="admin-input" name="submit" type="submit" value="Add">
+                </form>
         </div>
 
         <div id="artist-form" class="new-form col-span-full">

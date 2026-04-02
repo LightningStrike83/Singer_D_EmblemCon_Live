@@ -12,7 +12,7 @@ export function homeContent() {
         {
             text: "Welcome to EmblemCon! Made by Fire Emblem fans for Fire Emblem fans!",
             image: "emblemcon_banner.png",
-            link: "experience.html"
+            link: "overview.html"
         },
 
         {
