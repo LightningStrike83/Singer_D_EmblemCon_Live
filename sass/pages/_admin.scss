@@ -1,0 +1,88 @@
+#info-display-con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#info-selection {
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+#list-con {
+    border: 1px solid white;
+    border-radius: 50px;
+    height: 70vh;
+    overflow: scroll;
+}
+
+.admin-info-div {
+    margin-left: 5%;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid white;
+    padding: 10px;
+}
+
+.action-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#info-home {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#add-button-con {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#login-con {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+#login-home {
+    display: flex;
+    flex-direction: column;
+
+    #login-button {
+        margin-top: 20px;
+        align-self: center;
+        width: 50%;
+    }
+}
+
+.new-form, .edit-form {
+    border: 1px solid rgb(255, 239, 219);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.new-form {
+    display: none;
+}
+
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+textarea {
+    height: 100px!important;
+    width: 50%!important;
+}
+
+@media screen and (min-width: 768px) {
+    .admin-info-div {
+        width: 40%;
+    }
+}
