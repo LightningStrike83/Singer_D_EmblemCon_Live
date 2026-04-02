@@ -1,0 +1,134 @@
+#ae-list-con {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+}
+
+#ae-tabs {
+    display: flex;
+    justify-content: space-evenly;
+    // border-bottom: 1px solid #ffdf7f;
+    margin-top: 10px;
+}
+
+.guest-select {
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+    border: 1px solid #ffdf7f;
+    border-radius: 50px;
+    // border-top-left-radius: 20px;
+    // border-top-right-radius: 20px;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    background-image: linear-gradient(#3616d7, #2d0065);
+    &:hover {
+        text-decoration: underline;
+        background-color: white;
+        background-image: none;
+        color: #000246;
+        text-shadow: none!important;
+    }
+}
+
+#ae-text-con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid #ffdf7f;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-image: linear-gradient(#3616d7, #2d0065);
+    div {
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: min-content;
+    }
+}
+
+#ae-title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#ae-desc {
+    margin-bottom: 10px;
+}
+
+.ae-guest-name {
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+    text-decoration: none!important;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    &:hover {
+        text-decoration: underline;
+        opacity: 70%;
+    }
+}
+
+#ae-filter-link {
+    margin-top: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+    a {
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border: 1px solid #ffdf7f;
+        border-radius: 20px;
+        transition: all ease-in-out 0.5s;
+        text-decoration: none;
+        background-image: linear-gradient(#3616d7, #2d0065);
+        &:hover {
+            background-color: white;
+            color: #000246;
+            opacity: 100%;
+            text-shadow: none;
+            background-image: none;
+        }
+    }
+}
+
+.artist-link {
+    display: flex;
+}
+
+.cross {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+@media screen and (min-width: 428px) {
+    #ae-text-con {
+        max-height: 800px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .guest-select {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    #ae-text-con {
+        max-height: 700px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #ae-text-con {
+        max-height: 450px;
+    }
+}

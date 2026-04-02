@@ -1,0 +1,137 @@
+#experience-con {
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+}
+
+.experience-info {
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+#e-title {
+    width: 100%;
+}
+
+#e-intro {
+    margin-bottom: 10px;
+}
+
+.e-image {
+    margin-right: 20px;
+    border: 1.5px solid #ffdf7f;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 90%;
+    margin-bottom: 10px;
+    background-position: 0 25%
+}
+
+.e-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#e-cosplay-image {
+    background-image: url(/images/website_assets/ov5.png);
+    background-position: 0 -80px;
+}
+
+#e-panel-image {
+    background-image: url(/images/website_assets/ov1.png);
+}
+
+#e-discussion-image {
+    background-image: url(/images/website_assets/ov2.png);
+}
+
+#e-meme-image {
+    background-image: url(/images/website_assets/ov4.png);
+    background-position: center;
+}
+
+#e-creative-image {
+    background-image: url(/images/website_assets/ov3.png);
+}
+
+#e-inclusive-image {
+    background-image: url(/images/website_assets/inclusive.jpg);
+}
+
+#e-stamp-image {
+    background-image: url(/images/stamp_rally/2025-fe8_rally.png);
+}
+
+#e-contest-image {
+    background-image: url(/images/website_assets/contest.png);
+    background-position: 0 -20px;
+}
+
+.art-credit {
+    font-size: calc(100% - 2px);
+    a {
+        font-size: 100%;
+    }
+}
+
+@media screen and (min-width: 428px) {
+    #e-cosplay-image {
+        background-image: url(/images/website_assets/ov5.png);
+        background-position: 0 -100px;
+    }
+}
+
+@media screen and (min-width: 550px) {
+    #e-cosplay-image {
+        background-image: url(/images/website_assets/ov5.png);
+        background-position: 0 -120px;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    #e-cosplay-image {
+        background-image: url(/images/website_assets/ov5.png);
+        background-position: 0 -140px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .e-image {
+       height: 200px;
+    }
+
+    #e-cosplay-image {
+    background-image: url(/images/website_assets/ov5.png);
+    background-position: 0 -90px;
+}
+
+    #e-inclusive-image {
+        background-image: url(/images/website_assets/inclusive.jpg);
+        background-position: center;
+    }
+
+    .experience-info {
+        width: 49%;
+    }
+
+    #experience-home {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #e-cosplay-image {
+        background-image: url(/images/website_assets/ov5.png);
+        background-position: 0 -130px;
+    }
+}

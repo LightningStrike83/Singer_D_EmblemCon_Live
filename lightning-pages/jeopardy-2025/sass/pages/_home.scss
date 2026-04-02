@@ -1,0 +1,184 @@
+#game-board-con {
+    background-color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#category-con {
+    display: flex;
+    justify-content: space-between;
+    div {
+        width: 10.5%;
+        display: flex;
+        align-items: center;
+        background-color: #060CE9;
+        justify-content: center;
+        cursor: pointer;
+        height: 83px;
+    }
+}
+
+.category-title {
+    padding: 5px;
+    color: white;
+    text-align: center;
+    font-family: 'Sw921Rg';
+    letter-spacing: 0.5px;
+    font-size: 18px;
+    line-height: 25px;
+    text-shadow: 2px 2px black;
+    display: none;
+}
+
+#questions-con {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    div {
+        width: 10.5%;
+        display: flex;
+        align-items: center;
+        background-color: #060CE9;
+        justify-content: center;
+    }
+}
+
+.question-text-con {
+    margin-top: 10px;
+    position: relative;
+    cursor: pointer;
+    height: 83px;
+    padding: 10px;
+}
+
+.question-text {
+    font-size: 10px;
+    color: white;
+    line-height: 15px;
+    text-shadow: 1px 1px black;
+    text-align: center;
+}
+
+.value {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #060CE9;
+    text-align: center;
+    align-content: center;
+    color: gold;
+    font-size: 36px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 2px 2px black;
+    display: none;
+}
+
+#players-con {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    background-color: black;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #060CE9;
+    h3 {
+        margin-bottom: 5px;
+        color: white;
+    }
+    p {
+        color: white;
+    }
+}
+
+.information-insert, .money-insert {
+    display: flex;
+    justify-content: space-around;
+    background-color: #060CE9;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    &:not(.money-insert) {
+        margin-top: 10px;
+    }
+}
+
+#question-con {
+    width: 100%;
+    background-color: #060CE9;
+}
+
+#question-zoom-con, #daily-double-con, #fj-con-con, #fj-question-con, #fj-category-con {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.69);
+    height: 100vh;
+    width: 100%;
+    display: none;
+}
+
+#big-question-text, #dd-text, #fj-q-text, #fj-title, #fj-category-title {
+    color: white;
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    line-height: 70px;
+    justify-content: center;
+    text-align: center;
+}
+
+#fj-category-con {
+    z-index: 5;
+}
+
+#daily-double-con, #fj-con-con {
+    z-index: 10;
+}
+
+#dd-con, #fj-title-con, #fj-question, #fj-category {
+    width: 100%;
+    background-color: #060CE9;
+}
+
+#dd-text, #fj-title, #fj-category-title {
+    &:not(#fj-category-title) {
+        color: gold;
+    }
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.close-button {
+    color: white;
+    font-size: 40px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+#fj-text {
+    background-color: #060CE9;
+    padding: 10px 0px 10px 0px;
+    border-radius: 50px;
+    border: 2px solid gold;
+    text-align: center;
+    color: gold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: all ease-in-out 0.5s;
+    cursor: pointer;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    &:hover {
+        background-color: gold;
+        color: blue;
+    }
+}
+
+#gambit, #griss, #lesbian, #princess, #dragon, #eod, #song, #bath {
+    font-size: 9px;
+}
