@@ -38,7 +38,7 @@ export function puzzleFunctionality() {
             checkPunctuation()
         });
 
-        document.body.style.backgroundImage= `url('../images/bgs/${puzzles[puzzle].background}')`
+        document.body.style.backgroundImage= `url('../wheel-of-fortune-2025/images/bgs/${puzzles[puzzle].background}')`
     }
 
     function disappearBox() {
