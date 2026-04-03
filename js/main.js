@@ -26,6 +26,7 @@ import { countdown } from "./modules/countdown.js?version=1.0";
 import { stampSwitch } from "./modules/stamp.js?version=1.0";
 import { stampPopulation } from "./modules/stamp-rally.js?version=1.0";
 import { galleryFunctionality } from "./modules/gallery.js?version=1.0";
+import { badgeMaker } from "./modules/badge-maker.js?version=1.0";
 
 headerSubLinks()
 footerScroll()
@@ -117,4 +118,8 @@ if (document.body.dataset.page === 'stamp-rally') {
 
 if (document.body.dataset.page === 'gallery') {
     galleryFunctionality()
+}
+
+if (document.body.dataset.page === 'badge-maker') {
+    badgeMaker()
 }

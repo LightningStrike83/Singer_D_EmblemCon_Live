@@ -39,3 +39,4 @@ $router->get("/doodles", "DoodleController@getAll");
 $router->get("/reviews", "ReviewController@getAll");
 $router->get("/podcasts", "PodcastController@getAll");
 $router->get("/stamps", "ArtistController@getStamps");
+$router->get("/badge/characters", "BadgeCharacterController@getCharacters");
