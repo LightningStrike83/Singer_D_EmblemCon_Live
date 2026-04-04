@@ -127,20 +127,54 @@
     <section id="badge-info-con" class="grid-con content-section">
         <h3 class="col-span-full">BADGE MAKER</h3>
         <div class="line-divider col-span-full"></div>
-        <p class="col-span-full">Want to create a custom badge for EmblemCon 2026? Link your Discord and select the Fire Emblem characters you'd like to add to the badge and click "Create" or "Preview"!</p>
+        <p class="col-span-full">Want to create a custom badge for EmblemCon 2026? Link your Discord, select what Fire Emblem characters you'd like to appear on your badge, then download and share it all across the world!</p>
 
         <div id="badge-maker-con" class="col-span-full detail-section">
             <div id="discord-connect">
-                <p class="badge-title">Username and Avatar</p>
+                <p class="badge-title">Step 1/5: Username and Avatar</p>
                 <p>Connect your Discord to have your username and avatar appear on your badge!</p>
 
                 <a id="badge-button" href="https://discord.com/oauth2/authorize?client_id=1489101502164504750&response_type=token&redirect_uri=http%3A%2F%2F127.0.0.1%3A5501%2Fbadge-maker.html&scope=identify">Connect Your Discord Account</a>
             </div>
 
-            <div class="col-span-full badge-divider"></div>
+            <div id="divide-1" class="col-span-full badge-divider"></div>
+
+            <div id="type-select-con">
+                <p class="badge-title">Step 2/5: Type of Image</p>
+                <p>Select the type of character image you'd like to appear on your badge</p>
+
+                <div id="image-type-con">
+                    <div id="chibi-info">
+                        <label data-type="badge-chibis" class="radio-label"><input name="image-type" type='radio' value='Chibi' />Chibi</label>
+                        <div class="example-div">
+                            <p>Example</p>
+                            <div>
+                                <img class="chibi-example" src="images/badge-chibis/478.png" alt="Oscar Chibi Image Example">
+                                <img class="chibi-example" src="images/badge-chibis/979.png" alt="Clair Chibi Image Example">
+                                <img class="chibi-example" src="images/badge-chibis/853.png" alt="Soleil Chibi Image Example">
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <div id="headshot-info">
+                        <label data-type="badge-portraits" class="radio-label"><input name="image-type" type='radio' value='Headshot' />Headshot</label>
+                        <div class="example-div">
+                            <p>Example</p>
+                            <div>
+                                <img class="headshot-example" src="images/badge-portraits/478.png" alt="Oscar Chibi Image Example">
+                                <img class="headshot-example" src="images/badge-portraits/979.png" alt="Clair Chibi Image Example">
+                                <img class="headshot-example" src="images/badge-portraits/853.png" alt="Soleil Chibi Image Example">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="divide-2" class="col-span-full badge-divider"></div>
 
             <div id="chibi-select-con">
-                <p class="badge-title">Character Selection</p>
+                <p class="badge-title">Step 3/5: Character Selection</p>
                 <p>Select up to 6 Fire Emblem characters to appear on your badge!</p>
                 <div id="character-select-list">
                     <select id="bcs-1" class="badge-character-select">
@@ -161,6 +195,29 @@
                     <select id="bcs-6" class="badge-character-select">
                         <option disabled selected>--Select The Sixth Character--</option>
                     </select>
+                </div>
+            </div>
+
+            <div id="divide-3" class="col-span-full badge-divider"></div>
+
+            <div id="custom-name-con">
+                <p class="badge-title">Step 4/5: Custom Name (Optional)</p>
+                <p id="name-message">Don't wanna use your username for your badge? Enter a custom name for your badge! <br>(Max 18 characters)</p>
+                <div id="name-con">
+                    <input id="custom-name" type="text" maxlength="18">
+                    <button id="name-button">Submit</button>
+                </div>
+                <p id="submit-message"></p>
+            </div>
+
+            <div id="divide-4" class="col-span-full badge-divider"></div>
+
+            <div id="finalize-con">
+                <p class="badge-title">Step 5/5: Finalize!</p>
+                <p>Ready to finalize your badge? Preview the badge or skip straight to the download!</p>
+                <div id="finalize-button-con">
+                    <button id="preview-badge" class="finalize-button">Preview</button>
+                    <button id="download-badge" class="finalize-button download-button">Download</button>
                 </div>
             </div>
         </div>
@@ -282,42 +339,54 @@
 
     <section id="badge-creation-con" class="full-width-grid-con">
         <div id="badge-con" class="col-start-2 col-span-1 grid-con">
-            <div id="emblemcon-badge-con" class="col-span-full m-col-span-5">
+            <div id="emblemcon-badge-con" class="col-span-3 m-col-start-5 m-col-end-9">
+                
                 <div id="emblemcon-badge">
-                    <img id="badge-image" src="images/emblemcon.png" alt="The logo for EmblemCon on the badge">
-                    <p id="badge-date">May 7th - 10th 2026</p>
-                    <img id="badge-mascot" src="images/website_assets/transparent_mascot.png" alt="The mascot of EmblemCon on the badge">
-                    <div id="badge-chibi-con">
-                        <div class="image-home" data-link="bcs-1">
-                            <img class="badge-image">
-                        </div>
-                        
-                        <div class="image-home" data-link="bcs-2">
-                            <img class="badge-image">
-                        </div>
+                    <img id="badge-top" src="images/website_assets/top.png" alt="Top of badge">
+                    <div id="badge-assets">
+                        <img id="badge-image" src="images/emblemcon.png" alt="The logo for EmblemCon on the badge">
+                        <p id="badge-date">May 7th - 10th 2026</p>
+                        <img id="badge-mascot" src="images/website_assets/transparent_mascot.png" alt="The mascot of EmblemCon on the badge">
+                        <div id="badge-chibi-con">
+                            <div class="image-home" data-link="bcs-1">
+                                <img class="badge-image">
+                            </div>
+                            
+                            <div class="image-home" data-link="bcs-2">
+                                <img class="badge-image">
+                            </div>
 
-                        <div class="image-home" data-link="bcs-3">
-                            <img class="badge-image">
-                        </div>
+                            <div class="image-home" data-link="bcs-3">
+                                <img class="badge-image">
+                            </div>
 
-                        <div class="image-home" data-link="bcs-4">
-                            <img class="badge-image">
-                        </div>
+                            <div class="image-home" data-link="bcs-4">
+                                <img class="badge-image">
+                            </div>
 
-                        <div class="image-home" data-link="bcs-5">
-                            <img class="badge-image">
-                        </div>
+                            <div class="image-home" data-link="bcs-5">
+                                <img class="badge-image">
+                            </div>
 
-                        <div class="image-home" data-link="bcs-6">
-                            <img class="badge-image">
+                            <div class="image-home" data-link="bcs-6">
+                                <img class="badge-image">
+                            </div>
                         </div>
-                    </div>
-                    <div id="badge-discord-con">
-                        <div id="badge-avatar"></div>
-                        <p id="badge-username"></p>
+                        <div id="badge-discord-con">
+                            <div id="badge-avatar"></div>
+                            <p id="badge-username"></p>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div id="preview-download-con" class="col-start-4 m-col-start-10">
+                <button id="preview-download-badge" class="finalize-button download-button">Download?</button>
+            </div>
+        </div>
+
+        <div class="col-start-3 col-span-1">
+            <p id="badge-close">X</p>
         </div>
     </section>
 </body>
