@@ -27,10 +27,13 @@ import { stampSwitch } from "./modules/stamp.js?version=1.0";
 import { stampPopulation } from "./modules/stamp-rally.js?version=1.0";
 import { galleryFunctionality } from "./modules/gallery.js?version=1.0";
 import { badgeMaker } from "./modules/badge-maker.js?version=1.0";
+import { testImages } from "./modules/test-images.js?version=1.0";
 
-headerSubLinks()
-footerScroll()
-hamburgerMenu()
+if (document.body.dataset.page !== "test") {
+    headerSubLinks()
+    footerScroll()
+    hamburgerMenu()
+}
 
 if (document.body.dataset.page === "voice-actors") {
     vaPopulation()
@@ -122,4 +125,8 @@ if (document.body.dataset.page === 'gallery') {
 
 if (document.body.dataset.page === 'badge-maker') {
     badgeMaker()
+}
+
+if (document.body.dataset.page === 'test') {
+    testImages()
 }
