@@ -9,7 +9,7 @@
 
 #badge-maker-con {
     margin: 20px 0;
-    padding: 10px 5px;
+    padding: 10px 10px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -19,10 +19,11 @@
 }
 
 .badge-title {
-    font-size: calc(100% + 2px);
+    font-size: 14px;
     font-weight: bold;
     text-underline-offset: 3px;
     text-align: center;
+    margin-bottom: 5px;
 }
 
 #badge-button {
@@ -61,13 +62,21 @@
 
 #badge-con {
     width: 100%;
-    margin-top: 50px;
+    margin-top: 10px;
+    overflow-y: scroll;
+    position: relative;
+}
+
+#emblemcon-badge-con {
+    height: 370px;
 }
 
 #emblemcon-badge {
     border: 15px solid #ffdf7f;
     border-radius: 20px;
     width: 450px;
+    transform: scale(0.6);
+    transform-origin: top center;
 }
 
 #badge-top {
@@ -86,12 +95,16 @@
 }
 
 #badge-image {
-    width: 250px;
+    width: 300px;
     align-self: center;
 }
 
+#badge-mascot {
+    filter: drop-shadow(4px 2px black);
+}
+
 #badge-date {
-    margin-top: 10px;
+    margin: 5px 0 10px 0;
     text-align: center;
     font-size: 20px;
 }
@@ -123,11 +136,13 @@
     align-items: center;
     justify-content: center;
     display: flex;
+    font-size: calc(100%);
 }
 
 #character-select-list {
     display: flex;
     flex-direction: column;
+    margin-top: 5px;
 }
 
 .image-home {
@@ -135,8 +150,16 @@
     width: 65px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     display: none;
+    // border: 3px solid #f1d17c;
+    // background-color: #215ff053;
+    overflow: hidden;
+
+    img {
+        max-height: 60px;
+        filter: drop-shadow(3px 1px black);
+    }
 }
 
 #badge-chibi-con {
@@ -145,9 +168,6 @@
     justify-content: space-evenly;
     margin-bottom: 10px;
     margin-top: 10px;
-    img {
-        height: 60px;
-    }
 }
 
 .select2 {
@@ -167,11 +187,12 @@
 #image-type-con {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin-top: 10px;
+    justify-content: space-around;
+    margin-top: 20px;
 }
 
 .radio-label {
+    font-size: 16px;
     cursor: pointer;
 }
 
@@ -184,7 +205,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 5px;
+    margin-top: 20px;
+    p {
+        margin-bottom: 5px;
+    }
 }
 
 #chibi-info, #headshot-info {
@@ -285,6 +309,7 @@
 #badge-close {
     margin-top: 20px;
     font-size: 48px;
+    text-align: center;
     cursor: pointer;
     transition: all ease-in-out 0.5s;
     margin-bottom: 10px;
@@ -295,9 +320,73 @@
 
 #preview-download-con {
     align-self: center;
+    justify-self: center;
+    margin-bottom: 20px;
 }
 
 #preview-download-badge {
     font-size: calc(100% + 2px);
-    padding: 15px 20px;
+    padding: 10px 20px;
+}
+
+.example-con {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+
+    img {
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .badge-title {
+        font-size: calc(100% + 2px);
+    }
+
+    #image-type-con {
+        justify-content: space-between;
+    }
+
+    #emblemcon-badge {
+        transform: scale(0.9);
+    }
+
+    #preview-download-con {
+        grid-column-start: 4;
+    }
+
+    #preview-download-con {
+        align-self: center;
+        justify-self: flex-end;
+        margin-bottom: 20px;
+        font-size: calc(100% - 4px);
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 630px) {
+    #preview-download-con {
+        justify-self: center;
+
+        font-size: calc(100% + 4px);
+    }
+
+    #emblemcon-badge {
+        transform: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #preview-download-con {
+        grid-column-start: 10;
+    }
+
+    .example-con {
+        flex-direction: row;
+    }
+
+    .radio-label {
+        font-size: 20px;
+    }
 }

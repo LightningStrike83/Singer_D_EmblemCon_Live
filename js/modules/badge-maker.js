@@ -116,6 +116,9 @@ export function badgeMaker() {
 
                 image.src = `../images/${badgeSource}/${this.options[this.selectedIndex].dataset.id}.png`
                 image.setAttribute("alt", `Badge image of ${this.options[this.selectedIndex].innerText}`)
+                image.setAttribute("data-id", `${this.options[this.selectedIndex].dataset.id}`)
+
+                image.classList.add("active")
 
                 parentNode.style.display = "flex"
 
@@ -143,6 +146,24 @@ export function badgeMaker() {
             divide3.style.display = "block"
             divide4.style.display = "block"
         }
+
+        if (badgeSource === "badge-portraits") {
+            const imageHome = document.querySelectorAll(".image-home")
+
+            imageHome.forEach(image => {
+                image.style.border = "3px solid #f1d17c"
+                image.style.backgroundColor = "#215ff053"
+            })
+        } else if (badgeSource === "badge-chibis") {
+            const imageHome = document.querySelectorAll(".image-home")
+
+            imageHome.forEach(image => {
+                image.style.border = "none"
+                image.style.backgroundColor = "transparent"
+            })
+        }
+
+        checkImages()
     }
 
     function submitNewName() {
@@ -174,7 +195,7 @@ export function badgeMaker() {
             badgeCreationCon.style.display = "grid"
         }
 
-        const scale = 3; // increase for more quality (2–4 is good)
+        const scale = 3;
         const node = document.querySelector("#emblemcon-badge");
         const rect = node.getBoundingClientRect();
 
@@ -201,6 +222,17 @@ export function badgeMaker() {
         .catch(error => {
             console.error('Error exporting div:', error);
         });
+    }
+
+    function checkImages() {
+        const badgeImage = document.querySelectorAll(".badge-image")
+
+        badgeImage.forEach(image => {
+
+            if (image.classList.contains("active")) {
+                image.src = `../images/${badgeSource}/${image.dataset.id}.png`
+            }
+        })
     }
 
     radioLabel.forEach(radio => radio.addEventListener("click", changeImageType))
