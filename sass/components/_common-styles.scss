@@ -14,6 +14,13 @@ html {
     height: 100%;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+}
+
 .bg-gradient {
     background-image: linear-gradient(#232341, #18182d, #232341, #18182d, #232341);
     position: fixed;
