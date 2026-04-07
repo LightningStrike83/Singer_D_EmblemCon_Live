@@ -26,7 +26,7 @@ All images used are used for a transformative work and nonprofit. The images are
 
 Certain materials are included under fair use exemption of the U.S. Copyright Law and are restricted from further use.  
 
-© 2025 Nintendo / INTELLIGENT SYSTEMS  
+© 2026 Nintendo / INTELLIGENT SYSTEMS  
 
 ## License  
 

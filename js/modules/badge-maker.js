@@ -191,12 +191,17 @@ export function badgeMaker() {
     function downloadBadge() {
         const badgeCreationCon = document.querySelector("#badge-creation-con")
 
+        const x = window.matchMedia("(min-width: 600px)")
+        const y = window.matchMedia("(min-width: 630px)")
+
+        const node = document.querySelector("#emblemcon-badge");
+        node.style.transform = "none"
+
         if (badgeCreationCon.style.display !== "grid") {
             badgeCreationCon.style.display = "grid"
         }
 
         const scale = 3;
-        const node = document.querySelector("#emblemcon-badge");
         const rect = node.getBoundingClientRect();
 
         domtoimage.toPng(node, {
@@ -218,6 +223,16 @@ export function badgeMaker() {
             link.click();
 
             badgeCreationCon.style.display = "none"
+
+            node.style.transform="scale(0.6)"
+
+            if (x.matches) {
+                node.style.transform = "scale(0.9)"
+            }
+
+            if (y.matches) {
+                node.style.transform = "none"
+            }
         })
         .catch(error => {
             console.error('Error exporting div:', error);

@@ -76,7 +76,7 @@
     border-radius: 20px;
     width: 450px;
     transform: scale(0.6);
-    transform-origin: top center;
+    transform-origin: top left;
 }
 
 #badge-top {
@@ -374,6 +374,7 @@
 
     #emblemcon-badge {
         transform: none;
+        transform-origin: top center;
     }
 }
 

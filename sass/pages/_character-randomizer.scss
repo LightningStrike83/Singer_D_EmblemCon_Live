@@ -109,6 +109,9 @@
 
 #randomize-mode-select-con {
     text-align: center;
+    p {
+        font-weight: bold;
+    }
 }
 
 #randomize-mode-select {
@@ -129,6 +132,7 @@
         align-self: center;
         margin-top: 10px;
         cursor: pointer;
+        font-weight: 500;
 
         &:hover {
             border: 2px solid #ffdf7f;
@@ -190,6 +194,88 @@
 
 #general-mode, #guess-who-mode {
     display: none;
+}
+
+#randomize-character-button {
+    background-color: white;
+    border-radius: 50px;
+    padding: 10px 20px;
+    color: black;
+    text-shadow: none;
+    text-decoration: none;
+    border: 2px solid black;
+    transition: all ease-in-out 0s;
+    align-self: center;
+    margin-top: 30px;
+    font-size: 18px;
+    cursor: pointer;
+
+    &:hover {
+        border: 2px solid #ffdf7f;
+        color: white;
+        background-image: linear-gradient(#3616d7, #2d0065);
+        opacity: 100%;
+    }
+}
+
+#randomize-results-con {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.randomizer-result-con {
+    width: 170px;
+    height: fit-content;
+    border: 1px solid #ffdf7f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: #c4c4c4;
+    img {
+        height: 150px;
+    }
+
+    p {
+        background-color: #5353ff;
+        width: 100%;
+        text-align: center;
+        text-shadow: none;
+        font-weight: bold;
+    }
+}
+
+#guess-who-instructions {
+    border: 1px solid #ffdf7f;
+    padding: 5px;
+    display: none;
+}
+
+#guess-who-instruct-button {
+    background-color: white;
+    width: fit-content;
+    justify-self: center;
+    margin-bottom: 20px;
+    border-radius: 50px;
+    padding: 10px 20px;
+    color: black;
+    text-shadow: none;
+    text-decoration: none;
+    border: 2px solid black;
+    transition: all ease-in-out 0s;
+    align-self: center;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: 500;
+
+    &:hover {
+        border: 2px solid #ffdf7f;
+        color: white;
+        background-image: linear-gradient(#3616d7, #2d0065);
+        opacity: 100%;
+    }
 }
 
 @media screen and (min-width: 768px) {
