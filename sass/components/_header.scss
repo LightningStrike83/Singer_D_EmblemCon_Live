@@ -24,6 +24,7 @@ header {
     margin: 0;
     margin-top: 10px;
     text-align: center;
+    width: max-content;
 }
 
 .sm-icons-header {
@@ -120,7 +121,6 @@ header {
 
     .header-date {
         order: -1;
-        width: 150px;
         background-image: none;
         padding: 0;
         margin-top: 10px;
@@ -139,6 +139,8 @@ header {
         background-color: rgba(255, 255, 255, 0.85);
         border-radius: 20px;
         padding-bottom: 10px;
+        height: max-content;
+        align-self: center;
     }
 
     .sm-icons-con {
@@ -172,7 +174,7 @@ header {
 
 @media screen and (min-width: 1200px) {
     .header-logo {
-        max-width: 30%;
+        max-width: 25%;
     }
 
     .header-link {
