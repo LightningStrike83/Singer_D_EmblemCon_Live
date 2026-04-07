@@ -1,6 +1,6 @@
 .header-logo {
-    max-width: 60%;
-    margin-left: 100px;
+    max-width: 75%;
+    margin-left: 20px;
 }
 
 .header-logo-con {
@@ -25,10 +25,15 @@ header {
     margin-top: 10px;
     text-align: center;
     width: max-content;
+    justify-self: center;
 }
 
 .sm-icons-header {
     display: none;
+}
+
+section {
+    width: 100%;
 }
 
 .sm-icons-header-mobile {
@@ -38,10 +43,12 @@ header {
     border: 3px solid #ffdf7f;
     background-color: rgba(255, 255, 255, 0.85);
     border-radius: 20px;
-    min-height: 50%;
-    max-height: 50%;
+    height: fit-content;
+    padding-top: 10px;
+    padding-bottom: 20px;
 
     .sm-icons-con {
+        margin-top: 10px;
         display: flex;
         justify-content: space-around;
     }
@@ -89,7 +96,7 @@ header {
     }
 }
 
-.sub-links-events, .sub-links-about, .sub-links-guests, .sub-links-contact {
+.sub-links-events, .sub-links-about, .sub-links-guests, .sub-links-contact, .sub-links-activity {
     position: absolute;
     top: 40px;
     // background-color: #000246;
@@ -106,8 +113,13 @@ header {
 
 @media screen and (min-width: 428px) {
     .header-logo {
+        max-width: 60%;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .header-logo {
         max-width: 40%;
-        margin-left: 100px;
     }
 }
 
@@ -138,13 +150,17 @@ header {
         border: 3px solid #ffdf7f;
         background-color: rgba(255, 255, 255, 0.85);
         border-radius: 20px;
-        padding-bottom: 10px;
         height: max-content;
         align-self: center;
+        width: 200px;
     }
 
     .sm-icons-con {
         margin-top: 5px!important;
+        flex-wrap: wrap;
+        a {
+            margin-bottom: 10px;
+        }
     }
 
     .header-links {
@@ -154,27 +170,28 @@ header {
 
     .header-logo {
         max-width: 60%;
-        margin-left: 0px;
+        margin-left: 80px;
     }
 }
 
 @media screen and (min-width: 900px) {
     .header-logo {
         max-width: 50%;
-        margin-left: 130px;
+        margin-left: 110px;
     }
 }
 
 @media screen and (min-width: 1050px) {
     .header-logo {
         max-width: 40%;
-        margin-left: 130px;
+        margin-left: 70px;
     }
 }
 
 @media screen and (min-width: 1200px) {
     .header-logo {
-        max-width: 25%;
+        max-width: 30%;
+        margin-left: 0;
     }
 
     .header-link {

@@ -1,0 +1,211 @@
+#randomizer-con {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #dcdcdc;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+}
+
+#randomizer-home {
+    border-radius: 20px;
+    padding: 20px 10px;
+    margin-top: 20px;
+}
+
+#code-con div {
+    margin-top: 10px;
+    justify-self: center;
+}
+
+#code-text {
+    margin-bottom: 5px;
+}
+
+#guess-who-area {
+    margin-top: 20px;
+}
+
+#character-con, #board-con {
+    display: flex;
+    flex-direction: column;
+    p {
+        text-align: center;
+    }
+}
+
+.board-piece {
+    background-color: white;
+    width: 20%;
+    border: 3px solid blue;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+}
+
+#gw-board {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+#gw-generate {
+    width: 100px;
+    align-self: center;
+    margin-bottom: 10px;
+}
+
+.gw-image {
+    margin-top: 5px;
+    max-height: 80px!important;
+}
+
+.gw-name {
+    color: white;
+    background-color: rgb(83, 83, 255);
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.gw-key {
+    display: none;
+}
+
+#gw-game-select {
+    margin-bottom: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#select-image {
+    margin-top: 20px;
+    align-self: center;
+    max-width: 50%;
+}
+
+#gw-token {
+    margin-bottom: 10px;
+}
+
+#mobile-divider {
+    border-bottom: 5px solid white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#gw-character-name {
+    width: 75%;
+    align-self: center;
+}
+
+#current-mode-text {
+    text-align: right;
+}
+
+#randomize-mode-select-con {
+    text-align: center;
+}
+
+#randomize-mode-select {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 10px 0;
+
+    button {
+        background-color: white;
+        border-radius: 50px;
+        padding: 10px 20px;
+        color: black;
+        text-shadow: none;
+        text-decoration: none;
+        border: 2px solid black;
+        transition: all ease-in-out 0s;
+        align-self: center;
+        margin-top: 10px;
+        cursor: pointer;
+
+        &:hover {
+            border: 2px solid #ffdf7f;
+            color: white;
+            background-image: linear-gradient(#3616d7, #2d0065);
+            opacity: 100%;
+        }
+    }
+}
+
+#randomize-number-con {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#randomize-number {
+    text-align: left;
+    margin-left: 10px;
+    padding-left: 5px;
+    font-size: 18px;
+}
+
+#general-randomize-select {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#randomize-game-con {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    label {
+        width: 30%;
+        margin-bottom: 5px;
+    }
+}
+
+.random-divider {
+    border: 1px solid #ffdf7f;
+    width: 95%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    justify-self: center;
+}
+
+#select-game-text, #randomize-results-text {
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+#randomize-number-label {
+    font-weight: bold;
+}
+
+#general-mode, #guess-who-mode {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    #mobile-divider {
+        display: none;
+    }
+
+    #select-image {
+        max-width: 75%;
+    }
+
+    #gw-character-name {
+        max-width: 100%;
+    }
+
+    .gw-name {
+        padding-bottom: 2px;
+    }
+}
