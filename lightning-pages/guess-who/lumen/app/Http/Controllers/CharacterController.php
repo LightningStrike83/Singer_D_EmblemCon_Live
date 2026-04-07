@@ -34,6 +34,11 @@ class CharacterController extends Controller {
         return response()->json($characters);
     }
 
+    public function getModFavs(){
+        $characters = Character::select('id', 'name', 'game')->where('mod_fav', '=', 'y')->orderBy('game', 'asc')->get();
+        return response()->json($characters);
+    }
+
     public function getOne($game){
         $characters = Character::select('id', 'name', 'game')->where('game', '=', $game)->orderBy('name', 'asc')->get();
         return response()->json($characters);

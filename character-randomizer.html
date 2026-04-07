@@ -151,79 +151,94 @@
                 <div id="randomize-number-con">
                     <label id="randomize-number-label" for="randomize-number">
                         Amount:
-                        <input id="randomize-number" min="1" max="20" type="number" name="randomize-number" value="1">
+                        <input id="randomize-number" min="1" max="15" type="number" name="randomize-number" value="1">
                     </label>
 
                     <p id="select-game-text">Select Games:</p>
 
                     <div id="randomize-game-con">
                         <label for="random-archanea">
-                            <input type="checkbox" id="random-archanea" data-game="1">
+                            <input type="checkbox" id="random-archanea" data-game="1" checked>
                             Shadow Dragon and New Mystery
                         </label>
                         <label for="random-valentia">
-                            <input type="checkbox" id="random-valentia" data-game="2">
+                            <input type="checkbox" id="random-valentia" data-game="2" checked>
                             Shadows of Valentia
                         </label>
                         <label for="random-genealogy">
-                            <input type="checkbox" id="random-genealogy" data-game="3">
+                            <input type="checkbox" id="random-genealogy" data-game="3" checked>
                             Genealogy of the Holy War
                         </label>
                         <label for="random-thracia">
-                            <input type="checkbox" id="random-thracia" data-game="4">
+                            <input type="checkbox" id="random-thracia" data-game="4" checked>
                             Thracia 776
                         </label>
                         <label for="random-binding">
-                            <input type="checkbox" id="random-binding" data-game="5">
+                            <input type="checkbox" id="random-binding" data-game="5" checked>
                             Binding Blade
                         </label>
                         <label for="random-blazing">
-                            <input type="checkbox" id="random-blazing" data-game="6">
+                            <input type="checkbox" id="random-blazing" data-game="6" checked>
                             Blazing Blade
                         </label>
                         <label for="random-sacred">
-                            <input type="checkbox" id="random-sacred" data-game="7">
+                            <input type="checkbox" id="random-sacred" data-game="7" checked>
                             Sacred Stones
                         </label>
                         <label for="random-tellius">
-                            <input type="checkbox" id="random-tellius" data-game="8">
+                            <input type="checkbox" id="random-tellius" data-game="8" checked>
                             Path of Radiance and Radiant Dawn
                         </label>
                         <label for="random-awakening">
-                            <input type="checkbox" id="random-awakening" data-game="10">
+                            <input type="checkbox" id="random-awakening" data-game="10" checked>
                             Awakening
                         </label>
                         <label for="random-fates">
-                            <input type="checkbox" id="random-fates" data-game="11">
+                            <input type="checkbox" id="random-fates" data-game="11" checked>
                             Fates
                         </label>
                         <label for="random-fodland">
-                            <input type="checkbox" id="random-fodland" data-game="12">
+                            <input type="checkbox" id="random-fodland" data-game="12" checked>
                             Three Houses and Three Hopes
                         </label>
                         <label for="random-engage">
-                            <input type="checkbox" id="random-engage" data-game="13">
+                            <input type="checkbox" id="random-engage" data-game="13" checked>
                             Engage
                         </label>
                         <label for="random-tms">
-                            <input type="checkbox" id="random-tms" data-game="14">
+                            <input type="checkbox" id="random-tms" data-game="14" checked>
                             Tokyo Mirage Sessions #FE
                         </label>
                         <label for="random-heroes">
-                            <input type="checkbox" id="random-heroes" data-game="15">
+                            <input type="checkbox" id="random-heroes" data-game="15" checked>
                             Heroes
                         </label>
                         <label for="random-shadows">
-                            <input type="checkbox" id="random-shadows" data-game="17">
+                            <input type="checkbox" id="random-shadows" data-game="17" checked>
                             Shadows
                         </label>
                     </div>
 
+                    <button id="randomize-character-button">Randomize</button>
+
                     <p id="randomize-results-text">Results:</p>
+
+                    <div id="randomize-results-con"></div>
                 </div>
             </div>
 
            <div id="guess-who-mode">
+            <div id="instruction-con" class="grid-con">
+                <button class="col-span-full" id="guess-who-instruct-button">Open Instructions</button>
+                <p id="guess-who-instructions" class="col-span-full"><span>Instructions:</span>
+                • Select a game or mode you wish to generate from<br>
+                • Click the generate button to generate a board and a code for your opponent<br>
+                • Have your opponent input the code for them to acquire the same board as you<br>
+                • Select a character you wish to use for the game<br>
+                • Enjoy!
+                </p>
+            </div>
+
              <div id="code-con" class="grid-con">
                 <div class="col-span-full">
                     <p id="code-text">Input Applicable Code Here:</p>
@@ -270,6 +285,7 @@
                         <option value="anna">Hard Mode</option>
                         <option value="dev-fav">Dev's Favourites Mode</option>
                         <option value="beta-fav">Beta Tester's Favourites Mode</option>
+                        <option value="mod-fav">EmblemCon Mod's Favourites Mode</option>
                     </select>
                     <button id="gw-generate">Generate</button>
             

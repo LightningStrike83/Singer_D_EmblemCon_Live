@@ -5,6 +5,7 @@ export function guessWhoMode() {
     const loadButton = document.querySelector("#gw-submit")
     const yourName = document.querySelector("#gw-character-name")
     const selectImage = document.querySelector("#select-image")
+    const gwButton = document.querySelector("#guess-who-instruct-button")
 
     function generateGame() {
         const selectHome = document.querySelector("#gw-game-select");
@@ -108,7 +109,8 @@ export function guessWhoMode() {
     function imageSelect() {
         const selectedValue = yourName.value
         
-        selectImage.src = `images/${selectedValue}.png`
+        selectImage.src = `images/character-randomizer/${selectedValue}.png`
+        selectImage.setAttribute("alt", `Image of ${yourName.options[yourName.selectedIndex].innerText}`)
     }
 
     function deselectPiece() {
@@ -223,7 +225,8 @@ export function guessWhoMode() {
                 name.setAttribute("class", "gw-name");
                 key.setAttribute("class", "gw-key");
 
-                img.src = `images/${response[number].id}.png`;
+                img.src = `images/character-randomizer/${response[number].id}.png`;
+                img.setAttribute("alt", `Image of ${response[number].name}`)
                 name.textContent = response[number].name;
                 key.textContent = response[number].id;
 
@@ -249,8 +252,19 @@ export function guessWhoMode() {
         })
     }
 
+    function openInstructions() {
+        const instructions = document.querySelector("#guess-who-instructions")
+
+        if (instructions.style.display !== "grid") {
+            instructions.style.display = "grid"
+        } else {
+            instructions.style.display = "none"
+        }
+    }
+
 
     generateButton.addEventListener("click", generateGame)
     yourName.addEventListener("change", imageSelect)
     loadButton.addEventListener("click", loadGame)
+    gwButton.addEventListener("click", openInstructions)
 }
