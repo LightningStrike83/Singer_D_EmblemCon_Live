@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+    <title>EmblemCon- Character Randomizer</title>
+    <meta property="og:url" content="https://emblemcon.com/index.html" />
+    <meta property="og:title" content="EmblemCon- Character Randomizer" />
+    <meta property="og:description" content="Randomize characters or play a game of Guess Who here!" />
+    <meta property="og:image" content="https://emblemcon.com/images/website_assets/emblemcon_banner.png" />
+    <meta property="og:image:width" content="1500" />
+    <meta property="og:image:height" content="500" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/main.css?version=5.0">
+    <script type="module" src="js/main.js?version=5.1"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<body data-page="randomizer">
+    <header class="full-width-grid-con">
+        <a class="col-start-2 col-span-1 m-col-span-1 header-logo-con" href="index.html"><img class="header-logo" src="images/website_assets/updated-logo-2026.png" alt="EmblemCon Logo"></a>
+        <svg class="col-span-1" id="ham-menu" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.83 22">
+            <defs>
+                <style>
+                .cls-1 {
+                    fill: rgb(255, 239, 219);
+                    stroke: rgb(255, 239, 219);
+                    stroke-miterlimit: 10;
+                    stroke-width: 2px;
+                }
+                </style>
+            </defs>
+            <g id="Layer_2-2" data-name="Layer 2">
+                <line class="cls-1" y1="1" x2="51.83" y2="1"/>
+                <line class="cls-1" y1="11" x2="51.83" y2="11"/>
+                <line class="cls-1" y1="21" x2="51.83" y2="21"/>
+            </g>
+        </svg>
+        <p class="col-span-full m-col-span-1 header-date">May 7 - 10 2026</p>
+        <div class="m-col-span-1 sm-icons-header">
+            <p class="follow-text bolder">Follow Us:</p>
+            <div class="sm-icons-con">
+                <a href="https://t.co/J5iWSBYduP" class= "sm-icon" target="_blank">
+                    <img src="images/social_media_icons/discord-icon-svgrepo-com.svg" alt="Discord Logo">
+                </a>
+    
+                <a href="https://www.twitch.tv/emblemcon" class= "sm-icon" target="_blank">
+                    <img src="images/social_media_icons/icons8-twitch.svg" alt="Twitch Logo">
+                </a>
+
+                <a href="https://tiltify.com/@emblemcon/profile" class="sm-icon" target="_blank">
+                    <img src="images/social_media_icons/tiltify-logo.png" alt="Tiltify Logo">
+                </a>
+    
+                <a href="https://bsky.app/profile/emblemcon.bsky.social" class= "sm-icon" target="_blank">
+                    <img src="images/social_media_icons/bluesky-1.svg" alt="Bluesky Logo">
+                </a>
+    
+                <a href="https://www.instagram.com/theemblemcon/" class= "sm-icon" target="_blank">
+                    <img src="images/social_media_icons/icons8-instagram.svg" alt="Instagram Logo">
+                </a>
+
+                <a href="https://www.youtube.com/@emblemcon" class= "sm-icon" target="_blank">
+                    <img src="images/social_media_icons/icons8-youtube.svg" alt="Youtube Logo">
+                </a>
+
+                <a href="#" class= "sm-icon" target="_blank">
+                    <img src="images/social_media_icons/icons8-tumblr.svg" alt="Tumblr Logo">
+                </a>
+            </div>
+        </div>
+
+        <div class="col-span-full header-links">
+            <a class="header-link about-button">ABOUT ▼</a>
+            <a class="header-link events-button">EVENT INFO ▼</a>
+            <a class="header-link guest-button">GUESTS ▼</a>
+            <a class="header-link" href="apply.html">APPLICATIONS</a>
+            <a class="header-link activity-button">ACTIVITIES ▼</a>
+            <a class="header-link contact-button">CONTACT ▼</a>
+
+            <div class="sub-links-events">
+                <a class="header-link" href="schedule.html">SCHEDULE</a>
+                <a class="header-link" href="announcements.html">ANNOUNCEMENTS</a>
+                <a class="header-link" href="off-season.html">OFF-SEASON EVENTS</a>
+                <a class="header-link" href="stamp-rallies.html">STAMP RALLY</a>
+                <a class="header-link" target="_blank" href="https://docs.google.com/document/d/1_cDZk7ylTlnkT4UQgRJ-2_Y89slCWmm9SofVBeFB0Uw/edit?usp=sharing">FAQ</a>
+            </div>
+
+            <div class="sub-links-guests">
+                <a class="header-link" href="guests.html">VOICE ACTORS & GUESTS</a>
+                <a class="header-link" href="artist-exhibitor.html">ARTISTS & EXHIBITORS</a>
+            </div>
+
+            <div class="sub-links-about">
+                <a class="header-link" href="register.html">REGISTRATION</a>
+                <a class="header-link" href="overview.html">OVERVIEW</a>
+                <a class="header-link" href="gallery.html">GALLERY</a>
+                <a class="header-link" href="history.html">HISTORY</a>
+                <a class="header-link" href="reviews.html">REVIEWS</a>
+                <a class="header-link" href="team.html">MOD TEAM</a>
+                <a class="header-link" href="archive.html">MOD CREATIONS</a>
+            </div>
+
+            <div class="sub-links-contact">
+                <a class="header-link" href="contact.html">CONTACT THE CON</a>
+                <a class="header-link" href="submit-review.html">SUBMIT A REVIEW / MESSAGE</a>
+            </div>
+
+            <div class="sub-links-activity">
+                <a class="header-link" href="badge-maker.html">CUSTOM BADGE MAKER</a>
+                <a class="header-link" href="character-randomizer.html">CHARACTER RANDOMIZER</a>
+                <a class="header-link" href="colouring-pages.html">COLOURING PAGES</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="randomizer-con" class="grid-con content-section">
+        <div id="randomizer-info" class="col-span-full">
+            <h3>CHARACTER RANDOMIZER</h3>
+            <div class="line-divider"></div>
+            <p>Want to randomize characters from across the Fire Emblem franchise? Look no further! Just input how many you want randomized, and from which game, and they'll appear!</p>
+        </div>
+
+        <div id="randomizer-home" class="col-span-full detail-section">
+            <div id="mode-select-con">
+                <p id="current-mode-text">Current Mode: <span id="mode-inform"></span></p>
+                <div id="randomize-mode-select-con">
+                    <p>Select A Mode:</p>
+                    <div id="randomize-mode-select">
+                        <button id="randomize-general-button">General</button>
+                        <button id="randomize-guess-who-button">Guess Who</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="random-divider"></div>
+
+            <div id="general-mode">
+                <div id="randomize-number-con">
+                    <label id="randomize-number-label" for="randomize-number">
+                        Amount:
+                        <input id="randomize-number" min="1" max="20" type="number" name="randomize-number" value="1">
+                    </label>
+
+                    <p id="select-game-text">Select Games:</p>
+
+                    <div id="randomize-game-con">
+                        <label for="random-archanea">
+                            <input type="checkbox" id="random-archanea" data-game="1">
+                            Shadow Dragon and New Mystery
+                        </label>
+                        <label for="random-valentia">
+                            <input type="checkbox" id="random-valentia" data-game="2">
+                            Shadows of Valentia
+                        </label>
+                        <label for="random-genealogy">
+                            <input type="checkbox" id="random-genealogy" data-game="3">
+                            Genealogy of the Holy War
+                        </label>
+                        <label for="random-thracia">
+                            <input type="checkbox" id="random-thracia" data-game="4">
+                            Thracia 776
+                        </label>
+                        <label for="random-binding">
+                            <input type="checkbox" id="random-binding" data-game="5">
+                            Binding Blade
+                        </label>
+                        <label for="random-blazing">
+                            <input type="checkbox" id="random-blazing" data-game="6">
+                            Blazing Blade
+                        </label>
+                        <label for="random-sacred">
+                            <input type="checkbox" id="random-sacred" data-game="7">
+                            Sacred Stones
+                        </label>
+                        <label for="random-tellius">
+                            <input type="checkbox" id="random-tellius" data-game="8">
+                            Path of Radiance and Radiant Dawn
+                        </label>
+                        <label for="random-awakening">
+                            <input type="checkbox" id="random-awakening" data-game="10">
+                            Awakening
+                        </label>
+                        <label for="random-fates">
+                            <input type="checkbox" id="random-fates" data-game="11">
+                            Fates
+                        </label>
+                        <label for="random-fodland">
+                            <input type="checkbox" id="random-fodland" data-game="12">
+                            Three Houses and Three Hopes
+                        </label>
+                        <label for="random-engage">
+                            <input type="checkbox" id="random-engage" data-game="13">
+                            Engage
+                        </label>
+                        <label for="random-tms">
+                            <input type="checkbox" id="random-tms" data-game="14">
+                            Tokyo Mirage Sessions #FE
+                        </label>
+                        <label for="random-heroes">
+                            <input type="checkbox" id="random-heroes" data-game="15">
+                            Heroes
+                        </label>
+                        <label for="random-shadows">
+                            <input type="checkbox" id="random-shadows" data-game="17">
+                            Shadows
+                        </label>
+                    </div>
+
+                    <p id="randomize-results-text">Results:</p>
+                </div>
+            </div>
+
+           <div id="guess-who-mode">
+             <div id="code-con" class="grid-con">
+                <div class="col-span-full">
+                    <p id="code-text">Input Applicable Code Here:</p>
+                    <div id="code-box">
+                        <input min="1" id="gw-input" type="number" required>
+                        <button id="gw-submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="guess-who-area" class="grid-con">
+                <div id="character-con" class="col-span-full m-col-span-4">
+                    <p>Your Character:</p>
+                    <select id="gw-character-name">
+                        <option selected disabled>Select A Character After Loading A Game</option>
+                    </select>
+                    <img id="select-image" src="">
+                </div>
+
+                <div id="mobile-divider" class="col-span-full"></div>
+            
+                <div id="board-con" class="col-span-full m-col-span-8">
+                    <p>Your Board:</p>
+            
+                    <select id="gw-game-select">
+                        <option selected disabled>--Please Select A Game or Mode--</option>
+                        <option value="all">All Games</option>
+                        <option value="1">Shadow Dragon and New Mystery</option>
+                        <option value="2">Shadows of Valentia</option>
+                        <option value="3">Genealogy of the Holy War</option>
+                        <option value="4">Thracia 776</option>
+                        <option value="6">The Binding Blade</option>
+                        <option value="5">The Blazing Blade</option>
+                        <option value="7">The Sacred Stones</option>
+                        <option value="8">Path of Radiance and Radiant Dawn</option>
+                        <option value="10">Awakening</option>
+                        <option value="11">Fates</option>
+                        <option value="12">Three Houses and Three Hopes</option>
+                        <option value="13">Engage</option>
+                        <option value="14">Tokyo Mirage Sessions #FE</option>
+                        <option value="15">Heroes</option>
+                        <option disabled></option>
+                        <option disabled>--Special Modes--</option>
+                        <option value="anna">Hard Mode</option>
+                        <option value="dev-fav">Dev's Favourites Mode</option>
+                        <option value="beta-fav">Beta Tester's Favourites Mode</option>
+                    </select>
+                    <button id="gw-generate">Generate</button>
+            
+                    <div id="gw-token"></div>
+                    <div id="gw-board"></div>
+                </div>
+            </div>
+           </div>
+        </div>
+    </section>
+
+    <section class="grid-con to-top-con">
+        <h1 class="hidden">To Top Button</h1>
+        <div class="col-span-full line-divider"></div>
+        <a class="top-button white-text">↑ To Top</a>
+    </section>
+
+    <footer class="full-width-grid-con">
+        <div class="col-start-2 col-span-1 grid-con">
+            <p id="copyright-note" class="col-span-full">All images used are used for a transformative work and nonprofit. The images are copyrighted or is a registered trademark. The contributor claims fair use. No copyright infringement is intended.<br>Certain materials are included under fair use exemption of the U.S. Copyright Law and are restricted from further use.<br>EmblemCon is a fan-run convention and is not affiliated, sponsored, or endorsed by Nintendo or Intelligent Systems. Fire Emblem is copyright protected by Nintendo.<br></p>
+            <p class="col-span-full" id="footer-links"><a href="privacy.html">Privacy Policy</a> | <a href="contact.html">Contact</a> | <a href="references.html">Site References</a></p>
+        </div>
+    </footer>
+
+    <div class="bg-gradient"></div>
+    <div class="bg-texture"></div>
+
+    <section id="main-mobile-menu" class="full-width-grid-con mobile-menu">
+        <h1 class="hidden">Mobile Menu</h1>
+        <div class="col-start-2 col-span-1 mobile-links">
+            <p class="header-link about-mobile-button">ABOUT ▼</p>
+            <p class="header-link events-mobile-button">EVENT INFO ▼</p>
+            <p class="header-link guest-mobile-button">GUESTS ▼</p>
+            <a class="header-link" href="apply.html">APPLICATIONS</a>
+            <a class="header-link activity-mobile-button">ACTIVITIES ▼</a>
+            <a class="header-link contact-mobile-button">CONTACT ▼</a>
+        </div>
+
+        <div class="col-span-1 mobile-close">
+            <p class="close-button">X</p>
+        </div>
+
+        <div class="col-span-full sm-icons-header-mobile">
+            <p class="follow-text bolder">Follow Us:</p>
+            <div class="sm-icons-con">
+                <a href="https://t.co/J5iWSBYduP" class= "sm-icon" target="_blank">
+                    <img src="images/social_media_icons/discord-icon-svgrepo-com.svg" alt="Discord Logo">
+                </a>
+    
+                <a href="https://www.twitch.tv/emblemcon" class= "sm-icon" target="_blank">
+                    <img src="images/social_media_icons/icons8-twitch.svg" alt="Twitch Logo">
+                </a>
+
+                <a href="https://tiltify.com/@emblemcon/profile" class="sm-icon" target="_blank">
+                    <img src="images/social_media_icons/tiltify-logo.png" alt="Tiltify Logo">
+                </a>
+    
+                <a href="https://bsky.app/profile/emblemcon.bsky.social" class= "sm-icon" target="_blank">
+                    <img src="images/social_media_icons/bluesky-1.svg" alt="Bluesky Logo">
+                </a>
+    
+                <a href="https://www.instagram.com/theemblemcon/" class= "sm-icon" target="_blank">
+                    <img src="images/social_media_icons/icons8-instagram.svg" alt="Instagram Logo">
+                </a>
+
+                <a href="https://www.youtube.com/@emblemcon" class= "sm-icon" target="_blank">
+                    <img src="images/social_media_icons/icons8-youtube.svg" alt="Youtube Logo">
+                </a>
+
+                <a href="#" class= "sm-icon" target="_blank">
+                    <img src="images/social_media_icons/icons8-tumblr.svg" alt="Tumblr Logo">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="event-mobile-menu" class="full-width-grid-con mobile-menu">
+        <h1 class="hidden">Mobile Event Menu</h1>
+        <div class="col-start-2 col-span-1 mobile-links">
+            <a class="header-link" href="schedule.html">SCHEDULE</a>
+            <a class="header-link" href="announcements.html">ANNOUNCEMENTS</a>
+            <a class="header-link" href="off-season.html">OFF-SEASON EVENTS</a>
+                <a class="header-link" href="stamp-rallies.html">STAMP RALLY</a>
+                <a class="header-link" target="_blank" href="https://docs.google.com/document/d/1_cDZk7ylTlnkT4UQgRJ-2_Y89slCWmm9SofVBeFB0Uw/edit?usp=sharing">FAQ</a>
+        </div>
+
+        <div class="col-span-1 mobile-close">
+            <p class="close-button">X</p>
+        </div>
+    </section>
+
+    <section id="guest-mobile-menu" class="full-width-grid-con mobile-menu">
+        <h1 class="hidden">Mobile Guest Menu</h1>
+        <div class="col-start-2 col-span-1 mobile-links">
+            <a class="header-link" href="guests.html">VOICE ACTORS & GUESTS</a>
+            <a class="header-link" href="artist-exhibitor.html">ARTISTS & EXHIBITORS</a>
+        </div>
+
+        <div class="col-span-1 mobile-close">
+            <p class="close-button">X</p>
+        </div>
+    </section>
+
+    <section id="about-mobile-menu" class="full-width-grid-con mobile-menu">
+        <h1 class="hidden">Mobile About Menu</h1>
+        <div class="col-start-2 col-span-1 mobile-links">
+            <a class="header-link" href="register.html">REGISTRATION</a>
+            <a class="header-link" href="overview.html">OVERVIEW</a>
+            <a class="header-link" href="gallery.html">GALLERY</a>
+            <a class="header-link" href="history.html">HISTORY</a>
+            <a class="header-link" href="reviews.html">REVIEWS</a>
+            <a class="header-link" href="team.html">MOD TEAM</a>
+            <a class="header-link" href="archive.html">MOD CREATIONS</a>
+        </div>
+
+        <div class="col-span-1 mobile-close">
+            <p class="close-button">X</p>
+        </div>
+    </section>
+
+    <section id="contact-mobile-menu" class="full-width-grid-con mobile-menu">
+        <h1 class="hidden">Mobile Contact Menu</h1>
+
+        <div class="col-start-2 col-span-1 mobile-links">
+            <a class="header-link" href="contact.html">CONTACT THE CON</a>
+            <a class="header-link" href="submit-review.html">SUBMIT A REVIEW / MESSAGE</a>
+        </div>
+
+        <div class="col-span-1 mobile-close">
+            <p class="close-button">X</p>
+        </div>
+    </section>
+
+    <section id="activity-mobile-menu" class="full-width-grid-con mobile-menu">
+        <h1 class="hidden">Mobile Activity Menu</h1>
+
+        <div class="col-start-2 col-span-1 mobile-links">
+            <a class="header-link" href="badge-maker.html">CUSTOM BADGE MAKER</a>
+            <a class="header-link" href="character-randomizer.html">CHARACTER RANDOMIZER</a>
+            <a class="header-link" href="colouring-pages.html">COLOURING PAGES</a>
+        </div>
+
+        <div class="col-span-1 mobile-close">
+            <p class="close-button">X</p>
+        </div>
+    </section>
+</body>
+</html>

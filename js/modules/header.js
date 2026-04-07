@@ -7,12 +7,15 @@ export function headerSubLinks() {
     const aboutButton = document.querySelector(".about-button")
     const guestButton = document.querySelector(".guest-button")
     const contactButton = document.querySelector(".contact-button")
+    const activityLinks = document.querySelector(".sub-links-activity")
+    const activityButton = document.querySelector(".activity-button")
 
     function initialState() {
         eventLinks.style.display = "none"
         aboutLinks.style.display = "none"
         guestLinks.style.display = "none"
         contactLinks.style.display = "none"
+        activityLinks.style.display = "none"
     }
 
     initialState()
@@ -31,6 +34,10 @@ export function headerSubLinks() {
 
             if (contactLinks.style.display === "flex") {
                 contactLinks.style.display = "none"
+            }
+
+            if (activityLinks.style.display === "flex") {
+                activityLinks.style.display = "none"
             }
         } else {
             eventLinks.style.display = "none"
@@ -52,6 +59,10 @@ export function headerSubLinks() {
             if (contactLinks.style.display === "flex") {
                 contactLinks.style.display = "none"
             }
+
+            if (activityLinks.style.display === "flex") {
+                activityLinks.style.display = "none"
+            }
         } else {
             aboutLinks.style.display = "none"
         }
@@ -71,6 +82,10 @@ export function headerSubLinks() {
 
             if (contactLinks.style.display === "flex") {
                 contactLinks.style.display = "none"
+            }
+
+            if (activityLinks.style.display === "flex") {
+                activityLinks.style.display = "none"
             }
         } else {
             guestLinks.style.display = "none"
@@ -92,8 +107,36 @@ export function headerSubLinks() {
             if (guestLinks.style.display === "flex") {
                 guestLinks.style.display = "none"
             }
+
+            if (activityLinks.style.display === "flex") {
+                activityLinks.style.display = "none"
+            }
         } else {
             contactLinks.style.display = "none"
+        }
+    }
+
+    function openActivityLinks() {
+        if (activityLinks.style.display === "none") {
+            activityLinks.style.display = "flex"
+
+            if (eventLinks.style.display === "flex") {
+                eventLinks.style.display = "none"
+            }
+
+            if (aboutLinks.style.display === "flex") {
+                aboutLinks.style.display = "none"
+            }
+
+            if (guestLinks.style.display === "flex") {
+                guestLinks.style.display = "none"
+            }
+
+            if (contactLinks.style.display === "flex") {
+                contactLinks.style.display = "none"
+            }
+        } else {
+            activityLinks.style.display = "none"
         }
     }
 
@@ -101,4 +144,5 @@ export function headerSubLinks() {
     aboutButton.addEventListener("click", openAboutLinks)
     guestButton.addEventListener("click", openGuestLinks)
     contactButton.addEventListener("click", openContactLinks)
+    activityButton.addEventListener("click", openActivityLinks)
 }

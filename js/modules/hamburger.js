@@ -4,10 +4,12 @@ export function hamburgerMenu() {
     const eventMobile = document.querySelector("#event-mobile-menu")
     const guestMobile = document.querySelector("#guest-mobile-menu")
     const contactMobile = document.querySelector("#contact-mobile-menu")
+    const activityMobile = document.querySelector("#activity-mobile-menu")
     const aboutMobileButton = document.querySelector(".about-mobile-button")
     const eventMobileButton = document.querySelector(".events-mobile-button")
     const guestMobileButton = document.querySelector(".guest-mobile-button")
     const contactMobileButton = document.querySelector(".contact-mobile-button")
+    const contactActivityButton = document.querySelector(".activity-mobile-button")
     const hamMenu = document.querySelector("#ham-menu")
     const mainMenu = document.querySelector("#main-mobile-menu")
 
