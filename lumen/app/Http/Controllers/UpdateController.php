@@ -23,5 +23,10 @@ class UpdateController extends Controller {
         $update = Update::select('id', 'image_path', 'title', 'body', 'date', 'link')->orderBy('id', 'desc')->limit('3')->get();
         return response()->json($update);
     }
+
+    public function getRecentDate() {
+        $update = Update::select('date')->orderBy('id', 'desc')->limit('1')->get();
+        return response()->json($update);
+    }
 }
 

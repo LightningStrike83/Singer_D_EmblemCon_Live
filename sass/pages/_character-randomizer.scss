@@ -169,8 +169,8 @@
     flex-wrap: wrap;
     justify-content: space-between;
     label {
-        width: 30%;
-        margin-bottom: 5px;
+        width: 49%;
+        margin-bottom: 15px;
     }
 }
 
@@ -221,7 +221,7 @@
 #randomize-results-con {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-end;
 }
 
@@ -234,6 +234,8 @@
     align-items: center;
     margin-bottom: 10px;
     background-color: #c4c4c4;
+    margin-left: 10px;
+    margin-right: 10px;
     img {
         height: 150px;
     }
@@ -293,5 +295,12 @@
 
     .gw-name {
         padding-bottom: 2px;
+    }
+
+    #randomize-game-con {
+        label {
+            width: 30%;
+            margin-bottom: 15px;
+        }
     }
 }
