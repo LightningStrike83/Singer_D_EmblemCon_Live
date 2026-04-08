@@ -31,6 +31,7 @@ $router->get("/exhibitor", "ExhibitorController@getAll");
 $router->get("/commission", "CommissionController@getAll");
 $router->get("/update", "UpdateController@getAll");
 $router->get("/update-three", "UpdateController@getThree");
+$router->get("/recent-date", "UpdateController@getRecentDate");
 $router->get("/comics", "ComicController@getAll");
 $router->get("/users", "UserController@getAll");
 $router->get("/featured-doodles", "FeaturedDoodleController@getAll");

@@ -128,6 +128,19 @@ export function homeContent() {
         }
     }
 
+    function latestUpdate() {
+        fetch (`${baseURL}recent-date`)
+        .then(response => response.json())
+        .then(function(response){
+            const updateText = document.querySelector("#home-index-recent")
+            console.log(response)
+
+            updateText.textContent = response[0].date
+        })
+    }
+
+    latestUpdate()
+
     rightArrow.addEventListener("click", nextContent)
     leftArrow.addEventListener("click", previousContent)
     trailerText.addEventListener("click", videoVisibility)
