@@ -30,6 +30,7 @@ import { badgeMaker } from "./modules/badge-maker.js?version=2.0";
 import { testImages } from "./modules/test-images.js?version=2.0";
 import { guessWhoMode } from "./modules/guess-who-mode.js?version=2.0";
 import { randomizeCharacters } from "./modules/randomize-characters.js?version=2.0";
+import { colouringFunctionality } from "./modules/colouring-page.js?version=2.0";
 
 if (document.body.dataset.page !== "test") {
     headerSubLinks()
@@ -137,4 +138,8 @@ if (document.body.dataset.page === 'test') {
 if (document.body.dataset.page === 'randomizer') {
     guessWhoMode()
     randomizeCharacters()
+}
+
+if (document.body.dataset.page === 'colouring') {
+    colouringFunctionality()
 }

@@ -6,3 +6,120 @@
     padding-bottom: 20px;
     border-radius: 20px;
 }
+
+#cp-external-icon {
+    width: 15px;
+}
+
+#anni-credit {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#download-pages-button, #download-page-button {
+    background-color: white;
+    border-radius: 50px;
+    padding: 10px 15px;
+    color: black;
+    text-shadow: none;
+    text-decoration: none;
+    border: 2px solid black;
+    transition: all ease-in-out 0s;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: 500;
+
+    &:hover {
+        border: 2px solid #ffdf7f;
+        color: white;
+        background-image: linear-gradient(#3616d7, #2d0065);
+        opacity: 100%;
+    }
+}
+
+#download-pages-button {
+    margin-top: 30px;
+}
+
+#page-home-con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+}
+
+#page-con {
+    display: flex;
+    justify-content: space-between;
+}
+
+#big-colouring-picture-con {
+    height: 100vh;
+    background-color: #1b1b1bea;
+    position: fixed;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+
+    .close-button {
+        font-size: 48px!important;
+        font-weight: bold;
+    }
+}
+
+#download-big-page {
+    display: flex;
+    justify-content: center;
+    order: -1;
+    margin-top: 50px;
+    height: fit-content;
+    justify-self: center;
+    align-self: center;
+}
+
+#page-home {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.colouring-con {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.colouring-page-image {
+    background-color: rgb(211, 211, 211);
+    transition: all ease-in-out 0.5s;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 70%;
+    }
+}
+
+#big-page {
+    img {
+        margin-top: 20px;
+        max-height: 95vh;
+        background-color: rgb(211, 211, 211);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .colouring-con {
+        width: 250px;
+    }
+
+    #download-big-page {
+        order: 1;
+    }
+}
