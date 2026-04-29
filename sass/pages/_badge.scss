@@ -126,17 +126,19 @@
 }
 
 #badge-username {
-    background-color: white;
+    background-color: #fff;
     padding: 10px 5px;
     width: 65%;
-    text-align: center;
-    color: black;
-    text-shadow: none;
     height: 70px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    font-size: calc(100%);
+
+    display: block;
+    text-align: center;
+
+    line-height: 50px;
+
+    color: #000;
+    text-shadow: none;
+    font-size: 100%;
 }
 
 #character-select-list {

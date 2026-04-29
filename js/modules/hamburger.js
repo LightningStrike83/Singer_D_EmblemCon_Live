@@ -9,7 +9,7 @@ export function hamburgerMenu() {
     const eventMobileButton = document.querySelector(".events-mobile-button")
     const guestMobileButton = document.querySelector(".guest-mobile-button")
     const contactMobileButton = document.querySelector(".contact-mobile-button")
-    const contactActivityButton = document.querySelector(".activity-mobile-button")
+    const activityMobileButton = document.querySelector(".activity-mobile-button")
     const hamMenu = document.querySelector("#ham-menu")
     const mainMenu = document.querySelector("#main-mobile-menu")
 
@@ -60,10 +60,19 @@ export function hamburgerMenu() {
         })
     }
 
+    function openActivityMenu() {
+        activityMobile.style.visibility = "visible"
+        activityMobile.style.opacity = "1"
+        hamClose.forEach(ham => {
+            ham.textContent = "←"
+        })
+    }
+
     hamMenu.addEventListener("click", hamburgerOpen)
     hamClose.forEach(close => close.addEventListener("click", hamBurgerClose))
     aboutMobileButton.addEventListener("click", openAboutMenu)
     eventMobileButton.addEventListener("click", openEventMenu)
     guestMobileButton.addEventListener("click", openGuestMenu)
     contactMobileButton.addEventListener("click", openContactMenu)
+    activityMobileButton.addEventListener("click", openActivityMenu)
 }

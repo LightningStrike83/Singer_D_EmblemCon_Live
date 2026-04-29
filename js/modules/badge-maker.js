@@ -1,3 +1,4 @@
+
 export function badgeMaker() {
     const hash = window.location.hash.substring(1);
     const params = new URLSearchParams(hash);
@@ -39,6 +40,22 @@ export function badgeMaker() {
             // <img src="https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png?size=256">
             // `;
         });
+    }
+
+    function loadHtmlToImage() {
+        return new Promise((resolve, reject) => {
+            if (window.htmlToImage) return resolve();
+
+            const script = document.createElement("script");
+            script.src = "https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.min.js";
+
+            script.onload = () => resolve();
+            script.onerror = () => reject("Failed to load html-to-image");
+
+            document.head.appendChild(script);
+        });
+
+        console.log("htmlToImage loaded:", !!window.htmlToImage);
     }
 
     async function populateLists() {
@@ -188,62 +205,153 @@ export function badgeMaker() {
         badgeCreationCon.style.display = "grid"
     }
 
-    function downloadBadge() {
-        const badgeCreationCon = document.querySelector("#badge-creation-con")
+    async function waitForLayoutStability(node) {
+        // force all CSS + layout recalculation
+        node.getBoundingClientRect();
 
-        const x = window.matchMedia("(min-width: 600px)")
-        const y = window.matchMedia("(min-width: 630px)")
-
-        const node = document.querySelector("#emblemcon-badge");
-        node.style.transform = "none"
-
-        if (badgeCreationCon.style.display !== "grid") {
-            badgeCreationCon.style.display = "grid"
+        // wait for fonts (VERY important for text centering + spacing)
+        if (document.fonts?.ready) {
+            await document.fonts.ready;
         }
 
-        const scale = 3;
-        const rect = node.getBoundingClientRect();
+        // wait for at least 2 paint frames
+        await new Promise(r => requestAnimationFrame(r));
+        await new Promise(r => requestAnimationFrame(r));
+    }
 
-        domtoimage.toPng(node, {
-            bgcolor: null,
-            quality: 1,
-            width: rect.width * scale,
-            height: rect.height * scale,
-            style: {
-                transform: `scale(${scale})`,
-                transformOrigin: "top left",
-                width: `${rect.width}px`,
-                height: `${rect.height}px`
-            }
-        })
-        .then(dataUrl => {
-            const link = document.createElement('a');
-            link.download = 'emblemcon-badge-2026.png';
+    async function downloadBadge() {
+        const badgeCreationCon = document.querySelector("#badge-creation-con");
+        const node = document.querySelector("#emblemcon-badge");
+        const badgeUsername = document.querySelector("#badge-username")
+
+        const x = window.matchMedia("(min-width: 600px)");
+        const y = window.matchMedia("(min-width: 630px)");
+
+        node.style.transform = "none";
+
+        badgeCreationCon.style.display = "grid";
+        
+        badgeUsername.style.lineHeight = "70px"
+
+        // wait for UI to fully settle
+        await new Promise(r => requestAnimationFrame(r));
+        await new Promise(r => requestAnimationFrame(r));
+
+        // ==============================
+        // 🔥 CLEAN EXPORT ROOT (KEY FIX)
+        // ==============================
+        const exportRoot = document.createElement("div");
+
+        exportRoot.style.position = "fixed";
+        exportRoot.style.left = "-10000px";
+        exportRoot.style.top = "0";
+        exportRoot.style.background = "transparent";
+        exportRoot.style.width = "fit-content";
+
+        document.body.appendChild(exportRoot);
+
+        // clone the badge INTO clean environment
+        const clone = node.cloneNode(true);
+        exportRoot.appendChild(clone);
+
+        // remove any layout hazards
+        clone.style.transform = "none";
+        clone.style.position = "static";
+        clone.style.display = "block";
+
+        // ensure images are allowed to render correctly
+        clone.querySelectorAll("img").forEach(img => {
+            img.crossOrigin = "anonymous";
+        });
+
+        // wait a frame so clone layout stabilizes
+        await new Promise(r => requestAnimationFrame(r));
+
+        try {
+            const canvas = await html2canvas(exportRoot, {
+                backgroundColor: null,
+                scale: 3,
+                useCORS: true
+            });
+
+            const dataUrl = canvas.toDataURL("image/png");
+
+            const link = document.createElement("a");
+            link.download = "emblemcon-badge-2026.png";
             link.href = dataUrl;
             link.click();
 
-            badgeCreationCon.style.display = "none"
+        } catch (e) {
+            console.error(e);
+        }
 
-            node.style.transform="scale(0.6)"
+        // cleanup
+        document.body.removeChild(exportRoot);
 
-            if (x.matches) {
-                node.style.transform = "scale(0.9)"
-            }
+        badgeCreationCon.style.display = "none";
 
-            if (y.matches) {
-                node.style.transform = "none"
-            }
-        })
-        .catch(error => {
-            console.error('Error exporting div:', error);
-        });
+        badgeUsername.style.lineHeight = "50px"
+
+        node.style.transform = "scale(0.6)";
+        if (x.matches) node.style.transform = "scale(0.9)";
+        if (y.matches) node.style.transform = "none";
     }
+
+    // function downloadBadge() {
+    //     const badgeCreationCon = document.querySelector("#badge-creation-con")
+
+    //     const x = window.matchMedia("(min-width: 600px)")
+    //     const y = window.matchMedia("(min-width: 630px)")
+
+    //     const node = document.querySelector("#emblemcon-badge");
+    //     node.style.transform = "none"
+
+    //     if (badgeCreationCon.style.display !== "grid") {
+    //         badgeCreationCon.style.display = "grid"
+    //     }
+
+    //     const scale = 3;
+    //     const rect = node.getBoundingClientRect();
+
+    //     domtoimage.toPng(node, {
+    //         bgcolor: null,
+    //         quality: 1,
+    //         width: rect.width * scale,
+    //         height: rect.height * scale,
+    //         style: {
+    //             transform: `scale(${scale})`,
+    //             transformOrigin: "top left",
+    //             width: `${rect.width}px`,
+    //             height: `${rect.height}px`
+    //         }
+    //     })
+    //     .then(dataUrl => {
+    //         const link = document.createElement('a');
+    //         link.download = 'emblemcon-badge-2026.png';
+    //         link.href = dataUrl;
+    //         link.click();
+
+    //         badgeCreationCon.style.display = "none"
+
+    //         node.style.transform="scale(0.6)"
+
+    //         if (x.matches) {
+    //             node.style.transform = "scale(0.9)"
+    //         }
+
+    //         if (y.matches) {
+    //             node.style.transform = "none"
+    //         }
+    //     })
+    //     .catch(error => {
+    //         console.error('Error exporting div:', error);
+    //     });
+    // }
 
     function checkImages() {
         const badgeImage = document.querySelectorAll(".badge-image")
 
         badgeImage.forEach(image => {
-
             if (image.classList.contains("active")) {
                 image.src = `../images/${badgeSource}/${image.dataset.id}.png`
             }
