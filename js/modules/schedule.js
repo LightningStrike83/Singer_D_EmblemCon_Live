@@ -69,7 +69,7 @@ export function schedulePopulation() {
                 const finalDiv = document.createElement("div")
                 const p = document.createElement("p")
 
-                const utcTime = "2025-05-04 15:00:00";
+                const utcTime = "2026-05-11 15:00:00";
                 const utcDateTime = luxon.DateTime.fromFormat(utcTime, "yyyy-MM-dd HH:mm:ss", { zone: "utc" });
 
                 const userZone = Intl.DateTimeFormat().resolvedOptions().timeZone;

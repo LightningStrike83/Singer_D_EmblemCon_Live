@@ -24,6 +24,11 @@ class CharacterController extends Controller {
         return response()->json($characters);
     }
 
+    public function getGLFavs(){
+        $characters = Character::select('id', 'name', 'game')->where('great_lord_fav', '=', 'y')->orderBy('game', 'asc')->get();
+        return response()->json($characters);
+    }
+
     public function getDevFavs(){
         $characters = Character::select('id', 'name', 'game')->where('dev_fav', '=', 'y')->orderBy('game', 'asc')->get();
         return response()->json($characters);
