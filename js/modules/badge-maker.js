@@ -206,15 +206,12 @@ export function badgeMaker() {
     }
 
     async function waitForLayoutStability(node) {
-        // force all CSS + layout recalculation
         node.getBoundingClientRect();
 
-        // wait for fonts (VERY important for text centering + spacing)
         if (document.fonts?.ready) {
             await document.fonts.ready;
         }
 
-        // wait for at least 2 paint frames
         await new Promise(r => requestAnimationFrame(r));
         await new Promise(r => requestAnimationFrame(r));
     }
@@ -233,13 +230,9 @@ export function badgeMaker() {
         
         badgeUsername.style.lineHeight = "70px"
 
-        // wait for UI to fully settle
         await new Promise(r => requestAnimationFrame(r));
         await new Promise(r => requestAnimationFrame(r));
 
-        // ==============================
-        // 🔥 CLEAN EXPORT ROOT (KEY FIX)
-        // ==============================
         const exportRoot = document.createElement("div");
 
         exportRoot.style.position = "fixed";
@@ -250,21 +243,17 @@ export function badgeMaker() {
 
         document.body.appendChild(exportRoot);
 
-        // clone the badge INTO clean environment
         const clone = node.cloneNode(true);
         exportRoot.appendChild(clone);
 
-        // remove any layout hazards
         clone.style.transform = "none";
         clone.style.position = "static";
         clone.style.display = "block";
 
-        // ensure images are allowed to render correctly
         clone.querySelectorAll("img").forEach(img => {
             img.crossOrigin = "anonymous";
         });
 
-        // wait a frame so clone layout stabilizes
         await new Promise(r => requestAnimationFrame(r));
 
         try {
@@ -285,7 +274,6 @@ export function badgeMaker() {
             console.error(e);
         }
 
-        // cleanup
         document.body.removeChild(exportRoot);
 
         badgeCreationCon.style.display = "none";
