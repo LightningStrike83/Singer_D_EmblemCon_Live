@@ -52,12 +52,12 @@ export function artistExhibitor() {
 
                 a.setAttribute("class", "artist-link")
 
-                if (guest.name === "hanjyuus x rainymint") {
-                    a.innerHTML = `<a target="_blank" class="ae-guest-name" href="https://twitter.com/hanjyuus">hanjyuus</a> <p class="cross">x</p> <a target="_blank" class="ae-guest-name" href="https://twitter.com/rainy_mint">rainymint</a> <img class="external-icon" src="../images/external.svg" alt="External Icon">`
-                } else if (guest.name === "Hzokki x Embu") {
-                    a.innerHTML = `<a target="_blank" class="ae-guest-name" href="https://hzokki.com">Hzokki</a> <p class="cross">x</p> <a target="_blank" class="ae-guest-name" href="https://x.com/embubuu">Embu</a> <img class="external-icon" src="../images/external.svg" alt="External Icon">`
-                } else if (guest.name === "DT75Art & Trikey") {
-                    a.innerHTML = `<a target="_blank" class="ae-guest-name" href="https://x.com/Dt75Art">DT75Art</a> <p class="cross">x</p> <a target="_blank" class="ae-guest-name" href="https://linktr.ee/trikey">Trikey</a> <img class="external-icon" src="../images/external.svg" alt="External Icon">`
+                if (guest.name === "DT75 and Trikey") {
+                    a.innerHTML = `<a target="_blank" class="ae-guest-name" href="https://x.com/Dt75Art">DT75</a> <p class="cross">and</p> <a target="_blank" class="ae-guest-name" href="https://linktr.ee/trikey">Trikey</a> <img class="external-icon" src="../images/external.svg" alt="External Icon">`
+                } else if (guest.name === "jadesnapart / hildaemblem") {
+                    a.innerHTML = `<a target="_blank" class="ae-guest-name" href="https://bsky.app/profile/jadesnapart.bsky.social">jadesnapart</a> <p class="cross">/</p> <a target="_blank" class="ae-guest-name" href="https://bsky.app/profile/hildaemblem.bsky.social">hildaemblem</a> <img class="external-icon" src="../images/external.svg" alt="External Icon">`
+                } else if (guest.name === "🌸🐰 kyousa38 & Arclup 🐶🌱") {
+                    a.innerHTML = `<a target="_blank" class="ae-guest-name" href="https://bsky.app/profile/kyousa38.bsky.social">🌸🐰 kyousa38</a> <p class="cross">&</p> <a target="_blank" class="ae-guest-name" href="https://arclup.tumblr.com/">Arclup 🐶🌱</a> <img class="external-icon" src="../images/external.svg" alt="External Icon">`
                 } else if (guest.link !== "") {
                     a.innerHTML = `<a target="_blank" class="ae-guest-name" href="${guest.link}">${guest.name} <img class="external-icon" src="../images/external.svg" alt="External Icon"></a>`
                 } else {
