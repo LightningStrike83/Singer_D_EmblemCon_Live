@@ -21,8 +21,8 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dom-to-image-more@3.6.3/dist/dom-to-image-more.min.js"></script>
     <script src="https://unpkg.com/html-to-image@1.11.11/dist/html-to-image.min.js"></script>
-    <link rel="stylesheet" href="css/main.css?version=5.30">
-    <script type="module" src="js/main.js?version=5.30"></script>
+    <link rel="stylesheet" href="css/main.css?version=5.32">
+    <script type="module" src="js/main.js?version=5.32"></script>
     <link rel="icon" type="image/png" href="/images/favicon/favicon-96x96.png?v=2" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg?v=2" />
     <link rel="shortcut icon" href="/images/favicon/favicon.ico?v=2" />
@@ -210,7 +210,7 @@
 
             <div id="custom-name-con">
                 <p class="badge-title">Step 4/5: Custom Name (Optional)</p>
-                <p id="name-message">Don't wanna use your username for your badge? Enter a custom name for your badge! <br>(Max 18 characters)</p>
+                <p id="name-message">Don't wanna use your username for your badge? Enter a custom name for your badge! <br>(Max 18 characters)<br>Don't forget to click the submit button to finalize and complete the change!</p>
                 <div id="name-con">
                     <input id="custom-name" type="text" maxlength="18">
                     <button id="name-button">Submit</button>
@@ -376,7 +376,10 @@
                     <div id="badge-assets">
                         <img id="badge-image" crossorigin="anonymous" src="images/website_assets/updated-logo-2026-date_badge.png" alt="The logo for EmblemCon on the badge">
                         <!-- <p id="badge-date">May 7th - 10th 2026</p> -->
-                        <img id="badge-mascot" crossorigin="anonymous" src="images/website_assets/transparent_mascot_badge.png" alt="The mascot of EmblemCon on the badge">
+                        <div id="badge-mascot-con">
+                            <img id="mascot-shadow" src="images/website_assets/transparent_mascot_copy_shadow.png" alt="Shadow for the badge">
+                            <img id="badge-mascot" crossorigin="anonymous" src="images/website_assets/transparent_mascot_copy.png" alt="The mascot of EmblemCon on the badge">
+                        </div>
                         <div id="badge-chibi-con">
                             <div class="image-home" data-link="bcs-1">
                                 <img class="badge-image" crossorigin="anonymous" src="">

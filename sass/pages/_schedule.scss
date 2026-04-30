@@ -123,6 +123,22 @@
     text-align: center;
 }
 
+#schedule-box-g {
+    background-image: linear-gradient( #298933, #032404);
+}
+
+#schedule-box-m {
+    background-image: linear-gradient( #0f1ca1, #01034c);
+}
+
+#schedule-box-p {
+    background-image: linear-gradient( #a78d2e, #523607);
+}
+
+#schedule-box-v {
+    background-image: linear-gradient( #95032d, #3d0003);
+}
+
 @media screen and (min-width: 428px) {
     .day {
         padding-left: 20px;

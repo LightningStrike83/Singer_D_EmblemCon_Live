@@ -220,6 +220,7 @@ export function badgeMaker() {
         const badgeCreationCon = document.querySelector("#badge-creation-con");
         const node = document.querySelector("#emblemcon-badge");
         const badgeUsername = document.querySelector("#badge-username")
+        const badgeAssets = document.querySelector("#badge-assets")
 
         const x = window.matchMedia("(min-width: 600px)");
         const y = window.matchMedia("(min-width: 630px)");
@@ -228,10 +229,8 @@ export function badgeMaker() {
 
         badgeCreationCon.style.display = "grid";
         
-        badgeUsername.style.lineHeight = "70px"
-
-        await new Promise(r => requestAnimationFrame(r));
-        await new Promise(r => requestAnimationFrame(r));
+        badgeUsername.style.lineHeight = "65px"
+        badgeAssets.style.marginTop = "-3px"
 
         const exportRoot = document.createElement("div");
 
@@ -254,12 +253,9 @@ export function badgeMaker() {
             img.crossOrigin = "anonymous";
         });
 
-        await new Promise(r => requestAnimationFrame(r));
-
         try {
             const canvas = await html2canvas(exportRoot, {
                 backgroundColor: null,
-                scale: 3,
                 useCORS: true
             });
 
@@ -279,6 +275,7 @@ export function badgeMaker() {
         badgeCreationCon.style.display = "none";
 
         badgeUsername.style.lineHeight = "50px"
+        badgeAssets.style.marginTop = "0px"
 
         node.style.transform = "scale(0.6)";
         if (x.matches) node.style.transform = "scale(0.9)";

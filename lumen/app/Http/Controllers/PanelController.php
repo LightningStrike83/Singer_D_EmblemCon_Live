@@ -15,7 +15,7 @@ class PanelController extends Controller {
      */
 
      public function getDay($day){
-        $panel = Panel::select('title', 'day', 'time', 'description', 'host', 'type')->where('panels.day', '=', $day)->where('panels.year', '=', '2025')->orderBy('time', 'asc')->get();
+        $panel = Panel::select('title', 'day', 'time', 'description', 'host', 'type')->where('panels.day', '=', $day)->where('panels.year', '=', '2026')->orderBy('time', 'asc')->get();
         return response()->json($panel);
     }
 

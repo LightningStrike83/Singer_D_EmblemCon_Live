@@ -6,6 +6,14 @@ export function schedulePopulation() {
     const scheduleText = document.querySelector("#schedule-text")
     const spinner = `<img id="spinner" src="../images/website_assets/shield.gif" alt="Loading image"><br> <p id="spinner-text">Loading...</p>`;
 
+    let theme = "";
+
+    function checkTheme() {
+        const currentTheme = localStorage.getItem("theme");
+
+        theme = currentTheme
+    }
+
     function panelList() {
         scheduleText.innerHTML = spinner
         fetch(`${baseURL}panel/${d}`)
@@ -19,7 +27,7 @@ export function schedulePopulation() {
 
             if (d !== "5") {
                 let img = document.createElement("img")
-                img.src = `../images/schedule_images/day-${d}.png`
+                img.src = `../images/schedule_images/day-${d}-temp.png`
                 img.setAttribute("id", "schedule-image")
                 img.setAttribute("alt", `Image of Day ${d} Schedule`)
 
@@ -46,15 +54,19 @@ export function schedulePopulation() {
                     panelHost.textContent = `Hosted by: ${panel.host}`
                     scheduleDiv.setAttribute("data-type", `${panel.type}`)
 
-                    // if (panel.type === "m") {
-                    //     scheduleDiv.style.background = "linear-gradient( #0f1ca1, #01034c)"
-                    // } else if (panel.type === "g") {
-                    //     scheduleDiv.style.background = "linear-gradient( #298933, #032404)"
-                    // } else if (panel.type === "p") {
-                    //     scheduleDiv.style.background = "linear-gradient( #a78d2e, #523607)"
-                    // } else if (panel.type === "v") {
-                    //     scheduleDiv.style.background = "linear-gradient( #95032d, #3d0003)"
-                    // } 
+                    checkTheme()
+
+                    if (theme === "default") {
+                        if (panel.type === "m") {
+                            scheduleDiv.style.background = "linear-gradient( #0f1ca1, #01034c)"
+                        } else if (panel.type === "g") {
+                            scheduleDiv.style.background = "linear-gradient( #298933, #032404)"
+                        } else if (panel.type === "p") {
+                            scheduleDiv.style.background = "linear-gradient( #a78d2e, #523607)"
+                        } else if (panel.type === "v") {
+                            scheduleDiv.style.background = "linear-gradient( #95032d, #3d0003)"
+                        } 
+                    }
 
                     scheduleDiv.appendChild(panelTitle)
                     scheduleDiv.appendChild(panelHost)
