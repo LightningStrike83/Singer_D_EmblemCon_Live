@@ -92,6 +92,20 @@
     padding-top: 10px;
 }
 
+#cotc-current-con {
+    padding: 15px;
+    border-radius: 20px;
+    margin: 10px 15px 20px 15px;
+
+    p {
+        text-align: center;
+    }
+}
+
+#cotc-previous-title {
+    margin-top: 15px;
+}
+
 @media screen and (min-width: 768px) {
     #brian-headshot {
         width: 20%;
