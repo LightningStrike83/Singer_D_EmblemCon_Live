@@ -1,29 +1,22 @@
 export function stampPopulation() {
-    const artistList = document.querySelector("#artist-list")
-    const baseURL = "https://emblemcon.com/lumen/public/"
-    const spinner = `<img id="spinner" src="../images/website_assets/shield.gif" alt="Loading image"><br> <p id="spinner-text">Sending...</p>`;
+    const tocText = document.querySelector("#rally-toc-text")
+    const table = document.querySelector("#rally-links")
 
-    function populateArtists() {
-         fetch(`${baseURL}stamps`)
-        .then(response => response.json())
-        .then(function(response){
-            response.forEach(artist => {
-                const li = document.createElement("li")
-                const a = document.createElement("a")
-
-                a.setAttribute("class", "stamp-link")
-
-                a.innerHTML = `• ${artist.name} <img class="external-icon" src="../images/external.svg" alt="External Icon">`
-                a.href = `${artist.link}`
-
-                li.appendChild(a)
-                artistList.appendChild(li)
-            })
-        })
-        .catch(error => {
-
-        })
+    function openRallyTOC() {
+        if (table.style.display === "flex") {
+            table.style.display = "none"
+            tocText.textContent = "Rally Table of Contents ▼"
+        } else {
+            table.style.display = "flex"
+            tocText.textContent = "Rally Table of Contents ▲"
+        }
     }
 
-    populateArtists()
+    function setInitialState() {
+        table.style.display = "none"
+    }
+
+    setInitialState()
+
+    tocText.addEventListener("click", openRallyTOC)
 }

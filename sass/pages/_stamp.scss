@@ -85,6 +85,75 @@
     font-weight: 600;
 }
 
+.rally-title {
+    width: 100%;
+}
+
+.rally-box {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+.rally-title {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-size: calc(100% + 2px);
+    border-top: 2px solid #ffdf7f;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+#stamp-toc-con {
+    border-radius: 20px;
+    border: 3px solid #ffdf7f;
+    width: fit-content;
+    padding: 10px;
+    background-image: linear-gradient(#3616d7, #2d0065);
+
+    a {
+        margin-bottom: 10px;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    margin-bottom: 20px;
+}
+
+#rally-toc-text {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#rally-links {
+    display: none;
+}
+
+#current-stamp-image {
+    margin-bottom: 10px;
+}
+
+.current-rally-artists {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    li {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    p {
+        font-weight: bold;
+    }
+}
+
 @media screen and (min-width: 500px) {
     #stamp-year-con {
         flex-direction: row;
@@ -93,8 +162,7 @@
 
 @media screen and (min-width: 768px) {
     #current-stamp-image {
-        width: 60%;
-        order: -1;
+        width: 50%;
     }
 
     #artist-list {
@@ -102,8 +170,16 @@
         margin-left: 10px;
     }
 
-    #current-stamp-info {
-        display: flex;
-        justify-content: space-evenly;
+    .current-rally-artists {
+        width: 45%;
+        align-items: flex-start;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    .rally-box {
+        flex-direction: row;
     }
 }

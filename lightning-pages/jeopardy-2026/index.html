@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmblemCon Wheel of Fortune</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script type="module" defer src="js/main.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+</head>
+<body>
+    <section id="game-board-con" class="grid-con">
+        <h1 class="hidden">Jeopardy Game Board</h1>
+
+        <div id="game-board" class="col-span-full">
+            <div id="category-con">
+                <div class="category-title-con">
+                    <p class="category-title">Azura and Dorothea's Jukebox</p>
+                </div>
+                <div class="category-title-con">
+                    <p class="category-title">What Do You Meme</p>
+                </div>
+                <div class="category-title-con">
+                    <p class="category-title">Beautiful Voices</p>
+                </div>
+                <div class="category-title-con">
+                    <p class="category-title">Top 10 Anime Betrayals</p>
+                </div>
+                <div class="category-title-con">
+                    <p class="category-title">What Do We Have In Common?</p>
+                </div>
+                <div class="category-title-con">
+                    <p class="category-title">Crossover Cameos</p>
+                </div>
+                <div class="category-title-con">
+                    <p class="category-title">Before The War</p>
+                </div>
+                <div class="category-title-con">
+                    <p class="category-title">Fire Emblem</p>
+                </div>
+                <div class="category-title-con">
+                    <p class="category-title">Any Last Words?</p>
+                </div>
+            </div>
+
+            <div id="questions-con">
+                <div class="question-text-con">
+                    <p class="value">300</p>
+                    <p class="question-text">"Reach for my hand, I'll soar away."</p>
+                    <p class="answer-text">"The Edge of Dawn" <iframe class="jeopardy-music" width="560" height="315" src="https://www.youtube.com/embed/z9XZU7Zdvyc?si=QcqElqS6f5q3-4x9&amp;start=4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">300</p>
+                    <p class="question-text">Thanks to a certain star-adorned thief, this fruit has become a popular meme to use in greetings</p>
+                    <p class="answer-text">Papaya</p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">300</p>
+                    <p class="question-text">Donnel<br>Fresh Cut Grass<br>Phoenix Wright</p>
+                    <p class="answer-text">Sam Riegel</p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">300</p>
+                    <p class="question-text">A life debt owed to Matthew causes this guy to throw away his brand new perfectly, good job and join Eliwood's army instead</p>
+                    <p class="answer-text">Guy</p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">300</p>
+                    <p class="question-text">Ignatz<br>Kagero<br>Forde</p>
+                    <p class="answer-text">They're all artists</p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">300</p>
+                    <p class="question-text">This item, which originated in Fire Emblem, can be found as a treasure in the Great Cave Offensive in Kirby Super Star Ultra.</p>
+                    <p class="answer-text">Falchion <img class="answer-image" src="images/kirby.png" alt="Image of Great Cave Offensive Treasures"></p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">300</p>
+                    <p class="question-text">This natural disaster occurred in Tellius when the goddess was overcome with despair</p>
+                    <p class="answer-text">A flood</p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">300</p>
+                    <p class="question-text">"I'm the thirteenth Emblem? The Fire Emblem" was uttered by this character when they became the Fire Emblem</p>
+                    <p class="answer-text">Alear</p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">300</p>
+                    <p class="question-text">"My queen, where are you?! I can’t see… Blood is in my eyes… Your Majesty… I’ll be right… there…"</p>
+                    <p class="answer-text">Geoffrey</p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">600</p>
+                    <p class="question-text">"Rise from a thousand years ago"</p>
+                    <p class="answer-text">"Emblem Engage!" <iframe class="jeopardy-music" width="560" height="315" src="https://www.youtube.com/embed/yqqapXnrH1Y?si=tKAz6vsUY77RsYYC&amp;start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">600</p>
+                    <p class="question-text">This is what Fire Emblem fans put on before every Nintendo Direct, in hopes for a Genealogy remake</p>
+                    <p class="answer-text">Clown makeup</p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">600</p>
+                    <p class="question-text">Thrasir<br>Pomni<br>Fish Hat Woman</p>
+                    <p class="answer-text">Lizzie Freeman</p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">600</p>
+                    <p class="question-text">Betraying his homeland is out of the question for this character, unless a certain princess asks him if he believes in love</p>
+                    <p class="answer-text">Roger</p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">600</p>
+                    <p class="question-text">Robin<br>Zeke<br>Frey</p>
+                    <p class="answer-text">They all had amnesia</p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">600</p>
+                    <p class="question-text">Lyn wasn't the first character to become horse, as a pony that strongly resembles this character appeared in a My Little Pony comic.</p>
+                    <p class="answer-text">Lucina <img class="answer-image" src="images/mlp.png" alt="Image of Lucina as a pony in a My Little Pony comic"></p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">600</p>
+                    <p class="question-text">This war between humans and dragons occurred 1000 years before the events of Binding Blade</p>
+                    <p class="answer-text">The Scouring</p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">600</p>
+                    <p class="question-text">This Fire Emblem contains a dark and chaotic energy that can only be soothed with an enchanting song</p>
+                    <p class="answer-text">Lehran's Medallion</p>
+                </div>
+                <div class="question-text-con" data-dailyDouble="dd">
+                    <p class="value">600</p>
+                    <p class="question-text">"Ungh... Stupid weapon... doesn't work... Should have... given it... a better name... "</p>
+                    <p class="answer-text">Owain</p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">900</p>
+                    <p class="question-text">"On an ocean of stars"</p>
+                    <p class="answer-text">"Heritors of Arcadia" <iframe class="jeopardy-music" width="560" height="315" src="https://www.youtube.com/embed/l4irgZg-Wv0?si=VHvcQCX9jHkbzvtt&amp;start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">900</p>
+                    <p class="question-text">A voice actor coined this meme, referencing the distress you should feel towards a hoofed ruminant ungulate</p>
+                    <p class="answer-text">Fear the deer</p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">900</p>
+                    <p class="question-text">Rose<br>Mimi Tachikawa<br>SM-8 Research Leader</p>
+                    <p class="answer-text">Elsie Lovelock</p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">900</p>
+                    <p class="question-text">This character finds killing a beautiful woman distasteful, and would rather change his allegiance based on a coin flip</p>
+                    <p class="answer-text">Joshua</p>
+                </div>
+                <div class="question-text-con" data-dailyDouble="dd">
+                    <p class="value">900</p>
+                    <p class="question-text">Haar<br>Niles<br>Malice</p>
+                    <p class="answer-text">They all wear eyepatches</p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">900</p>
+                    <p class="question-text">In this Disney cartoon, the attire of Edelgard and Link were worn by false friends inside of a dreamscape.</p>
+                    <p class="answer-text">Amphibia <img class="answer-image" src="images/amphibia.png" alt="Image of Ann and Sasha dressed as Link and Edelgard"></p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">900</p>
+                    <p class="question-text">This disaster, instigated as part of a coup against King Lima IV, is what caused the separation between Anthiese and Conrad</p>
+                    <p class="answer-text">Arson / a house fire</p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">900</p>
+                    <p class="question-text">Only a few people are known to have ever borne this Fire Emblem, one of whom carries it in their own heart </p>
+                    <p class="answer-text">The Crest of Flames</p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">900</p>
+                    <p class="question-text">"In the end... it's all the same. May as well have died all those years ago..."</p>
+                    <p class="answer-text">Yunaka</p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">1200</p>
+                    <p class="question-text">"Only want one future, only want one world."</p>
+                    <p class="answer-text">"Fallen"<br><iframe class="jeopardy-music" width="560" height="315" src="https://www.youtube.com/embed/1MoM51GkNDo?si=Yh6tXjspb26DRzkV&amp;start=8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+                </div>
+                <div class="question-text-con" data-dailyDouble="dd">
+                    <p class="value">1200</p>
+                    <p class="question-text">Thanks to Fire Emblem Shadows, a Lyn was often memed to come from this popular mobile game about horse girl racing</p>
+                    <p class="answer-text">Uma Musume</p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">1200</p>
+                    <p class="question-text">Tuxedo Mask<br>Johnny Splash<br>Reinhard</p>
+                    <p class="answer-text">Robbie Daymond</p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">1200</p>
+                    <p class="question-text">This enemy unit will automatically fall in love with a character different than the one you recruited her with</p>
+                    <p class="answer-text">Tharja</p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">1200</p>
+                    <p class="question-text">Cordelia<br>Fiora<br>Dimitri</p>
+                    <p class="answer-text">They are the sole survivors of massacres</p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">1200</p>
+                    <p class="question-text">Engage wasn't the first time that Marth was controlled by an antagonist, as he was one of many video game characters controlled by an AI in this anime.</p>
+                    <p class="answer-text">Digimon: Appli Monsters <img class="answer-image" src="images/digimon.png" alt="Image of various video game characters in Digimon: Appli Monsters, including Marth"></p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">1200</p>
+                    <p class="question-text">After slaying a dragon, this peasant's hometown was turned into a new kingdom in which he'd rule as king as his reward</p>
+                    <p class="answer-text">Anri</p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">1200</p>
+                    <p class="question-text">This item came to be known as the Fire Emblem due to the burning rage of the Demon King's soul imprisoned within</p>
+                    <p class="answer-text">The Stone of Grado</p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">1200</p>
+                    <p class="question-text">"Ooh! Why me? This is SO annoying!"</p>
+                    <p class="answer-text">Serra</p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">1500</p>
+                    <p class="question-text">"Yami e to"</p>
+                    <p class="answer-text">If ~ Hitori Omou ~ (Lost In Thoughts All Alone JP version) <iframe class="jeopardy-music" width="560" height="315" src="https://www.youtube.com/embed/21EMANTl6W4?si=-JUnIKLKI3L3UmZK&amp;start=4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">1500</p>
+                    <p class="question-text">To Okke's despair, this character only finally became a meme when Lightning joked Okke wanted to eat his ass out</p>
+                    <p class="answer-text">Oscar</p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">1500</p>
+                    <p class="question-text">Celica<br>Tikki<br>Jade</p>
+                    <p class="answer-text">Mela Lee</p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">1500</p>
+                    <p class="question-text">These allies turned enemies can become your allies once more during an army's dangerous river crossing</p>
+                    <p class="answer-text">Zihark and Jill</p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">1500</p>
+                    <p class="question-text">Lucius<br>Mercedes<br>Veyle</p>
+                    <p class="answer-text">Characters who open / start orphanages in their endings</p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">1500</p>
+                    <p class="question-text">Edelgard, Dimitri, and Claude were referenced in this children's series as writing in the background, with Claude's being written upside down.</p>
+                    <p class="answer-text">Bluey <img class="answer-image" src="images/bluey.png" alt="Image of Bluey scene showing Dimitri and Claude written in the background"></p>
+                </div>
+                <div class="question-text-con" data-dailyDouble="dd">
+                    <p class="value">1500</p>
+                    <p class="question-text">A failed attack on Garreg Mach by Those Who Slither In The Dark left this place a fiery, lava-flooded wasteland</p>
+                    <p class="answer-text">Ailell, the Valley of Torment</p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">1500</p>
+                    <p class="question-text">The Fire Emblem of Tokyo Mirage Sessions #FE is a ritual that also goes by this other name</p>
+                    <p class="answer-text">The Opera of Light</p>
+                </div>
+                <div class="question-text-con">
+                    <p class="value">1500</p>
+                    <p class="question-text">"Luck be… with you, sire…"</p>
+                    <p class="answer-text">Frey</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="players-con" class="grid-con">
+        <div id="player-1" class="player col-span-4" data-player="1">
+            <h3 class="player-name">-Insert Name-</h3>
+            <p>Winnings: $<span class="money-amount">0</span></p>
+        </div>
+
+        <div id="player-2" class="player col-span-4" data-player="2">
+            <h3 class="player-name">-Insert Name-</h3>
+            <p>Winnings: $<span class="money-amount">0</span></p>
+        </div>
+
+        <div id="player-3" class="player col-span-4" data-player="3">
+            <h3 class="player-name">-Insert Name-</h3>
+            <p>Winnings: $<span class="money-amount">0</span></p>
+        </div>
+
+        <div class="information-insert col-span-4" data-player="1">
+            <input type="text" placeholder="Name" class="name-value">
+            <input type="submit" class="name-submit">
+        </div>
+
+        <div class="information-insert col-span-4" data-player="2">
+            <input type="text" placeholder="Name" class="name-value">
+            <input type="submit" class="name-submit">
+        </div>
+
+        <div class="information-insert col-span-4" data-player="3">
+            <input type="text" placeholder="Name" class="name-value">
+            <input type="submit" class="name-submit">
+        </div>
+
+        <div class="money-insert col-span-4" data-player="1">
+            <input type="text" placeholder="Money" class="money-value">
+            <input type="submit" class="money-submit">
+        </div>
+        
+        <div class="money-insert col-span-4" data-player="2">
+            <input type="text" placeholder="Money" class="money-value">
+            <input type="submit" class="money-submit">
+        </div>
+
+        <div class="money-insert col-span-4" data-player="3">
+            <input type="text" placeholder="Money" class="money-value">
+            <input type="submit" class="money-submit">
+        </div>
+    </section>
+
+    <section id="final-jeopardy-con" class="grid-con">
+        <div id="fj-con" class="col-start-2 col-span-2 m-col-start-6 m-col-span-2">
+            <p id="fj-text">Final Jeopardy</p>
+        </div>
+    </section>
+
+    <section id="question-zoom-con" class="full-width-grid-con">
+        <div id="question-con" class="col-start-2 grid-con">
+            <p id="big-question-text" class="col-start-2 col-span-2 m-col-start-4 m-col-span-6"></p>
+            <p class="col-start-4 col-span-1 m-col-start-12 m-col-span-1 close-button">X</p>
+        </div>
+    </section>
+
+    <section id="answer-zoom-con" class="full-width-grid-con">
+        <div id="answer-con" class="col-start-2 grid-con">
+            <p id="big-answer-text" class="col-start-2 col-span-2 m-col-start-4 m-col-span-6"></p>
+            <p class="col-start-4 col-span-1 m-col-start-12 m-col-span-1 close-button">X</p>
+        </div>
+    </section>
+
+    <section id="daily-double-con" class="full-width-grid-con">
+        <div id="dd-con" class="col-start-2 grid-con">
+            <p id="dd-text" class="col-start-2 col-span-2 m-col-start-4 m-col-span-6">DAILY DOUBLE</p>
+            <p class="col-start-4 col-span-1 m-col-start-12 m-col-span-1 close-button">X</p>
+        </div>
+    </section>
+
+    <section id="fj-con-con" class="full-width-grid-con">
+        <div id="fj-title-con" class="col-start-2 grid-con">
+            <p id="fj-title" class="col-start-2 col-span-2 m-col-start-4 m-col-span-6">FINAL JEOPARDY</p>
+            <p class="col-start-4 col-span-1 m-col-start-12 m-col-span-1 close-button">X</p>
+        </div>
+    </section>
+
+    <section id="fj-category-con" class="full-width-grid-con">
+        <div id="fj-category" class="col-start-2 grid-con">
+            <p id="fj-category-title" class="col-start-2 col-span-2 m-col-start-4 m-col-span-6">Portrait Art</p>
+            <p class="col-start-4 col-span-1 m-col-start-12 m-col-span-1 close-button">X</p>
+        </div>
+    </section>
+
+    <section id="fj-question-con" class="full-width-grid-con">
+        <div id="fj-question" class="col-start-2 grid-con">
+            <p id="fj-q-text" class="col-start-2 col-span-2 m-col-start-4 m-col-span-6">The Anna of Fire Emblem Fates has this unusual (and likely unintended) characteristic in her portrait art<img id="anna-pic" src="images/FEF_Anna_01.png"></p>
+            <p class="col-start-4 col-span-1 m-col-start-12 m-col-span-1 close-button">X</p>
+        </div>
+    </section>
+</body>
+</html>
