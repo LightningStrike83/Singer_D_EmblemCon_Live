@@ -27,7 +27,7 @@ export function schedulePopulation() {
 
             if (d !== "5") {
                 let img = document.createElement("img")
-                img.src = `../images/schedule_images/day-${d}-temp.png`
+                img.src = `../images/schedule_images/2026-day-${d}.png`
                 img.setAttribute("id", "schedule-image")
                 img.setAttribute("alt", `Image of Day ${d} Schedule`)
 
