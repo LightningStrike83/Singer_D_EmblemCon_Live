@@ -22,13 +22,15 @@ export function artistExhibitor() {
             const a = document.createElement("a")
             const listCon = document.querySelector("#ae-list-con")
 
-            div.setAttribute("id", "ae-filter-link")
-            div.setAttribute("class", "col-span-full")
-            a.href = "artist-filter.html"
-            a.textContent = "View the Artist Alley Filter"
+            // div.setAttribute("id", "ae-filter-link")
+            // div.setAttribute("class", "col-span-full")
+            // a.href = "artist-filter.html"
+            // a.textContent = "View the Artist Alley Filter"
 
-            div.appendChild(a)
-            listCon.appendChild(div)
+            // div.appendChild(a)
+            // listCon.appendChild(div)
+
+            textCon.style.alignItems = "flex-start"
         }
 
         if (g === "commission") {
@@ -39,6 +41,8 @@ export function artistExhibitor() {
         if (g === "exhibitor") {
             aeTitle.textContent = "Exhibitors Hall"
             aeDesc.textContent = "Our Exhibitors Hall is where our vendors sell their Fire Emblem themed merchandise and services"
+
+            textCon.style.alignItems = "center"
         }
 
         fetch(`${baseURL}${g}`)
@@ -53,13 +57,15 @@ export function artistExhibitor() {
                 a.setAttribute("class", "artist-link")
 
                 if (guest.name === "DT75 and Trikey") {
-                    a.innerHTML = `<a target="_blank" class="ae-guest-name" href="https://x.com/Dt75Art">DT75</a> <p class="cross">and</p> <a target="_blank" class="ae-guest-name" href="https://linktr.ee/trikey">Trikey</a> <img class="external-icon" src="../images/external.svg" alt="External Icon">`
+                    a.innerHTML = `<a target="_blank" class="ae-guest-name" href="https://x.com/Dt75Art">• DT75 <img class="external-icon" src="../images/external.svg" alt="External Icon"></a> <p class="cross">and</p> <a target="_blank" class="ae-guest-name" href="https://linktr.ee/trikey">Trikey</a> <img class="external-icon" src="../images/external.svg" alt="External Icon">`
                 } else if (guest.name === "jadesnapart / hildaemblem") {
-                    a.innerHTML = `<a target="_blank" class="ae-guest-name" href="https://bsky.app/profile/jadesnapart.bsky.social">jadesnapart</a> <p class="cross">/</p> <a target="_blank" class="ae-guest-name" href="https://bsky.app/profile/hildaemblem.bsky.social">hildaemblem</a> <img class="external-icon" src="../images/external.svg" alt="External Icon">`
-                } else if (guest.name === "🌸🐰 kyousa38 & Arclup 🐶🌱") {
-                    a.innerHTML = `<a target="_blank" class="ae-guest-name" href="https://bsky.app/profile/kyousa38.bsky.social">🌸🐰 kyousa38</a> <p class="cross">&</p> <a target="_blank" class="ae-guest-name" href="https://arclup.tumblr.com/">Arclup 🐶🌱</a> <img class="external-icon" src="../images/external.svg" alt="External Icon">`
+                    a.innerHTML = `<a target="_blank" class="ae-guest-name" href="https://bsky.app/profile/jadesnapart.bsky.social">• jadesnapart <img class="external-icon" src="../images/external.svg" alt="External Icon"></a> <p class="cross">/</p> <a target="_blank" class="ae-guest-name" href="https://bsky.app/profile/hildaemblem.bsky.social">hildaemblem</a> <img class="external-icon" src="../images/external.svg" alt="External Icon">`
+                } else if (guest.name === "Arclup & kyousa38") {
+                    a.innerHTML = `<a target="_blank" class="ae-guest-name" href="https://arclup.tumblr.com/">• Arclup</a> <img class="external-icon" src="../images/external.svg" alt="External Icon">  <p class="cross"> & </p> <a target="_blank" class="ae-guest-name" href="https://bsky.app/profile/kyousa38.bsky.social"> kyousa38 <img class="external-icon" src="../images/external.svg" alt="External Icon"></a>`
+                } else if (guest.name === "kagayaki cafe") {
+                    a.innerHTML = `<div id="kagayaki-cafe-con"><a target="_blank" class="ae-guest-name" href="#">• kagayaki cafe</a><a href="https://bsky.app/profile/rockythebunny13.bsky.social" class="ae-guest-name">• Rocky  <img class="external-icon" src="../images/external.svg" alt="External Icon"></a><a href="https://bsky.app/profile/springexalt.bsky.social" class="ae-guest-name">• Robin  <img class="external-icon" src="../images/external.svg" alt="External Icon"></a></div>`
                 } else if (guest.link !== "") {
-                    a.innerHTML = `<a target="_blank" class="ae-guest-name" href="${guest.link}">${guest.name} <img class="external-icon" src="../images/external.svg" alt="External Icon"></a>`
+                    a.innerHTML = `<a target="_blank" class="ae-guest-name" href="${guest.link}">• ${guest.name} <img class="external-icon" src="../images/external.svg" alt="External Icon"></a>`
                 } else {
                     a.innerHTML = `<a class="ae-guest-name">${guest.name}</a>`
                 }
