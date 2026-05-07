@@ -22,13 +22,13 @@ export function artistExhibitor() {
             const a = document.createElement("a")
             const listCon = document.querySelector("#ae-list-con")
 
-            // div.setAttribute("id", "ae-filter-link")
-            // div.setAttribute("class", "col-span-full")
-            // a.href = "artist-filter.html"
-            // a.textContent = "View the Artist Alley Filter"
+            div.setAttribute("id", "ae-filter-link")
+            div.setAttribute("class", "col-span-full")
+            a.href = "artist-filter.html"
+            a.textContent = "View the Artist Alley Filter"
 
-            // div.appendChild(a)
-            // listCon.appendChild(div)
+            div.appendChild(a)
+            listCon.appendChild(div)
 
             textCon.style.alignItems = "flex-start"
         }

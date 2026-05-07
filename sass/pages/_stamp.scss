@@ -115,6 +115,7 @@
 
     a {
         margin-bottom: 10px;
+        text-decoration: none!important;
     }
 
     div {
@@ -151,6 +152,10 @@
         margin-bottom: 5px;
     }
 
+    a {
+        text-decoration: none;
+    }
+
     p {
         font-weight: bold;
     }
@@ -176,10 +181,6 @@
     .current-rally-artists {
         width: 45%;
         align-items: flex-start;
-
-        a {
-            text-decoration: none;
-        }
     }
 
     .rally-box {
