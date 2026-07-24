@@ -9,6 +9,7 @@ export function testImages() {
             const div = document.createElement("div")
             const imagediv = document.createElement("div")
             const headshot = document.createElement("img")
+            const doodle = document.createElement("img")
             const chibi = document.createElement("img")
             const name = document.createElement("p")
 
@@ -16,9 +17,12 @@ export function testImages() {
             chibi.src = `../images/badge-chibis/${character.id}.png`
             headshot.setAttribute("class", "test-image")
             chibi.setAttribute("class", "test-image")
+            doodle.src = `../images/badge-doodles/${character.id}.png`
+            doodle.setAttribute("class", "test-image")
 
             imagediv.appendChild(headshot)
             imagediv.appendChild(chibi)
+            imagediv.appendChild(doodle)
             imagediv.setAttribute("class", "test-image-div")
             div.appendChild(imagediv)
 
